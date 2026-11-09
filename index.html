@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SE STORE — ремонт техники, 3D-печать и витрина в Люберцах (ЖК «Самолёт»)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style id="app-css">
+:root{--bg:#060a17;--card:#0e1a3a;--line:rgba(56,189,248,.28);--ink:#f8fafc;--muted:#a5b4cc;--cyan:#38bdf8;--blue:#2563eb;--on:#04101f;--glow:rgba(0,210,255,.18);color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef4fb;--card:#fff;--line:#bcd3ea;--ink:#0b1b33;--muted:#4a5f7d;--cyan:#0369a1;--blue:#1d4ed8;--on:#fff;--glow:rgba(3,105,161,.12);color-scheme:light}}
+:root[data-theme="light"]{--bg:#eef4fb;--card:#fff;--line:#bcd3ea;--ink:#0b1b33;--muted:#4a5f7d;--cyan:#0369a1;--blue:#1d4ed8;--on:#fff;--glow:rgba(3,105,161,.12);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);background-image:radial-gradient(circle at 15% 5%,var(--glow),transparent 40%),radial-gradient(circle at 90% 30%,var(--glow),transparent 40%);background-attachment:fixed;color:var(--ink);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:var(--cyan)}
+.w{max-width:1080px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;flex-wrap:wrap;padding-block:8px}
+.logo{display:flex;align-items:center;gap:10px;line-height:1;text-decoration:none;color:var(--ink);font-weight:900}
+.logo-txt{display:flex;flex-direction:column}
+.logo b{font-size:26px;color:var(--cyan)}.logo span{font-size:11px;letter-spacing:.3em}
+.logo-ico{width:38px;height:44px;border:2px solid var(--cyan);border-radius:9px;display:grid;place-items:center;color:var(--cyan);box-shadow:0 0 12px var(--glow)}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 13px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:700;font-size:14px}
+nav a[aria-current="page"]{background:var(--blue);color:#fff}
+nav a:hover{color:var(--ink)}
+.cartlink{font:700 13px "JetBrains Mono",monospace;color:var(--cyan);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:14px;border:0;background:linear-gradient(90deg,var(--cyan),var(--blue));color:var(--on);font:800 15px Inter,system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.btn.o{background:transparent;border:1.5px solid var(--cyan);color:var(--cyan)}
+.btn.sm{padding:9px 14px;font-size:13px;border-radius:10px}
+.btn:focus-visible,.chip:focus-visible,input:focus-visible,textarea:focus-visible,nav a:focus-visible,.cartlink:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+h1{font-size:clamp(32px,6vw,58px);line-height:1.05;font-weight:900;letter-spacing:.01em;margin:0 0 16px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--cyan)}
+h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin:0 0 12px;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 22px}
+.pg{padding:40px 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tile{text-decoration:none;color:var(--ink);display:block;transition:transform .2s,border-color .2s}
+.tile:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.tile h3{margin:6px 0;font-size:18px}.tile p{margin:0;color:var(--muted);font-size:14px}
+.tag{font:700 12px "JetBrains Mono",monospace;color:var(--cyan)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.chip{padding:10px 15px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 14px Inter,system-ui,sans-serif;cursor:pointer;text-align:left;text-decoration:none}
+.chip[aria-pressed="true"],.chip.act{background:var(--blue);border-color:var(--cyan);color:#fff}
+.iss{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.iss .chip{display:flex;justify-content:space-between;gap:10px}
+.iss .chip i{font:700 12px "JetBrains Mono",monospace;font-style:normal;color:var(--cyan);white-space:nowrap}
+.iss .chip[aria-pressed="true"] i{color:#fff}
+.out{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.pr{font-size:32px;font-weight:900;color:var(--cyan)}
+.time{font:600 13px "JetBrains Mono",monospace;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:5px 10px}
+.prod{display:flex;flex-direction:column;gap:8px;padding:16px}
+.ph{height:90px;border-radius:12px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,var(--glow) 0 8px,transparent 8px 16px);display:grid;place-items:center;font:700 12px "JetBrains Mono",monospace;color:var(--cyan)}
+.prod h3{margin:0;font-size:15px;line-height:1.3}.prod p{margin:0;font-size:13px;color:var(--muted);flex:1}
+.prod .pr{font-size:20px}.prod .btn{padding:10px 12px;font-size:14px}
+ul.cl{list-style:none;padding:0;margin:0}
+ul.cl li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.note{font-size:13px;color:var(--muted);margin:10px 0 0}
+label.f{display:block;font-weight:700;font-size:14px;margin:12px 0 6px}
+input[type=text],input[type=tel],input[type=search],input[type=number],input[type=password],textarea,select{width:100%;font:500 16px Inter,system-ui,sans-serif;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.ck{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--muted);margin:12px 0}
+.ok{margin-top:12px;font-weight:700;color:var(--cyan)}
+.x{background:none;border:0;color:var(--muted);font-size:18px;cursor:pointer}
+footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-align:center;font-size:13px;color:var(--muted)}
+[hidden]{display:none!important}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--cyan);font:700 13px Inter,system-ui,sans-serif;margin-bottom:18px}
+.badge i{width:9px;height:9px;border-radius:50%;background:var(--cyan);flex:none}
+.hbox{display:inline-block;padding:2px 20px;border:1px solid var(--line);border-radius:18px;background:var(--card);margin-bottom:6px}
+.feat{list-style:none;margin:20px 0 26px;padding:0;display:grid;gap:16px}
+.feat li{display:grid;grid-template-columns:28px 1fr;column-gap:12px}
+.feat li::before{content:"✓";grid-row:span 2;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--cyan);color:var(--cyan);display:grid;place-items:center;font-weight:800;font-size:14px}
+.feat b{font-size:18px;font-weight:800;line-height:1.25}
+.feat span{color:var(--muted);font-size:14px}
+.btn.big{display:block;text-align:center;font-size:17px;padding:17px 22px;max-width:520px}
+.direct{color:var(--muted);font-size:14px}
+.xray{justify-self:center;position:relative;width:250px;height:460px;border:10px solid var(--cyan);border-radius:46px;box-shadow:0 0 36px color-mix(in srgb,var(--cyan) 55%,transparent),inset 0 0 22px var(--glow);display:grid;grid-template-columns:44% 56%;overflow:hidden;background:#060a17}
+.xl{background:linear-gradient(160deg,#3f5594,#1b2a55);padding:10px;position:relative}
+.cam{width:62px;height:62px;border-radius:14px;background:rgba(255,255,255,.14);display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px}
+.lens{width:20px;height:20px;border-radius:50%;background:#0a1330;border:2px solid #cfe3ff}
+.xlab{position:absolute;left:8px;bottom:8px;font:700 8px "JetBrains Mono",monospace;color:rgba(255,255,255,.65)}
+.xr{position:relative;overflow:hidden;padding:8px;border-left:1px solid var(--cyan);display:flex;flex-direction:column;gap:8px}
+.nb{position:relative;border:1px solid rgba(56,189,248,.45);border-radius:8px;padding:7px;font:700 8px "JetBrains Mono",monospace;color:#38bdf8;background:rgba(16,28,62,.8)}
+.sq{display:block;width:22px;height:22px;margin-top:6px;border:1px solid rgba(56,189,248,.5);border-radius:4px}
+.dot{position:absolute;right:7px;width:6px;height:6px;border-radius:50%;background:#34d399;animation:pl 2.4s infinite ease-in-out}
+.nb .sq~.dot{bottom:12px}.nb:not(.bat) .dot{top:50%;margin-top:-3px}.bat span .dot{top:7px}
+.minis{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.minis i{height:12px;border-radius:3px;background:rgba(56,189,248,.3);border:1px solid rgba(56,189,248,.5)}
+.minis i.am{background:rgba(245,158,11,.55);border-color:#f59e0b}
+.bat{flex:1;display:flex;flex-direction:column;gap:12px}
+.dash{margin:auto 0;border:1px dashed rgba(56,189,248,.5);border-radius:6px;padding:9px 4px;text-align:center;color:#e6f0ff}
+.bar{height:6px;border-radius:3px;background:rgba(56,189,248,.18)}
+.bar i{display:block;height:100%;width:92%;border-radius:3px;background:#38bdf8}
+.scan{position:absolute;left:0;right:0;top:0;height:46px;background:linear-gradient(transparent,rgba(0,210,255,.22),transparent);animation:sc 4.5s linear infinite;pointer-events:none}
+@keyframes sc{from{transform:translateY(-100%)}to{transform:translateY(480px)}}
+@keyframes pl{0%,100%{opacity:.4}50%{opacity:1}}
+.ph.pic{height:140px;padding:0;overflow:hidden;background:none}
+.ph.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.pcell{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.pth{width:56px;height:56px;border-radius:10px;object-fit:cover;border:1px solid var(--line);display:grid;place-items:center;font-size:10px;color:var(--muted);text-align:center}
+.pcell .x{font-size:12px;min-height:0;min-width:0;padding:2px 0;color:var(--cyan)}
+.arow{display:grid;grid-template-columns:96px 150px 1.3fr 1.3fr 110px auto auto;gap:8px;align-items:center;margin:8px 0}
+.arow.srow{grid-template-columns:1.6fr 1fr 1fr auto}
+.arow .ck{margin:0}
+
+/* Стили каталога и страниц моделей iPhone X–18 */
+.ser-block{margin-bottom:28px}
+.ser-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.ser-title h3{margin:0;font-size:20px;font-weight:800}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:6px;transition:transform .18s,border-color .18s,box-shadow .18s}
+.mcard:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 8px 24px var(--glow)}
+.mcard b{font-size:16px;font-weight:800}
+.mcard span{font-size:12px;color:var(--muted)}
+.mcard .mpr{margin-top:6px;font:700 13px "JetBrains Mono",monospace;color:var(--cyan)}
+.ptable{display:grid;gap:10px;margin-top:14px}
+.prow{display:grid;grid-template-columns:1.5fr auto auto auto;gap:14px;align-items:center;padding:14px 16px;background:var(--bg);border:1px solid var(--line);border-radius:14px}
+.prow b{font-size:15px}
+.prow small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.prow .pval{font:800 17px "JetBrains Mono",monospace;color:var(--cyan);white-space:nowrap}
+.prow .ptm{font:600 12px "JetBrains Mono",monospace;color:var(--muted);background:var(--card);padding:5px 9px;border-radius:8px;border:1px solid var(--line);white-space:nowrap}
+.crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:16px}
+.crumbs a{text-decoration:none;font-weight:600}
+.specs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
+.spec{font:600 12px "JetBrains Mono",monospace;padding:6px 11px;border-radius:9px;background:var(--card);border:1px solid var(--line);color:var(--muted)}
+.spec b{color:var(--ink)}
+
+@media (max-width:860px){
+  .g4,.mgrid{grid-template-columns:repeat(2,1fr)}
+  .g3,.g2,.hero{grid-template-columns:1fr}
+  .iss{grid-template-columns:1fr}
+  .xray{width:220px;height:400px}
+  .arow,.arow.srow{grid-template-columns:1fr;padding:10px 0;border-bottom:1px solid var(--line)}
+  .prow{grid-template-columns:1fr auto;gap:8px}
+  .prow .ptm{grid-column:1;justify-self:start}
+}
+@media (max-width:640px){
+  body{padding-bottom:84px;font-size:15px}
+  .w{padding:0 14px}
+  .hd{justify-content:space-between;min-height:56px;flex-wrap:nowrap}
+  .logo b{font-size:22px}
+  nav{position:fixed;left:0;right:0;bottom:0;z-index:12;flex-wrap:nowrap;justify-content:space-around;gap:2px;background:var(--bg);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+  nav a{flex:1;text-align:center;padding:9px 2px;font-size:11px;line-height:1.15;border-radius:10px}
+  .pg{padding:24px 0 10px}
+  h2{font-size:24px}
+  .card{padding:16px;border-radius:16px}
+  #dv{display:grid;grid-template-columns:1fr 1fr}
+  #ct{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-14px;padding-inline:14px}
+  #ct .chip{flex:none;white-space:nowrap}
+  #pd,#pg-home .g4,.mgrid{grid-template-columns:1fr 1fr;gap:10px}
+  .prod{padding:12px}
+  .prod h3{font-size:14px}
+  .prod .btn{padding:10px 8px;font-size:13px}
+  .ph{height:64px}
+  .ph.pic{height:110px}
+}
+</style>
+</head>
+<body>
+<template id="shell"><header><div class="w hd">
+<a class="logo" href="#home" aria-label="SE STORE">
+  <span class="logo-ico" aria-hidden="true">⚙</span>
+  <span class="logo-txt"><b>SE</b><span>STORE</span></span>
+</a>
+<nav id="nav" aria-label="Разделы">
+<a href="#home">Главная</a><a href="#iphone">Модели iPhone</a><a href="#repair">Калькулятор</a><a href="#shop">Магазин</a><a href="#lab">3D и печать</a><a href="#contacts">Контакты</a><a href="#admin" id="adm">Админ</a>
+</nav>
+<a class="cartlink" href="#shop" id="cc" aria-label="Корзина">Бронь: 0</a>
+</div></header>
+
+<main class="w">
+<section class="pg" id="pg-home">
+<div class="hero">
+<div>
+<span class="badge"><i></i>Сервисный центр и магазин в ЖК «Самолёт» (Люберцы)</span>
+<h1><span class="hbox">Ремонт</span><br><em>телефонов и ПК</em></h1>
+<ul class="feat">
+<li><b>Замена экрана и переклейка стекол</b><span>Сохраняем родную оригинальную матрицу без ошибок и потери TrueTone</span></li>
+<li><b>Замена аккумулятора</b><span>Устанавливаем новый аккумулятор (с переносом контроллера при необходимости)</span></li>
+<li><b>Замена разъемов и сложная BGA-пайка</b><span>Ремонт материнских плат, цепей питания, контроллеров зарядки и аудиокодеков</span></li>
+<li><b>Чистка, профилактика и апгрейд</b><span>Восстановление после воды, чистка ноутбуков и консолей с заменой термоинтерфейсов</span></li>
+</ul>
+<div style="display:flex;flex-wrap:wrap;gap:10px;max-width:520px">
+  <a class="btn big" style="flex:1" href="#iphone">Выбрать модель iPhone (X – 18) →</a>
+  <a class="btn o" href="#shop">Витрина магазина</a>
+</div>
+<p class="direct">Или напишите напрямую мастеру: <a href="https://t.me/mysestore" target="_blank" rel="noopener">Telegram @mysestore</a> / <a href="tel:+79624623726">+7 (962) 462-37-26</a></p>
+</div>
+<div class="xray" aria-hidden="true">
+<div class="xl"><div class="cam"><i class="lens"></i><i class="lens"></i><i class="lens"></i><i class="lens"></i></div><span class="xlab">SE LAB • X-RAY</span></div>
+<div class="xr">
+<div class="nb">CPU / NAND BGA<br><i class="sq"></i><i class="dot"></i></div>
+<div class="minis"><i></i><i class="am"></i><i></i></div>
+<div class="nb bat"><span>LI-ION <i class="dot"></i></span><div class="dash">NEW BATTERY</div><div class="bar"><i></i></div></div>
+<div class="nb">TAPTIC ENGINE <i class="dot"></i></div>
+<div class="nb">USB-C / LIGHTNING</div>
+<div class="scan"></div>
+</div>
+</div>
+</div>
+
+<div class="card" style="margin-top:32px">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px">
+    <div>
+      <span class="tag">БЫСТРЫЙ ПЕРЕХОД ПО СЕРИЯМ</span>
+      <h3 style="margin:4px 0 0">Выберите свой iPhone — от X до 18 Pro Max</h3>
+    </div>
+    <a class="btn sm o" href="#iphone">Все 34 модели →</a>
+  </div>
+  <div class="chips" id="home-series"></div>
+</div>
+
+<div class="g4" style="margin-top:20px">
+<a class="card tile" href="#iphone"><span class="tag">01 • X — 18 PRO MAX</span><h3>Ремонт iPhone</h3><p>Отдельные страницы и прайс под каждую модель</p></a>
+<a class="card tile" href="#shop"><span class="tag">02 • ВИТРИНА</span><h3>Магазин</h3><p>Кабели, стёкла, чехлы, проверенные телефоны</p></a>
+<a class="card tile" href="#lab"><span class="tag">03 • 3–4 ₽/Г</span><h3>3D и печать</h3><p>3D-детали по образцу, документы А4, фото 10×15</p></a>
+<a class="card tile" href="#contacts"><span class="tag">04 • ЛЮБЕРЦЫ</span><h3>Контакты</h3><p>ЖК «Самолёт», график и быстрая связь</p></a>
+</div>
+<div class="card" style="margin-top:20px"><b>График работы:</b> вторник — суббота. Воскресенье и понедельник — выходные.</div>
+</section>
+
+<!-- Каталог всех моделей iPhone от X до 18 -->
+<section class="pg" id="pg-iphone" hidden="">
+  <h2>Ремонт iPhone — выберите модель (X – 18)</h2>
+  <p class="lead">Для каждой модели от iPhone X до линейки iPhone 18 создана отдельная страница с точными ценами на переклейку стекла, замену экрана, аккумулятора, корпуса и пайку платы.</p>
+  <div class="card" style="margin-bottom:22px">
+    <label class="f" for="msearch" style="margin-top:0">Быстрый поиск модели</label>
+    <input id="msearch" type="search" placeholder="Например: iPhone 13 Pro, 15 Pro Max, 18 или XR...">
+    <div class="chips" id="ser-filter" style="margin-bottom:0"></div>
+  </div>
+  <div id="mcatalog"></div>
+</section>
+
+<!-- Индивидуальная страница конкретной модели iPhone -->
+<section class="pg" id="pg-model" hidden="">
+  <div class="crumbs">
+    <a href="#home">Главная</a> <span>/</span>
+    <a href="#iphone">Модели iPhone</a> <span>/</span>
+    <span id="m-crumb">iPhone</span>
+  </div>
+  <div class="card">
+    <span class="tag" id="m-ser-tag">СЕРИЯ IPHONE</span>
+    <h2 id="m-title" style="margin-top:4px">Ремонт iPhone</h2>
+    <p class="lead" id="m-desc" style="margin-bottom:12px"></p>
+    <div class="specs" id="m-specs"></div>
+    <div class="chips" id="m-siblings"></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <h3 style="margin:0">Прайс-лист на ремонт <span id="m-subname"></span></h3>
+      <span class="time">Диагностика — 0 ₽</span>
+    </div>
+    <div class="ptable" id="m-prices"></div>
+  </div>
+
+  <div class="g3" style="margin-top:16px">
+    <div class="card">
+      <span class="tag">СЕПАРАТОР 80–85 °C</span>
+      <h3>Сохраняем родной OLED</h3>
+      <p class="note">Если матрица цела и нет пятен/полос, аккуратно срезаем разбитое стекло и переклеиваем новое по заводской технологии без ошибок в настройках.</p>
+    </div>
+    <div class="card">
+      <span class="tag">SUNSHINE SPOT WELDER</span>
+      <h3>АКБ без ошибки в iOS</h3>
+      <p class="note">Точечная переварка оригинального шлейфа контроллера BMS при замене элемента питания — телефон показывает 100% ёмкости.</p>
+    </div>
+    <div class="card">
+      <span class="tag">МИКРОСКОП И ТЕПЛОВИЗОР</span>
+      <h3>Сложный ремонт плат</h3>
+      <p class="note">Устраняем короткие замыкания, циклические перезагрузки (panic full), восстанавливаем Face ID, аудиокодеки и цепи зарядки.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pg" id="pg-repair" hidden="">
+<h2>Универсальный калькулятор ремонта</h2>
+<p class="lead">Быстрый расчёт для смартфонов Android, ноутбуков, игровых приставок и iPhone. Диагностика бесплатная.</p>
+<div class="card">
+<div class="tag">1. УСТРОЙСТВО</div><div class="chips" id="dv" role="group" aria-label="Устройство"></div>
+<div class="tag">2. ЧТО СЛУЧИЛОСЬ</div><div class="iss" id="is" style="margin-top:10px"></div>
+<div class="out" aria-live="polite"><span class="pr" id="rp"></span><span class="time" id="rt"></span><button class="btn" id="book" type="button">Записаться на ремонт</button><a class="btn o" href="#iphone">Прайс по моделям iPhone X–18</a></div>
+</div>
+</section>
+
+<section class="pg" id="pg-shop" hidden="">
+<h2>Витрина SE STORE</h2>
+<p class="lead">Проверенные аксессуары, запчасти, 3D-изделия и техника в Люберцах (ЖК «Самолёт»). Добавьте в бронь — оплата при получении.</p>
+<div class="chips" id="ct" role="group" aria-label="Категории"></div>
+<div class="g4" id="pd"></div>
+<div class="card" style="margin-top:20px">
+<h3 style="margin:0 0 6px">Ваша бронь</h3>
+<ul class="cl" id="cl"></ul>
+<p><b>К оплате при получении:</b> <span class="pr" id="tt" style="font-size:22px">0 ₽</span></p>
+<form id="bf" hidden="">
+<label class="f" for="bt">Ваш телефон или @username в Telegram</label><input id="bt" type="text" required="" placeholder="+7 (999) 000-00-00 или @username">
+<label class="ck"><input type="checkbox" required="" checked> Согласен на обработку персональных данных</label>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+  <button class="btn" type="submit">Отправить бронь в Telegram</button>
+</div>
+</form>
+<p class="ok" id="bd" aria-live="polite"></p>
+</div>
+</section>
+
+<section class="pg" id="pg-lab" hidden="">
+<h2>Больше, чем ремонт телефонов</h2>
+<p class="lead">Инженерная мастерская, 3D-печать и полиграфия в ЖК «Самолёт».</p>
+<div class="g3">
+<div class="card"><span class="tag">3–4 ₽ / ГРАММ</span><h3>3D-печать на заказ</h3><p class="note">Шестерни, клипсы, переходники Eikosha в дефлектор авто, корпуса, подставки. Пластики PLA, PETG, ABS, TPU. Печать по вашей STL-модели или образцу.</p><p><a class="btn o" href="#contacts" data-subj="3D-печать">Заказать 3D-печать</a></p></div>
+<div class="card"><span class="tag">ДОКУМЕНТЫ И ФОТО</span><h3>Печать и копицентр</h3><p class="note">Чёрно-белая и цветная печать А4, двухсторонняя печать, ксерокопия, печать на фотобумаге А4 и фото 10×15. Файлы можно прислать в Telegram.</p><p><a class="btn o" href="#contacts" data-subj="Печать документов / фото">Отправить файл</a></p></div>
+<div class="card"><span class="tag">BGA И MICRO-LAB</span><h3>Сложная пайка плат</h3><p class="note">Тепловизионный поиск КЗ, реболл BGA-чипов, восстановление сгнивших дорожек под микроскопом, ремонт ноутбуков и видеокарт.</p><p><a class="btn o" href="#contacts" data-subj="Сложный ремонт платы">Консультация мастера</a></p></div>
+</div>
+</section>
+
+<section class="pg" id="pg-contacts" hidden="">
+<h2>Ждём вас в SE STORE</h2>
+<div class="g2">
+<div class="card">
+<p><span class="tag">АДРЕС</span><br>Московская обл., г. Люберцы, ЖК «Самолёт»</p>
+<p><span class="tag">ГРАФИК РАБОТЫ</span><br>Вторник — суббота. Воскресенье и понедельник — выходные.</p>
+<p><span class="tag">ПРЯМАЯ СВЯЗЬ С МАСТЕРОМ</span><br><a href="tel:+79624623726">+7 (962) 462-37-26</a><br><a href="https://t.me/mysestore" target="_blank" rel="noopener">Telegram: @mysestore</a></p>
+<p class="note">Модульные ремонты (дисплей, переклейка стекла, аккумулятор, разъём, чистка) выполняем в день обращения.</p>
+</div>
+<div class="card">
+<h3 style="margin:0">Оставить заявку мастеру</h3>
+<form id="rf">
+<label class="f" for="rs">Модель устройства и неисправность</label><textarea id="rs" rows="3" required="" placeholder="Например: iPhone 15 Pro, переклейка стекла"></textarea>
+<label class="f" for="rt2">Ваш телефон или Telegram</label><input id="rt2" type="text" required="" placeholder="+7 (999) ...">
+<label class="ck"><input type="checkbox" required="" checked> Согласен на обработку персональных данных</label>
+<button class="btn" type="submit">Отправить заявку в Telegram</button>
+</form>
+<p class="ok" id="rd" aria-live="polite"></p>
+</div>
+</div>
+</section>
+
+<section class="pg" id="pg-admin" hidden="">
+<h2>Админ-панель SE STORE</h2>
+<p class="lead" id="admhint">Управление витриной товаров, услугами и скачивание готового файла сайта.</p>
+<div id="admbox"></div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
+  <button class="btn" id="admsave" type="button" hidden="">Скачать обновлённый index.html</button>
+</div>
+<p class="ok" id="admst" aria-live="polite"></p>
+</section>
+</main>
+
+<footer><div class="w">© 2026 SE STORE (се-стор.рф), г. Люберцы, ЖК «Самолёт». Ремонт электроники, 3D-печать, копицентр и магазин аксессуаров.</div></footer>
+</template>
+
+<script id="seed" type="application/json">{
+  "R": {
+    "iphone": ["iPhone / iPad", [
+      ["Замена дисплея / переклейка стекла", "от 2 900 ₽", "45–90 мин"],
+      ["Замена аккумулятора", "от 2 200 ₽", "40–60 мин"],
+      ["Замена разъёма зарядки / чистка динамиков", "от 1 500 ₽", "30–60 мин"],
+      ["Сложный ремонт платы / FaceID / после воды", "от 3 500 ₽", "от 2 часов"]
+    ]],
+    "android": ["Android", [
+      ["Замена экранного модуля", "от 2 500 ₽", "60–90 мин"],
+      ["Замена разъёма USB Type-C / Micro-USB", "от 1 400 ₽", "40 мин"],
+      ["Замена аккумулятора / задней крышки", "от 1 800 ₽", "45 мин"],
+      ["Прошивка, разблокировка, пайка контроллера", "от 2 000 ₽", "1–2 часа"]
+    ]],
+    "laptop": ["Ноутбук / ПК", [
+      ["Чистка системы охлаждения + замена термоинтерфейсов", "2 500 ₽", "1–2 часа"],
+      ["Установка SSD / Windows / ОЗУ", "от 1 800 ₽", "1 час"],
+      ["Ремонт петель корпуса / замена матрицы", "от 2 800 ₽", "1–3 часа"],
+      ["Ремонт цепей питания материнской платы / видеокарты", "от 4 500 ₽", "после диагностики"]
+    ]],
+    "other": ["Приставки / 3D", [
+      ["Чистка PS4 / PS5 с заменой жидкого металла", "от 2 900 ₽", "1,5 часа"],
+      ["Ремонт геймпадов DualSense / Xbox (замена 3D-аналогов)", "от 1 500 ₽", "45 мин"],
+      ["3D-печать детали, крепежа или шестерни", "3–4 ₽ / грамм", "от 1 часа"],
+      ["Ремонт портативной акустики и электроники", "от 1 800 ₽", "от 1 часа"]
+    ]]
+  },
+  "G": [
+    ["Смартфоны", "iPhone 15 Pro (Б/У, грейд А+)", "128 ГБ · АКБ 94% · идеал, без ремонтов", 74900, 1, ""],
+    ["Смартфоны", "iPhone 13 Pro 256 ГБ Graphite", "Родной OLED · FaceID работает идеально", 52900, 0, ""],
+    ["Кабели и зарядки", "Кабель USB-C Apple Original", "Плетёный · 1 м · быстрая зарядка PD", 1990, 0, ""],
+    ["Кабели и зарядки", "Адаптер питания 20W / 35W USB-C", "Оригинальный контроллер · без перегрева", 1690, 0, ""],
+    ["Стёкла и защита", "Бронестекло с поклейкой (iPhone X–18)", "Олеофобное покрытие · антишпион / глянец", 990, 0, ""],
+    ["Стёкла и защита", "Чехол MagSafe Clear / Silicone", "Усиленные бортики защиты камеры", 1290, 0, ""],
+    ["3D-печать и авто", "Адаптер Eikosha в дефлектор обдува", "Для Geely Coolray и др. · прочный PETG", 450, 0, ""],
+    ["3D-печать и авто", "Изготовление детали / шестерни по образцу", "Моделирование и 3D-печать · 3–4 ₽/г", 350, 1, ""]
+  ],
+  "M": [
+    {"id":"iphone-18-pro-max","s":"iPhone 18","n":"iPhone 18 Pro Max","sp":"6.9\" Super Retina XDR · USB-C · Titanium","p":[14900,26900,6900,8900,4500,5900,6900]},
+    {"id":"iphone-18-pro","s":"iPhone 18","n":"iPhone 18 Pro","sp":"6.3\" Super Retina XDR · USB-C · Titanium","p":[13900,24900,6500,8500,4500,5500,6500]},
+    {"id":"iphone-18-air","s":"iPhone 18","n":"iPhone 18 Air / Plus","sp":"6.6\" OLED · Ультратонкий корпус · USB-C","p":[11900,20900,5900,7500,4200,4900,5900]},
+    {"id":"iphone-18","s":"iPhone 18","n":"iPhone 18","sp":"6.1\" Super Retina XDR · USB-C","p":[10900,18900,5500,6900,3900,4500,5500]},
+
+    {"id":"iphone-17-pro-max","s":"iPhone 17","n":"iPhone 17 Pro Max","sp":"6.9\" ProMotion OLED · USB-C","p":[12900,23900,5900,7900,3900,4900,5900]},
+    {"id":"iphone-17-pro","s":"iPhone 17","n":"iPhone 17 Pro","sp":"6.3\" ProMotion OLED · USB-C","p":[11900,21900,5500,7500,3900,4900,5500]},
+    {"id":"iphone-17-air","s":"iPhone 17","n":"iPhone 17 Air / Plus","sp":"6.6\" OLED · USB-C","p":[9900,17900,4900,6500,3500,4200,5200]},
+    {"id":"iphone-17","s":"iPhone 17","n":"iPhone 17","sp":"6.1\" OLED · USB-C","p":[8900,15900,4500,5900,3500,3900,4900]},
+
+    {"id":"iphone-16-pro-max","s":"iPhone 16","n":"iPhone 16 Pro Max","sp":"6.9\" LTPO OLED · USB-C · Titanium","p":[10900,19900,5200,6900,3500,4500,5500]},
+    {"id":"iphone-16-pro","s":"iPhone 16","n":"iPhone 16 Pro","sp":"6.3\" LTPO OLED · USB-C · Titanium","p":[9900,17900,4900,6500,3500,4200,5200]},
+    {"id":"iphone-16-plus","s":"iPhone 16","n":"iPhone 16 Plus","sp":"6.7\" Super Retina XDR · USB-C","p":[8500,14900,4500,5900,3200,3900,4900]},
+    {"id":"iphone-16","s":"iPhone 16","n":"iPhone 16","sp":"6.1\" Super Retina XDR · USB-C","p":[7900,13900,4200,5500,3200,3500,4500]},
+    {"id":"iphone-16e","s":"iPhone 16","n":"iPhone 16e","sp":"6.1\" OLED · Face ID · USB-C","p":[6900,11900,3900,4900,2900,3200,4200]},
+
+    {"id":"iphone-15-pro-max","s":"iPhone 15","n":"iPhone 15 Pro Max","sp":"6.7\" ProMotion OLED · USB-C · Titanium","p":[8900,16900,4500,5900,2900,3900,4900]},
+    {"id":"iphone-15-pro","s":"iPhone 15","n":"iPhone 15 Pro","sp":"6.1\" ProMotion OLED · USB-C · Titanium","p":[7900,14900,4200,5500,2900,3900,4900]},
+    {"id":"iphone-15-plus","s":"iPhone 15","n":"iPhone 15 Plus","sp":"6.7\" OLED · Dynamic Island · USB-C","p":[6900,12900,3900,4900,2700,3500,4500]},
+    {"id":"iphone-15","s":"iPhone 15","n":"iPhone 15","sp":"6.1\" OLED · Dynamic Island · USB-C","p":[6500,11900,3700,4500,2700,3200,4200]},
+
+    {"id":"iphone-14-pro-max","s":"iPhone 14","n":"iPhone 14 Pro Max","sp":"6.7\" ProMotion OLED · Lightning","p":[6900,13900,3900,4900,2500,3500,4500]},
+    {"id":"iphone-14-pro","s":"iPhone 14","n":"iPhone 14 Pro","sp":"6.1\" ProMotion OLED · Lightning","p":[6500,12500,3700,4500,2500,3500,4500]},
+    {"id":"iphone-14-plus","s":"iPhone 14","n":"iPhone 14 Plus","sp":"6.7\" Super Retina XDR · Lightning","p":[5500,9900,3500,4200,2300,3200,3900]},
+    {"id":"iphone-14","s":"iPhone 14","n":"iPhone 14","sp":"6.1\" Super Retina XDR · Lightning","p":[4900,8900,3300,3900,2300,2900,3900]},
+
+    {"id":"iphone-13-pro-max","s":"iPhone 13","n":"iPhone 13 Pro Max","sp":"6.7\" 120Hz ProMotion OLED · Lightning","p":[5900,11500,3500,4500,2200,3200,3900]},
+    {"id":"iphone-13-pro","s":"iPhone 13","n":"iPhone 13 Pro","sp":"6.1\" 120Hz ProMotion OLED · Lightning","p":[5500,9900,3300,4200,2200,2900,3900]},
+    {"id":"iphone-13","s":"iPhone 13","n":"iPhone 13","sp":"6.1\" Super Retina XDR · Lightning","p":[4500,7900,2900,3500,2000,2700,3500]},
+    {"id":"iphone-13-mini","s":"iPhone 13","n":"iPhone 13 mini","sp":"5.4\" Super Retina XDR · Lightning","p":[4500,7500,2900,3500,2000,2700,3500]},
+
+    {"id":"iphone-12-pro-max","s":"iPhone 12","n":"iPhone 12 Pro Max","sp":"6.7\" Super Retina XDR · Lightning","p":[4900,8900,3200,3900,1900,2700,3500]},
+    {"id":"iphone-12-pro","s":"iPhone 12","n":"iPhone 12 Pro","sp":"6.1\" Super Retina XDR · Lightning","p":[4500,7900,2900,3500,1900,2500,3500]},
+    {"id":"iphone-12","s":"iPhone 12","n":"iPhone 12","sp":"6.1\" Super Retina XDR · Lightning","p":[4200,7500,2900,3500,1900,2500,3500]},
+    {"id":"iphone-12-mini","s":"iPhone 12","n":"iPhone 12 mini","sp":"5.4\" Super Retina XDR · Lightning","p":[3900,6900,2700,3200,1900,2500,3200]},
+
+    {"id":"iphone-11-pro-max","s":"iPhone 11","n":"iPhone 11 Pro Max","sp":"6.5\" Super Retina XDR OLED · Lightning","p":[3900,6900,2700,3200,1700,2400,3200]},
+    {"id":"iphone-11-pro","s":"iPhone 11","n":"iPhone 11 Pro","sp":"5.8\" Super Retina XDR OLED · Lightning","p":[3700,6500,2500,2900,1700,2400,3200]},
+    {"id":"iphone-11","s":"iPhone 11","n":"iPhone 11","sp":"6.1\" Liquid Retina IPS · Lightning","p":[2900,4900,2400,2700,1600,2200,2900]},
+
+    {"id":"iphone-xs-max","s":"iPhone X / XS / XR","n":"iPhone XS Max","sp":"6.5\" Super Retina OLED · Lightning","p":[3500,5900,2500,2900,1500,2200,2900]},
+    {"id":"iphone-xs","s":"iPhone X / XS / XR","n":"iPhone XS","sp":"5.8\" Super Retina OLED · Lightning","p":[3200,5500,2300,2700,1500,2200,2900]},
+    {"id":"iphone-xr","s":"iPhone X / XS / XR","n":"iPhone XR","sp":"6.1\" Liquid Retina IPS · Lightning","p":[2700,4500,2200,2500,1500,1900,2700]},
+    {"id":"iphone-x","s":"iPhone X / XS / XR","n":"iPhone X","sp":"5.8\" Super Retina OLED · Lightning","p":[2900,4900,2200,2500,1500,1900,2900]}
+  ]
+}</script>
+
+<script id="app-js">(function(){var t=document.getElementById('shell');document.body.insertBefore(t.content.cloneNode(true),t)})();
+
+var S=JSON.parse(document.getElementById('seed').textContent),R=S.R,G=S.G,M=S.M||[];
+var $=function(i){return document.getElementById(i)};
+function fm(n){return Number(n||0).toLocaleString('ru-RU')+' ₽'}
+
+var M_SRV=[
+  ["Переклейка стекла (с сохранением родной матрицы)","При целом изображении и тачскрине · сепаратор 80–85 °C","90–120 мин"],
+  ["Замена дисплейного модуля целиком","Оригинал / проверенный OLED с переносом TrueTone","45–60 мин"],
+  ["Замена аккумулятора","Новая ёмкость 100% · переварка контроллера BMS при необходимости","40–60 мин"],
+  ["Замена заднего стекла / корпуса","Лазерная срезка или сборка в оригинальном корпусе","2–3 часа"],
+  ["Замена разъёма зарядки (нижнего шлейфа)","Решение проблем с зарядкой, микрофоном и циклической перезагрузкой","40–60 мин"],
+  ["Ремонт основной камеры / замена стекла камеры","Устранение пятен, тряски автофокуса или трещин сапфирового стекла","45–60 мин"],
+  ["Сложный ремонт платы / Face ID / после воды","Пайка BGA под микроскопом, поиск КЗ тепловизором","от 2 часов"]
+];
+
+function chips(b,a,cur,fn){
+  b.innerHTML='';
+  a.forEach(function(x){
+    var c=document.createElement('button');
+    c.type='button';c.className='chip';c.textContent=x[1];
+    c.setAttribute('aria-pressed',String(cur===x[0]));
+    c.onclick=function(){fn(x[0])};
+    b.appendChild(c);
+  });
+}
+
+// Главная: чипы быстрого перехода к сериям iPhone X-18
+var SERIES_LIST=['Все серии','iPhone 18','iPhone 17','iPhone 16','iPhone 15','iPhone 14','iPhone 13','iPhone 12','iPhone 11','iPhone X / XS / XR'];
+var curSer='Все серии',curQ='';
+
+function initHomeSeries(){
+  var hs=$('home-series');
+  if(!hs)return;
+  hs.innerHTML='';
+  SERIES_LIST.slice(1).forEach(function(s){
+    var a=document.createElement('a');
+    a.className='chip';
+    a.href='#iphone';
+    a.textContent=s;
+    a.onclick=function(){curSer=s;renderCatalog()};
+    hs.appendChild(a);
+  });
+}
+
+function renderCatalog(){
+  chips($('ser-filter'),SERIES_LIST.map(function(s){return [s,s]}),curSer,function(s){curSer=s;renderCatalog()});
+  var box=$('mcatalog');
+  box.innerHTML='';
+  var q=curQ.trim().toLowerCase();
+  var groups={};
+  M.forEach(function(m){
+    if(curSer!=='Все серии'&&m.s!==curSer)return;
+    if(q&&m.n.toLowerCase().indexOf(q)<0&&m.s.toLowerCase().indexOf(q)<0)return;
+    if(!groups[m.s])groups[m.s]=[];
+    groups[m.s].push(m);
+  });
+  var keys=Object.keys(groups);
+  if(!keys.length){
+    box.innerHTML='<div class="card"><p class="note">По вашему запросу модель не найдена. Попробуйте очистить фильтр.</p></div>';
+    return;
+  }
+  keys.forEach(function(sName){
+    var sb=document.createElement('div');
+    sb.className='ser-block';
+    sb.innerHTML='<div class="ser-title"><h3>Линейка '+sName+'</h3><span class="tag">'+groups[sName].length+' мод.</span></div>';
+    var gr=document.createElement('div');
+    gr.className='mgrid';
+    groups[sName].forEach(function(m){
+      var a=document.createElement('a');
+      a.className='mcard';
+      a.href='#model/'+m.id;
+      a.innerHTML='<span class="tag">'+m.s.toUpperCase()+'</span><b>'+m.n+'</b><span>'+m.sp+'</span><div class="mpr">Ремонт от '+fm(Math.min.apply(null,m.p))+' →</div>';
+      gr.appendChild(a);
+    });
+    sb.appendChild(gr);
+    box.appendChild(sb);
+  });
+}
+
+if($('msearch')){
+  $('msearch').oninput=function(e){curQ=e.target.value;renderCatalog()};
+}
+
+function renderModelPage(id){
+  var m=M.find(function(x){return x.id===id})||M[0];
+  if(!m)return;
+  $('m-crumb').textContent=m.n;
+  $('m-ser-tag').textContent='СЕРИЯ '+m.s.toUpperCase()+' • СЕРВИС SE STORE ЛЮБЕРЦЫ';
+  $('m-title').textContent='Ремонт '+m.n;
+  $('m-subname').textContent=m.n;
+  $('m-desc').textContent='Профессиональный ремонт '+m.n+' в ЖК «Самолёт» (Люберцы). Бесплатная диагностика, сохранение оригинальной матрицы при переклейке стекла и гарантия на все работы.';
+  var sp=$('m-specs');
+  sp.innerHTML='';
+  m.sp.split('·').forEach(function(item){
+    var d=document.createElement('span');
+    d.className='spec';
+    d.innerHTML='<b>•</b> '+item.trim();
+    sp.appendChild(d);
+  });
+
+  // Соседние модели этой же серии
+  var sib=$('m-siblings');
+  sib.innerHTML='';
+  M.filter(function(x){return x.s===m.s}).forEach(function(x){
+    var a=document.createElement('a');
+    a.href='#model/'+x.id;
+    a.className='chip'+(x.id===m.id?' act':'');
+    a.textContent=x.n;
+    sib.appendChild(a);
+  });
+
+  var pt=$('m-prices');
+  pt.innerHTML='';
+  M_SRV.forEach(function(srv,idx){
+    var price=m.p[idx]||2500;
+    var r=document.createElement('div');
+    r.className='prow';
+    r.innerHTML='<div><b>'+srv[0]+'</b><small>'+srv[1]+'</small></div><span class="ptm">⏱ '+srv[2]+'</span><span class="pval">от '+fm(price)+'</span>';
+    var b=document.createElement('button');
+    b.type='button';
+    b.className='btn sm';
+    b.textContent='Записаться';
+    b.onclick=function(){
+      $('rs').value=m.n+' — '+srv[0]+' (от '+fm(price)+')';
+      location.hash='#contacts';
+    };
+    r.appendChild(b);
+    pt.appendChild(r);
+  });
+}
+
+// Универсальный калькулятор
+var dev='iphone',iss=0;
+function calc(){
+  chips($('dv'),Object.keys(R).map(function(k){return[k,R[k][0]]}),dev,function(k){dev=k;iss=0;calc()});
+  var s=$('is');s.innerHTML='';
+  R[dev][1].forEach(function(x,i){
+    var c=document.createElement('button');c.type='button';c.className='chip';
+    c.setAttribute('aria-pressed',String(i===iss));
+    var a=document.createElement('span');a.textContent=x[0];
+    var p=document.createElement('i');p.textContent=x[1];
+    c.appendChild(a);c.appendChild(p);
+    c.onclick=function(){iss=i;calc()};
+    s.appendChild(c);
+  });
+  var v=R[dev][1][iss];$('rp').textContent=v[1];$('rt').textContent='⏱ '+v[2];
+}
+$('book').onclick=function(){var v=R[dev][1][iss];$('rs').value=R[dev][0]+': '+v[0]+' ('+v[1]+')';location.hash='#contacts'};
+document.querySelectorAll('[data-subj]').forEach(function(a){a.onclick=function(){$('rs').value=a.dataset.subj+': '}});
+
+// Витрина магазина
+var cat='Все',cart=[];
+function shop(){
+  var cs=['Все','Смартфоны','Кабели и зарядки','Стёкла и защита','3D-печать и авто'];
+  chips($('ct'),cs.map(function(c){return[c,c]}),cat,function(c){cat=c;shop()});
+  var b=$('pd');b.innerHTML='';
+  G.forEach(function(g,i){
+    if(cat!=='Все'&&g[0]!==cat)return;
+    var e=document.createElement('div');e.className='card prod';
+    e.innerHTML='<div class="ph"></div><h3></h3><p></p><div class="pr"></div>';
+    e.querySelector('.ph').textContent=g[0].slice(0,3).toUpperCase();
+    if(g[5]){
+      var ph=e.querySelector('.ph');ph.textContent='';ph.className='ph pic';
+      var im=document.createElement('img');im.src=g[5];im.alt=g[1];im.loading='lazy';ph.appendChild(im);
+    }
+    e.querySelector('h3').textContent=g[1];
+    e.querySelector('p').textContent=g[2];
+    e.querySelector('.pr').textContent=(g[4]?'от ':'')+fm(g[3]);
+    var t=document.createElement('button');t.type='button';t.className='btn';t.textContent='Забронировать';
+    t.onclick=function(){cart.push(i);bk()};
+    e.appendChild(t);b.appendChild(e);
+  });
+}
+function bk(){
+  $('cc').textContent='Бронь: '+cart.length;
+  var l=$('cl');l.innerHTML='';var sum=0;
+  if(!cart.length){l.innerHTML='<li><span class="note">Пока пусто. Выберите товар на витрине.</span></li>'}
+  cart.forEach(function(i,k){
+    sum+=G[i][3];
+    var li=document.createElement('li');
+    var s=document.createElement('span');s.textContent=G[i][1]+' — '+fm(G[i][3]);
+    var x=document.createElement('button');x.type='button';x.className='x';x.setAttribute('aria-label','Убрать');x.textContent='✕';
+    x.onclick=function(){cart.splice(k,1);bk()};
+    li.appendChild(s);li.appendChild(x);l.appendChild(li);
+  });
+  $('tt').textContent=fm(sum);$('bf').hidden=!cart.length;
+}
+
+$('bf').onsubmit=function(e){
+  e.preventDefault();
+  var items=cart.map(function(i){return '• '+G[i][1]+' ('+fm(G[i][3])+')'}).join('\n');
+  var contact=$('bt').value;
+  var msg='Здравствуйте! Хочу забронировать в SE STORE:\n'+items+'\nКонтакт: '+contact;
+  $('bd').innerHTML='Бронь сформирована! <a href="https://t.me/mysestore?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Нажмите здесь, чтобы отправить список мастеру в Telegram →</a>';
+  cart=[];bk();
+};
+
+$('rf').onsubmit=function(e){
+  e.preventDefault();
+  var text=$('rs').value,contact=$('rt2').value;
+  var msg='Заявка на ремонт в SE STORE:\nУстройство/вопрос: '+text+'\nКонтакт: '+contact;
+  $('rd').innerHTML='Заявка готова! <a href="https://t.me/mysestore?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Отправить напрямую в Telegram (@mysestore) →</a>';
+  e.target.reset();
+};
+
+// Админ-панель с редактированием товаров, услуг и цен моделей iPhone + скачиванием готового HTML
+var ADM=false,WG,WR,WM,CATS=['Смартфоны','Кабели и зарядки','Стёкла и защита','3D-печать и авто'];
+var HEAD="<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<title>SE STORE — ремонт техники, 3D-печать и витрина в Люберцах (ЖК «Самолёт»)</title>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap\" rel=\"stylesheet\">\n";
+
+function mk(t,p,k){var e=document.createElement(t);for(var x in p)e[x]=p[x];(k||[]).forEach(function(c){e.appendChild(c)});return e}
+function fi(v,ph,cb,ty){var i=mk('input',{type:ty||'text',value:v,placeholder:ph,oninput:function(){cb(i.value)}});i.setAttribute('aria-label',ph);return i}
+function xb(fn,l){var b=mk('button',{type:'button',className:'x',textContent:'✕',onclick:fn});b.setAttribute('aria-label',l);return b}
+function ab(t,fn){return mk('p',{},[mk('button',{type:'button',className:'btn o',textContent:t,onclick:fn})])}
+
+function shrinkDataUrl(file){
+  return new Promise(function(res,rej){
+    var im=new Image(),u=URL.createObjectURL(file);
+    im.onload=function(){
+      var k=Math.min(1,700/Math.max(im.width,im.height)),c=document.createElement('canvas');
+      c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);
+      c.getContext('2d').drawImage(im,0,0,c.width,c.height);
+      URL.revokeObjectURL(u);
+      res(c.toDataURL('image/webp',0.82));
+    };
+    im.onerror=function(){rej(new Error('img'))};
+    im.src=u;
+  });
+}
+
+function photoCell(g){
+  var w=mk('div',{className:'pcell'}),th;
+  if(g[5]){th=mk('img',{src:g[5],alt:g[1]||'Фото товара',className:'pth'})}
+  else{th=mk('span',{textContent:'Нет фото',className:'pth'})}
+  w.appendChild(th);
+  var fl=mk('input',{type:'file',accept:'image/*'});fl.hidden=true;
+  var bt=mk('button',{type:'button',className:'x',textContent:g[5]?'Заменить':'+ Фото'});
+  bt.onclick=function(){fl.click()};
+  fl.onchange=async function(){
+    var f=fl.files[0];if(!f)return;
+    bt.textContent='Сжатие…';
+    try{g[5]=await shrinkDataUrl(f);admRender()}catch(e){bt.textContent='Ошибка'}
+  };
+  w.appendChild(fl);w.appendChild(bt);
+  if(g[5])w.appendChild(xb(function(){g[5]='';admRender()},'Убрать фото'));
+  return w;
+}
+
+function admRender(){
+  var box=$('admbox');box.innerHTML='';$('admsave').hidden=!ADM;
+  if(!ADM){admLogin(box);return}
+  $('admhint').textContent='Редактируйте товары, цены на ремонт моделей iPhone X–18 и скачивайте готовый обновлённый файл index.html для хостинга.';
+  if(!WG){
+    WG=JSON.parse(JSON.stringify(G));
+    WR=JSON.parse(JSON.stringify(R));
+    WM=JSON.parse(JSON.stringify(M));
+  }
+  box.appendChild(ab('Выйти из админки',function(){ADM=false;try{sessionStorage.removeItem('se_adm')}catch(x){}admRender()}));
+
+  box.appendChild(mk('h3',{textContent:'1. Товары на витрине'}));
+  WG.forEach(function(g,i){
+    var sel=mk('select',{onchange:function(){g[0]=sel.value}});
+    CATS.forEach(function(c){sel.appendChild(mk('option',{textContent:c,selected:c===g[0]}))});
+    var ot=mk('input',{type:'checkbox',checked:!!g[4],onchange:function(){g[4]=ot.checked?1:0}});
+    box.appendChild(mk('div',{className:'arow'},[
+      photoCell(g),sel,
+      fi(g[1],'Название',function(v){g[1]=v}),
+      fi(g[2],'Описание',function(v){g[2]=v}),
+      fi(g[3],'Цена, ₽',function(v){g[3]=+v},'number'),
+      mk('label',{className:'ck'},[ot,document.createTextNode('от')]),
+      xb(function(){WG.splice(i,1);admRender()},'Удалить товар')
+    ]));
+  });
+  box.appendChild(ab('+ Добавить товар',function(){WG.push([CATS[0],'','',0,0,'']);admRender()}));
+
+  box.appendChild(mk('h3',{textContent:'2. Цены по моделям iPhone (переклейка / дисплей / АКБ)'}));
+  WM.forEach(function(m){
+    box.appendChild(mk('div',{className:'arow srow'},[
+      mk('b',{textContent:m.n}),
+      fi(m.p[0],'Переклейка, ₽',function(v){m.p[0]=+v},'number'),
+      fi(m.p[1],'Дисплей, ₽',function(v){m.p[1]=+v},'number'),
+      fi(m.p[2],'АКБ, ₽',function(v){m.p[2]=+v},'number')
+    ]));
+  });
+}
+
+function build(){
+  var seed=JSON.stringify(S).replace(/</g,'\\u003c');
+  return '<!DOCTYPE html>\n<html lang="ru">\n<head>\n'+HEAD+'<style id="app-css">'+$('app-css').textContent+'</style>\n</head>\n<body>\n<template id="shell">'+$('shell').innerHTML+'</template>\n<script id="seed" type="application/json">'+seed+'<\/script>\n<script id="app-js">'+$('app-js').textContent+'<\/script>\n</body>\n</html>';
+}
+
+function save(){
+  S.G=WG.filter(function(g){return String(g[1]).trim()}).map(function(g){return [g[0],g[1],g[2],+g[3]||0,g[4]?1:0,g[5]||'']});
+  S.M=WM;
+  G=S.G;M=S.M;
+  shop();renderCatalog();
+  var blob=new Blob([build()],{type:'text/html;charset=utf-8'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='index.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  $('admst').textContent='Изменения применены! Готовый файл index.html скачан.';
+}
+$('admsave').onclick=save;
+
+var AS='443f26a955275bae',AH='fc983c0f61e6849f3997c053b19b625411a5256f7f300f1de9832c5ece1b086a',FAIL=0,LOCK=0;
+try{ADM=sessionStorage.getItem('se_adm')==='1'}catch(e){}
+async function sha(s){var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('')}
+
+function admLogin(box){
+  $('admhint').textContent='Введите ваш логин и пароль администратора (или нажмите «Демо-вход» для быстрого редактирования).';
+  var lg=fi('','Логин',function(){}),pw=fi('','Пароль',function(){},'password');
+  var msg=mk('p',{className:'ok'}),bt=mk('button',{type:'submit',className:'btn',textContent:'Войти'});
+  var demo=mk('button',{type:'button',className:'btn o',textContent:'Демо-вход владельца',onclick:function(){ADM=true;admRender()}});
+  var f=mk('form',{},[lg,pw,mk('div',{style:'display:flex;gap:10px;flex-wrap:wrap'},[bt,demo])]);
+  f.style.cssText='display:grid;gap:10px;max-width:420px';
+  f.onsubmit=async function(e){
+    e.preventDefault();
+    if(Date.now()<LOCK){msg.textContent='Подождите минуту.';return}
+    var h=await sha(AS+':'+lg.value.trim()+':'+pw.value);
+    if(h===AH){ADM=true;try{sessionStorage.setItem('se_adm','1')}catch(x){}admRender()}
+    else{FAIL++;if(FAIL>=5){LOCK=Date.now()+60000;FAIL=0}msg.textContent='Неверный логин или пароль.'}
+  };
+  box.appendChild(f);box.appendChild(msg);
+}
+
+var P=['home','iphone','model','repair','shop','lab','contacts','admin'];
+function route(){
+  var raw=(location.hash||'#home').slice(1);
+  var parts=raw.split('/');
+  var h=parts[0];
+  if(P.indexOf(h)<0)h='home';
+  P.forEach(function(p){if($('pg-'+p))$('pg-'+p).hidden=p!==h});
+  var navHash=h==='model'?'#iphone':'#'+h;
+  document.querySelectorAll('#nav a').forEach(function(a){
+    if(a.getAttribute('href')===navHash)a.setAttribute('aria-current','page');
+    else a.removeAttribute('aria-current');
+  });
+  if(h==='model')renderModelPage(parts[1]);
+  if(h==='admin')admRender();
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);
+initHomeSeries();
+renderCatalog();
+calc();
+shop();
+bk();
+route();
+</script>
+</body>
+</html>
