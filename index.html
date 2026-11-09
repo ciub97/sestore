@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 156' fill='none'%3E%3Crect x='6' y='6' width='108' height='144' rx='22' fill='%23060a17' stroke='%23008CFF' stroke-width='10'/%3E%3Cline x1='45' y1='20' x2='75' y2='20' stroke='%23008CFF' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='82' r='28' fill='%23008CFF'/%3E%3Cpath d='M34 106 L64 76' stroke='%23060a17' stroke-width='11' stroke-linecap='round'/%3E%3Ccircle cx='67' cy='73' r='11' fill='%23060a17'/%3E%3C/svg%3E">
-<title>SE STORE — ремонт техники, 3D-печать и витрина в Люберцах (ЖК «Самолёт»)</title>
+<title>SE STORE — ремонт техники, 3D-печать и копицентр в Люберцах (ЖК «Самолёт»)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@ html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:10
 body{margin:0;background:var(--bg);background-image:radial-gradient(circle at 15% 5%,var(--glow),transparent 40%),radial-gradient(circle at 90% 30%,var(--glow),transparent 40%);background-attachment:fixed;color:var(--ink);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
 a{color:var(--cyan)}
-.w{max-width:1080px;margin:0 auto;padding:0 18px}
+.w{max-width:1120px;margin:0 auto;padding:0 18px}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;flex-wrap:wrap;padding-block:8px}
 .logo{display:inline-flex;align-items:center;gap:11px;line-height:1;text-decoration:none;color:#008cff;font-weight:900;user-select:none}
@@ -27,7 +27,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:va
 .logo span{font-size:11.5px;letter-spacing:.11em;color:#0095ff;font-weight:800;margin-top:3px}
 .logo-svg{width:38px;height:48px;flex:none;display:block;filter:drop-shadow(0 0 10px var(--glow))}
 nav{display:flex;gap:4px;flex-wrap:wrap}
-nav a{padding:8px 13px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:700;font-size:14px}
+nav a{padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:700;font-size:14px}
 nav a[aria-current="page"]{background:var(--blue);color:#fff}
 nav a:hover{color:var(--ink)}
 .cartlink{font:700 13px "JetBrains Mono",monospace;color:var(--cyan);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 12px}
@@ -38,7 +38,7 @@ nav a:hover{color:var(--ink)}
 h1{font-size:clamp(32px,6vw,58px);line-height:1.05;font-weight:900;letter-spacing:.01em;margin:0 0 16px;text-transform:uppercase}
 h1 em{font-style:normal;color:var(--cyan)}
 h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin:0 0 12px;letter-spacing:-.01em}
-.lead{color:var(--muted);max-width:60ch;margin:0 0 22px}
+.lead{color:var(--muted);max-width:65ch;margin:0 0 22px}
 .pg{padding:40px 0 20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
 .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -51,27 +51,27 @@ h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin:0 0 12px;letter-spacing
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
 .chip{padding:10px 15px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 14px Inter,system-ui,sans-serif;cursor:pointer;text-align:left;text-decoration:none}
 .chip[aria-pressed="true"],.chip.act{background:var(--blue);border-color:var(--cyan);color:#fff}
-.iss{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.iss .chip{display:flex;justify-content:space-between;gap:10px}
-.iss .chip i{font:700 12px "JetBrains Mono",monospace;font-style:normal;color:var(--cyan);white-space:nowrap}
-.iss .chip[aria-pressed="true"] i{color:#fff}
-.out{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:14px}
-.pr{font-size:32px;font-weight:900;color:var(--cyan)}
-.time{font:600 13px "JetBrains Mono",monospace;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:5px 10px}
 .prod{display:flex;flex-direction:column;gap:8px;padding:16px}
 .ph{height:90px;border-radius:12px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,var(--glow) 0 8px,transparent 8px 16px);display:grid;place-items:center;font:700 12px "JetBrains Mono",monospace;color:var(--cyan)}
+.ph.pic{height:140px;padding:0;overflow:hidden;background:none}
+.ph.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.pcell{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.pth{width:56px;height:56px;border-radius:10px;object-fit:cover;border:1px solid var(--line);display:grid;place-items:center;font-size:10px;color:var(--muted);text-align:center}
 .prod h3{margin:0;font-size:15px;line-height:1.3}.prod p{margin:0;font-size:13px;color:var(--muted);flex:1}
-.prod .pr{font-size:20px}.prod .btn{padding:10px 12px;font-size:14px}
+.prod .pr{font-size:20px;font-weight:900;color:var(--cyan)}.prod .btn{padding:10px 12px;font-size:14px}
 ul.cl{list-style:none;padding:0;margin:0}
 ul.cl li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
 .note{font-size:13px;color:var(--muted);margin:10px 0 0}
-label.f{display:block;font-weight:700;font-size:14px;margin:12px 0 6px}
-input[type=text],input[type=tel],input[type=search],input[type=number],input[type=password],textarea,select{width:100%;font:500 16px Inter,system-ui,sans-serif;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+label.f{display:block;font-weight:700;font-size:13px;margin:10px 0 5px;color:var(--ink)}
+input[type=text],input[type=tel],input[type=search],input[type=number],input[type=password],textarea,select{width:100%;font:500 15px Inter,system-ui,sans-serif;padding:11px 13px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 .ck{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--muted);margin:12px 0}
 .ok{margin-top:12px;font-weight:700;color:var(--cyan)}
-.x{background:none;border:0;color:var(--muted);font-size:18px;cursor:pointer}
+.x{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);border-radius:8px;color:#fca5a5;font-size:13px;font-weight:700;padding:6px 10px;cursor:pointer}
+.x:hover{background:rgba(239,68,68,.25)}
 footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-align:center;font-size:13px;color:var(--muted)}
 [hidden]{display:none!important}
+
+/* Анимированный X-Ray телефон на главной */
 .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--cyan);font:700 13px Inter,system-ui,sans-serif;margin-bottom:18px}
 .badge i{width:9px;height:9px;border-radius:50%;background:var(--cyan);flex:none}
@@ -83,6 +83,7 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
 .feat span{color:var(--muted);font-size:14px}
 .btn.big{display:block;text-align:center;font-size:17px;padding:17px 22px;max-width:520px}
 .direct{color:var(--muted);font-size:14px}
+
 .xray{justify-self:center;position:relative;width:250px;height:460px;border:10px solid var(--cyan);border-radius:46px;box-shadow:0 0 36px color-mix(in srgb,var(--cyan) 55%,transparent),inset 0 0 22px var(--glow);display:grid;grid-template-columns:44% 56%;overflow:hidden;background:#060a17}
 .xl{background:linear-gradient(160deg,#3f5594,#1b2a55);padding:10px;position:relative}
 .cam{width:62px;height:62px;border-radius:14px;background:rgba(255,255,255,.14);display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px}
@@ -103,45 +104,50 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
 .scan{position:absolute;left:0;right:0;top:0;height:46px;background:linear-gradient(transparent,rgba(0,210,255,.22),transparent);animation:sc 4.5s linear infinite;pointer-events:none}
 @keyframes sc{from{transform:translateY(-100%)}to{transform:translateY(480px)}}
 @keyframes pl{0%,100%{opacity:.4}50%{opacity:1}}
-.ph.pic{height:140px;padding:0;overflow:hidden;background:none}
-.ph.pic img{width:100%;height:100%;object-fit:cover;display:block}
-.pcell{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
-.pth{width:56px;height:56px;border-radius:10px;object-fit:cover;border:1px solid var(--line);display:grid;place-items:center;font-size:10px;color:var(--muted);text-align:center}
-.pcell .x{font-size:12px;min-height:0;min-width:0;padding:2px 0;color:var(--cyan)}
-.arow{display:grid;grid-template-columns:96px 150px 1.3fr 1.3fr 110px auto auto;gap:8px;align-items:center;margin:8px 0}
-.arow.srow{grid-template-columns:1.6fr 1fr 1fr auto}
-.arow .ck{margin:0}
 
-/* Стили каталога и страниц моделей iPhone X–18 */
-.ser-block{margin-bottom:28px}
-.ser-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-.ser-title h3{margin:0;font-size:20px;font-weight:800}
-.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.mcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:6px;transition:transform .18s,border-color .18s,box-shadow .18s}
-.mcard:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 8px 24px var(--glow)}
-.mcard b{font-size:16px;font-weight:800}
-.mcard span{font-size:12px;color:var(--muted)}
-.mcard .mpr{margin-top:6px;font:700 13px "JetBrains Mono",monospace;color:var(--cyan)}
-.ptable{display:grid;gap:10px;margin-top:14px}
-.prow{display:grid;grid-template-columns:1.5fr auto auto auto;gap:14px;align-items:center;padding:14px 16px;background:var(--bg);border:1px solid var(--line);border-radius:14px}
-.prow b{font-size:15px}
-.prow small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.subnav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.subnav a{padding:10px 18px;border-radius:12px;background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:700;font-size:14px}
+.subnav a.act,.subnav a:hover{background:var(--blue);border-color:var(--cyan);color:#fff}
+
+.ptable{display:grid;gap:12px;margin-top:16px}
+.prow{display:grid;grid-template-columns:2fr auto auto auto;gap:14px;align-items:center;padding:16px;background:var(--bg);border:1px solid var(--line);border-radius:14px}
+.prow b{font-size:16px}
+.prow small{display:block;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.4}
 .prow .pval{font:800 17px "JetBrains Mono",monospace;color:var(--cyan);white-space:nowrap}
-.prow .ptm{font:600 12px "JetBrains Mono",monospace;color:var(--muted);background:var(--card);padding:5px 9px;border-radius:8px;border:1px solid var(--line);white-space:nowrap}
-.crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:16px}
-.crumbs a{text-decoration:none;font-weight:600}
-.specs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
-.spec{font:600 12px "JetBrains Mono",monospace;padding:6px 11px;border-radius:9px;background:var(--card);border:1px solid var(--line);color:var(--muted)}
-.spec b{color:var(--ink)}
+.prow .ptm{font:600 12px "JetBrains Mono",monospace;color:var(--muted);background:var(--card);padding:6px 10px;border-radius:8px;border:1px solid var(--line);white-space:nowrap}
+
+.news-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px;position:relative}
+.news-card .date{font:700 11px "JetBrains Mono",monospace;color:var(--cyan);margin-bottom:6px;display:block}
+.news-card h3{margin:0 0 8px;font-size:18px}
+.news-card p{margin:0;color:var(--muted);font-size:14px}
+
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+.review-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.review-stars{color:#f59e0b;font-size:16px;margin-bottom:6px}
+.review-author{font-weight:800;font-size:14px;margin:0 0 4px}
+.review-text{color:var(--muted);font-size:13px;margin:0}
+
+.map-box{margin-top:30px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card);padding:22px}
+
+/* Админка по категориям (аккордеоны + фильтр категорий) */
+.adm-bar{position:sticky;top:68px;z-index:9;background:rgba(6,10,23,.92);backdrop-filter:blur(10px);padding:12px 0;margin-bottom:18px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.adm-cat{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:18px;overflow:hidden}
+.adm-cat > summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:800;font-size:18px;color:var(--cyan);display:flex;align-items:center;justify-content:space-between;user-select:none;background:rgba(255,255,255,.02)}
+.adm-cat > summary::-webkit-details-marker{display:none}
+.adm-cat > summary::after{content:"▼";font-size:12px;color:var(--muted);transition:transform .2s}
+.adm-cat[open] > summary::after{transform:rotate(180deg)}
+.adm-cat-body{padding:18px 22px;border-top:1px solid var(--line);display:grid;gap:14px}
+.adm-item{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px}
+.adm-grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.adm-grid3{display:grid;grid-template-columns:1.4fr 1fr .8fr;gap:8px}
+.adm-srv-row{display:grid;grid-template-columns:1.3fr .9fr .7fr 1.6fr auto;gap:8px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--line)}
+.arow{display:grid;grid-template-columns:76px 140px 1.2fr 1.2fr 105px auto auto;gap:8px;align-items:center;padding:10px;background:var(--bg);border:1px solid var(--line);border-radius:12px}
 
 @media (max-width:860px){
-  .g4,.mgrid{grid-template-columns:repeat(2,1fr)}
-  .g3,.g2,.hero{grid-template-columns:1fr}
-  .iss{grid-template-columns:1fr}
-  .xray{width:220px;height:400px}
-  .arow,.arow.srow{grid-template-columns:1fr;padding:10px 0;border-bottom:1px solid var(--line)}
-  .prow{grid-template-columns:1fr auto;gap:8px}
-  .prow .ptm{grid-column:1;justify-self:start}
+  .g4,.g3,.reviews-grid,.adm-grid2,.adm-grid3{grid-template-columns:1fr}
+  .g2,.hero{grid-template-columns:1fr}
+  .prow,.adm-srv-row,.arow{grid-template-columns:1fr;gap:8px}
+  .prow .ptm{justify-self:start}
 }
 @media (max-width:640px){
   body{padding-bottom:84px;font-size:15px}
@@ -153,20 +159,15 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
   .pg{padding:24px 0 10px}
   h2{font-size:24px}
   .card{padding:16px;border-radius:16px}
-  #dv{display:grid;grid-template-columns:1fr 1fr}
-  #ct{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-14px;padding-inline:14px}
-  #ct .chip{flex:none;white-space:nowrap}
-  #pd,#pg-home .g4,.mgrid{grid-template-columns:1fr 1fr;gap:10px}
-  .prod{padding:12px}
-  .prod h3{font-size:14px}
-  .prod .btn{padding:10px 8px;font-size:13px}
-  .ph{height:64px}
-  .ph.pic{height:110px}
+  .adm-cat > summary{padding:14px 16px;font-size:16px}
+  .adm-cat-body{padding:14px 16px}
 }
 </style>
 </head>
 <body>
-<template id="shell"><header><div class="w hd">
+<template id="shell">
+<header>
+<div class="w hd">
 <a class="logo" href="#home" aria-label="SE STORE">
   <span class="logo-txt"><b>SE</b><span>STORE</span></span>
   <svg class="logo-svg" viewBox="0 0 120 156" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -191,28 +192,31 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
   </svg>
 </a>
 <nav id="nav" aria-label="Разделы">
-<a href="#home">Главная</a><a href="#iphone">Модели iPhone</a><a href="#repair">Калькулятор</a><a href="#shop">Магазин</a><a href="#lab">3D и печать</a><a href="#contacts">Контакты</a><a href="#admin" id="adm" hidden="">Админ</a>
+<a href="#home">Главная</a>
+<a href="#service">Сервис</a>
+<a href="#shop">Магазин</a>
+<a href="#copystore">Копицентр</a>
+<a href="#contacts">Контакты</a>
+<a href="#admin" id="adm" hidden="">Админ</a>
 </nav>
 <a class="cartlink" href="#shop" id="cc" aria-label="Корзина">Бронь: 0</a>
-</div></header>
+</div>
+</header>
 
 <main class="w">
+<!-- ГЛАВНАЯ СТРАНИЦА -->
 <section class="pg" id="pg-home">
 <div class="hero">
 <div>
-<span class="badge"><i></i>Сервисный центр и магазин в ЖК «Самолёт» (Люберцы)</span>
-<h1><span class="hbox">Ремонт</span><br><em>телефонов и ПК</em></h1>
-<ul class="feat">
-<li><b>Замена экрана и переклейка стекол</b><span>Сохраняем родную оригинальную матрицу без ошибок и потери TrueTone</span></li>
-<li><b>Замена аккумулятора</b><span>Устанавливаем новый аккумулятор (с переносом контроллера при необходимости)</span></li>
-<li><b>Замена разъемов и сложная BGA-пайка</b><span>Ремонт материнских плат, цепей питания, контроллеров зарядки и аудиокодеков</span></li>
-<li><b>Чистка, профилактика и апгрейд</b><span>Восстановление после воды, чистка ноутбуков и консолей с заменой термоинтерфейсов</span></li>
-</ul>
+<span class="badge"><i></i><span id="h-badge">Сервисный центр, магазин и копицентр в ЖК «Самолёт» (Люберцы)</span></span>
+<h1><span class="hbox" id="h-top">Ремонт</span><br><em id="h-bot">телефонов и ПК</em></h1>
+<p class="lead" id="h-desc"></p>
+<ul class="feat" id="h-feats"></ul>
 <div style="display:flex;flex-wrap:wrap;gap:10px;max-width:520px">
-  <a class="btn big" style="flex:1" href="#iphone">Выбрать модель iPhone (X – 18) →</a>
-  <a class="btn o" href="#shop">Витрина магазина</a>
+  <a class="btn big" style="flex:1" href="#service" id="h-btn1">Выбрать модель ремонта →</a>
+  <a class="btn o" href="#shop" id="h-btn2">Витрина магазина</a>
 </div>
-<p class="direct">Или напишите напрямую мастеру: <a href="https://t.me/mysestore" target="_blank" rel="noopener">Telegram @mysestore</a> / <a href="tel:+79624623726">+7 (962) 462-37-26</a></p>
+<p class="direct">Связь с мастером: <a id="h-tg" href="https://t.me/mysestore" target="_blank" rel="noopener">Telegram @mysestore</a> / <a id="h-tel" href="tel:+79155505514">+7 (915) 550-55-14</a></p>
 </div>
 <div class="xray" aria-hidden="true">
 <div class="xl"><div class="cam"><i class="lens"></i><i class="lens"></i><i class="lens"></i><i class="lens"></i></div><span class="xlab">SE LAB • X-RAY</span></div>
@@ -227,461 +231,1590 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
 </div>
 </div>
 
-<div class="card" style="margin-top:32px">
+<!-- Свои кастомные модули из админки -->
+<div id="custom-modules" style="margin-top:28px;display:grid;gap:14px"></div>
+
+<!-- Новости и акции -->
+<div style="margin-top:34px">
+  <h2 style="margin:0 0 14px;font-size:24px">🔥 Акции и новости SE STORE</h2>
+  <div id="home-news"></div>
+</div>
+
+<!-- 4 плитки разделов -->
+<div class="g4" id="home-tiles" style="margin-top:26px"></div>
+
+<!-- Отзывы с Яндекс Карт -->
+<div style="margin-top:36px">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px">
-    <div>
-      <span class="tag">БЫСТРЫЙ ПЕРЕХОД ПО СЕРИЯМ</span>
-      <h3 style="margin:4px 0 0">Выберите свой iPhone — от X до 18 Pro Max</h3>
-    </div>
-    <a class="btn sm o" href="#iphone">Все 34 модели →</a>
+    <h2 style="margin:0;font-size:24px">⭐ Отзывы клиентов (Яндекс Карты)</h2>
+    <a class="btn sm o" id="rev-map-link" href="https://yandex.ru/maps" target="_blank" rel="noopener">Все отзывы на Яндекс Картах →</a>
   </div>
-  <div class="chips" id="home-series"></div>
+  <div class="reviews-grid" id="home-reviews"></div>
 </div>
 
-<div class="g4" style="margin-top:20px">
-<a class="card tile" href="#iphone"><span class="tag">01 • X — 18 PRO MAX</span><h3>Ремонт iPhone</h3><p>Отдельные страницы и прайс под каждую модель</p></a>
-<a class="card tile" href="#shop"><span class="tag">02 • ВИТРИНА</span><h3>Магазин</h3><p>Кабели, стёкла, чехлы, проверенные телефоны</p></a>
-<a class="card tile" href="#lab"><span class="tag">03 • 3–4 ₽/Г</span><h3>3D и печать</h3><p>3D-детали по образцу, документы А4, фото 10×15</p></a>
-<a class="card tile" href="#contacts"><span class="tag">04 • ЛЮБЕРЦЫ</span><h3>Контакты</h3><p>ЖК «Самолёт», график и быстрая связь</p></a>
+<!-- Блок Мы находимся + точка на Яндекс Картах -->
+<div class="map-box">
+  <h3 id="m-box-title" style="margin-top:0">📍 Мы находимся в Люберцах (ЖК «Самолёт»)</h3>
+  <p class="note" id="m-box-sched" style="margin-bottom:14px"></p>
+  <div id="m-box-frame" style="width:100%;min-height:280px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#101a30;display:grid;place-items:center"></div>
 </div>
-<div class="card" style="margin-top:20px"><b>График работы:</b> вторник — суббота. Воскресенье и понедельник — выходные.</div>
 </section>
 
-<!-- Каталог всех моделей iPhone от X до 18 -->
-<section class="pg" id="pg-iphone" hidden="">
-  <h2>Ремонт iPhone — выберите модель (X – 18)</h2>
-  <p class="lead">Для каждой модели от iPhone X до линейки iPhone 18 создана отдельная страница с точными ценами на переклейку стекла, замену экрана, аккумулятора, корпуса и пайку платы.</p>
-  <div class="card" style="margin-bottom:22px">
-    <label class="f" for="msearch" style="margin-top:0">Быстрый поиск модели</label>
-    <input id="msearch" type="search" placeholder="Например: iPhone 13 Pro, 15 Pro Max, 18 или XR...">
-    <div class="chips" id="ser-filter" style="margin-bottom:0"></div>
+<!-- РАЗДЕЛ СЕРВИС -->
+<section class="pg" id="pg-service" hidden="">
+  <h2>Сервисный центр SE STORE</h2>
+  <p class="lead">Выберите категорию устройства: ремонт Apple iPhone, смартфонов Android, компьютеров/ноутбуков или игровых приставок.</p>
+  <div class="subnav" id="srv-tabs">
+    <a href="#service/apple" class="act" data-st="apple">Ремонт Apple</a>
+    <a href="#service/android" data-st="android">Ремонт Android</a>
+    <a href="#service/pc" data-st="pc">Ремонт ПК</a>
+    <a href="#service/console" data-st="console">Ремонт Игровых Приставок</a>
   </div>
-  <div id="mcatalog"></div>
+  <div id="srv-content"></div>
 </section>
 
-<!-- Индивидуальная страница конкретной модели iPhone -->
-<section class="pg" id="pg-model" hidden="">
-  <div class="crumbs">
-    <a href="#home">Главная</a> <span>/</span>
-    <a href="#iphone">Модели iPhone</a> <span>/</span>
-    <span id="m-crumb">iPhone</span>
+<!-- СТРАНИЦА КОНКРЕТНОЙ МОДЕЛИ APPLE ИЛИ СЕРИИ ANDROID -->
+<section class="pg" id="pg-model-detail" hidden="">
+  <div class="crumbs" style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:16px">
+    <a href="#service" id="md-back">← Назад в Сервис</a> <span>/</span> <span id="md-crumb-title">Модель</span>
   </div>
   <div class="card">
-    <span class="tag" id="m-ser-tag">СЕРИЯ IPHONE</span>
-    <h2 id="m-title" style="margin-top:4px">Ремонт iPhone</h2>
-    <p class="lead" id="m-desc" style="margin-bottom:12px"></p>
-    <div class="specs" id="m-specs"></div>
-    <div class="chips" id="m-siblings"></div>
-  </div>
-
-  <div class="card" style="margin-top:16px">
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-      <h3 style="margin:0">Прайс-лист на ремонт <span id="m-subname"></span></h3>
-      <span class="time">Диагностика — 0 ₽</span>
-    </div>
-    <div class="ptable" id="m-prices"></div>
-  </div>
-
-  <div class="g3" style="margin-top:16px">
-    <div class="card">
-      <span class="tag">СЕПАРАТОР 80–85 °C</span>
-      <h3>Сохраняем родной OLED</h3>
-      <p class="note">Если матрица цела и нет пятен/полос, аккуратно срезаем разбитое стекло и переклеиваем новое по заводской технологии без ошибок в настройках.</p>
-    </div>
-    <div class="card">
-      <span class="tag">SUNSHINE SPOT WELDER</span>
-      <h3>АКБ без ошибки в iOS</h3>
-      <p class="note">Точечная переварка оригинального шлейфа контроллера BMS при замене элемента питания — телефон показывает 100% ёмкости.</p>
-    </div>
-    <div class="card">
-      <span class="tag">МИКРОСКОП И ТЕПЛОВИЗОР</span>
-      <h3>Сложный ремонт плат</h3>
-      <p class="note">Устраняем короткие замыкания, циклические перезагрузки (panic full), восстанавливаем Face ID, аудиокодеки и цепи зарядки.</p>
-    </div>
+    <span class="tag" id="md-tag">ПРАЙС-ЛИСТ НА РЕМОНТ</span>
+    <h2 id="md-title" style="margin-top:4px">Ремонт устройства</h2>
+    <p class="lead" id="md-desc" style="margin-bottom:12px"></p>
+    <div class="chips" id="md-siblings"></div>
+    <div class="ptable" id="md-prices"></div>
   </div>
 </section>
 
-<section class="pg" id="pg-repair" hidden="">
-<h2>Универсальный калькулятор ремонта</h2>
-<p class="lead">Быстрый расчёт для смартфонов Android, ноутбуков, игровых приставок и iPhone. Диагностика бесплатная.</p>
-<div class="card">
-<div class="tag">1. УСТРОЙСТВО</div><div class="chips" id="dv" role="group" aria-label="Устройство"></div>
-<div class="tag">2. ЧТО СЛУЧИЛОСЬ</div><div class="iss" id="is" style="margin-top:10px"></div>
-<div class="out" aria-live="polite"><span class="pr" id="rp"></span><span class="time" id="rt"></span><button class="btn" id="book" type="button">Записаться на ремонт</button><a class="btn o" href="#iphone">Прайс по моделям iPhone X–18</a></div>
-</div>
-</section>
-
+<!-- РАЗДЕЛ МАГАЗИН -->
 <section class="pg" id="pg-shop" hidden="">
-<h2>Витрина SE STORE</h2>
-<p class="lead">Проверенные аксессуары, запчасти, 3D-изделия и техника в Люберцах (ЖК «Самолёт»). Добавьте в бронь — оплата при получении.</p>
-<div class="chips" id="ct" role="group" aria-label="Категории"></div>
-<div class="g4" id="pd"></div>
-<div class="card" style="margin-top:20px">
-<h3 style="margin:0 0 6px">Ваша бронь</h3>
-<ul class="cl" id="cl"></ul>
-<p><b>К оплате при получении:</b> <span class="pr" id="tt" style="font-size:22px">0 ₽</span></p>
-<form id="bf" hidden="">
-<label class="f" for="bt">Ваш телефон или @username в Telegram</label><input id="bt" type="text" required="" placeholder="+7 (999) 000-00-00 или @username">
-<label class="ck"><input type="checkbox" required="" checked> Согласен на обработку персональных данных</label>
-<div style="display:flex;flex-wrap:wrap;gap:10px">
-  <button class="btn" type="submit">Отправить бронь в Telegram</button>
-</div>
-</form>
-<p class="ok" id="bd" aria-live="polite"></p>
-</div>
+  <h2>Витрина магазина SE STORE</h2>
+  <p class="lead">Проверенные аксессуары, кабели, защитные стёкла, 3D-изделия и техника в ЖК «Самолёт» (Люберцы). Добавьте в бронь — оплата при получении.</p>
+  <div class="chips" id="ct" role="group" aria-label="Категории"></div>
+  <div class="g4" id="pd"></div>
+  <div class="card" style="margin-top:20px">
+    <h3 style="margin:0 0 6px">Ваша бронь</h3>
+    <ul class="cl" id="cl"></ul>
+    <p><b>К оплате при получении:</b> <span class="pr" id="tt" style="font-size:22px">0 ₽</span></p>
+    <form id="bf" hidden="">
+      <label class="f" for="bt">Ваш телефон или @username в Telegram</label><input id="bt" type="text" required="" placeholder="+7 (999) 000-00-00 или @username">
+      <label class="ck"><input type="checkbox" required="" checked> Согласен на обработку персональных данных</label>
+      <button class="btn" type="submit">Отправить бронь в Telegram</button>
+    </form>
+    <p class="ok" id="bd" aria-live="polite"></p>
+  </div>
 </section>
 
-<section class="pg" id="pg-lab" hidden="">
-<h2>Больше, чем ремонт телефонов</h2>
-<p class="lead">Инженерная мастерская, 3D-печать и полиграфия в ЖК «Самолёт».</p>
-<div class="g3">
-<div class="card"><span class="tag">3–4 ₽ / ГРАММ</span><h3>3D-печать на заказ</h3><p class="note">Шестерни, клипсы, переходники Eikosha в дефлектор авто, корпуса, подставки. Пластики PLA, PETG, ABS, TPU. Печать по вашей STL-модели или образцу.</p><p><a class="btn o" href="#contacts" data-subj="3D-печать">Заказать 3D-печать</a></p></div>
-<div class="card"><span class="tag">ДОКУМЕНТЫ И ФОТО</span><h3>Печать и копицентр</h3><p class="note">Чёрно-белая и цветная печать А4, двухсторонняя печать, ксерокопия, печать на фотобумаге А4 и фото 10×15. Файлы можно прислать в Telegram.</p><p><a class="btn o" href="#contacts" data-subj="Печать документов / фото">Отправить файл</a></p></div>
-<div class="card"><span class="tag">BGA И MICRO-LAB</span><h3>Сложная пайка плат</h3><p class="note">Тепловизионный поиск КЗ, реболл BGA-чипов, восстановление сгнивших дорожек под микроскопом, ремонт ноутбуков и видеокарт.</p><p><a class="btn o" href="#contacts" data-subj="Сложный ремонт платы">Консультация мастера</a></p></div>
-</div>
+<!-- РАЗДЕЛ КОПИЦЕНТР -->
+<section class="pg" id="pg-copystore" hidden="">
+  <h2>Копицентр и 3D-печать в ЖК «Самолёт»</h2>
+  <p class="lead">Ксерокопия и печать документов А4, печать фотографий и 3D-печать функциональных деталей по образцу или модели.</p>
+  <div class="g2" id="copy-services"></div>
+  <div class="card" style="margin-top:20px">
+    <h3>Отправить документ или фото в печать через Telegram</h3>
+    <p class="note">Пришлите файл PDF, DOCX, JPG или STL-модель в наш Telegram — подготовим к вашему приходу без очереди.</p>
+    <p><a class="btn" id="copy-tg-btn" href="https://t.me/mysestore" target="_blank" rel="noopener">Отправить файл в Telegram →</a></p>
+  </div>
 </section>
 
+<!-- РАЗДЕЛ КОНТАКТЫ -->
 <section class="pg" id="pg-contacts" hidden="">
-<h2>Ждём вас в SE STORE</h2>
-<div class="g2">
-<div class="card">
-<p><span class="tag">АДРЕС</span><br>Московская обл., г. Люберцы, ЖК «Самолёт»</p>
-<p><span class="tag">ГРАФИК РАБОТЫ</span><br>Вторник — суббота. Воскресенье и понедельник — выходные.</p>
-<p><span class="tag">ПРЯМАЯ СВЯЗЬ С МАСТЕРОМ</span><br><a href="tel:+79624623726">+7 (962) 462-37-26</a><br><a href="https://t.me/mysestore" target="_blank" rel="noopener">Telegram: @mysestore</a></p>
-<p class="note">Модульные ремонты (дисплей, переклейка стекла, аккумулятор, разъём, чистка) выполняем в день обращения.</p>
-</div>
-<div class="card">
-<h3 style="margin:0">Оставить заявку мастеру</h3>
-<form id="rf">
-<label class="f" for="rs">Модель устройства и неисправность</label><textarea id="rs" rows="3" required="" placeholder="Например: iPhone 15 Pro, переклейка стекла"></textarea>
-<label class="f" for="rt2">Ваш телефон или Telegram</label><input id="rt2" type="text" required="" placeholder="+7 (999) ...">
-<label class="ck"><input type="checkbox" required="" checked> Согласен на обработку персональных данных</label>
-<button class="btn" type="submit">Отправить заявку в Telegram</button>
-</form>
-<p class="ok" id="rd" aria-live="polite"></p>
-</div>
-</div>
+  <h2>Контакты SE STORE</h2>
+  <div class="g2">
+    <div class="card">
+      <p><span class="tag">АДРЕС</span><br><span id="c-addr">Московская обл., г. Люберцы, ЖК «Самолёт»</span></p>
+      <p><span class="tag">ГРАФИК РАБОТЫ</span><br><span id="c-sched">Понедельник — Суббота с 10:00 до 21:00</span></p>
+      <p><span class="tag">ПРЯМАЯ СВЯЗЬ С МАСТЕРОМ</span><br><a id="c-tel" href="tel:+79155505514">+7 (915) 550-55-14</a><br><a id="c-tg" href="https://t.me/mysestore" target="_blank" rel="noopener">Telegram: @mysestore</a></p>
+      <p class="note">Типовые ремонты (замена дисплея, аккумулятора, крышки, чистка) выполняем в день обращения.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin:0">Оставить заявку мастеру</h3>
+      <form id="rf">
+        <label class="f" for="rs">Устройство и неисправность</label><textarea id="rs" rows="3" required="" placeholder="Например: iPhone 15 Pro, разбили дисплей"></textarea>
+        <label class="f" for="rt2">Ваш телефон или Telegram</label><input id="rt2" type="text" required="" placeholder="+7 (999) ...">
+        <label class="ck"><input type="checkbox" required="" checked> Согласен на обработку персональных данных</label>
+        <button class="btn" type="submit">Отправить заявку в Telegram</button>
+      </form>
+      <p class="ok" id="rd" aria-live="polite"></p>
+    </div>
+  </div>
 </section>
 
+<!-- АДМИН-ПАНЕЛЬ -->
 <section class="pg" id="pg-admin" hidden="">
-<h2>Админ-панель SE STORE</h2>
-<p class="lead" id="admhint">Управление витриной товаров, услугами и скачивание готового файла сайта.</p>
-<div id="admbox"></div>
-<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
-  <button class="btn" id="admsave" type="button" hidden="">Скачать обновлённый index.html</button>
-</div>
-<p class="ok" id="admst" aria-live="polite"></p>
+  <h2>Панель управления сайтом SE STORE</h2>
+  <p class="lead" id="admhint">Все настройки, тексты, модули, прайсы сервиса, витрина магазина и услуги копицентра разбиты по удобным категориям на одной странице.</p>
+  <div id="admbox"></div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
+    <button class="btn" id="admsave" type="button">💾 Применить и скачать готовый index.html</button>
+    <a class="btn o" href="#home">Вернуться на главную</a>
+  </div>
+  <p class="ok" id="admst" aria-live="polite"></p>
 </section>
 </main>
 
-<footer><div class="w"><span id="secret-adm" style="cursor:default;user-select:none">© 2026 SE STORE</span> (се-стор.рф), г. Люберцы, ЖК «Самолёт». Ремонт электроники, 3D-печать, копицентр и магазин аксессуаров.</div></footer>
+<footer><div class="w"><span id="secret-adm" style="cursor:pointer;user-select:none" title="Нажмите 5 раз для входа в админку">© 2026 SE STORE</span> <span id="f-txt">(се-стор.рф), г. Люберцы, ЖК «Самолёт». Ремонт электроники, 3D-печать, копицентр и магазин аксессуаров.</span></div></footer>
 </template>
 
-<script id="seed" type="application/json">{
-  "R": {
-    "iphone": ["iPhone / iPad", [
-      ["Замена дисплея / переклейка стекла", "от 2 900 ₽", "45–90 мин"],
-      ["Замена аккумулятора", "от 2 200 ₽", "40–60 мин"],
-      ["Замена разъёма зарядки / чистка динамиков", "от 1 500 ₽", "30–60 мин"],
-      ["Сложный ремонт платы / FaceID / после воды", "от 3 500 ₽", "от 2 часов"]
-    ]],
-    "android": ["Android", [
-      ["Замена экранного модуля", "от 2 500 ₽", "60–90 мин"],
-      ["Замена разъёма USB Type-C / Micro-USB", "от 1 400 ₽", "40 мин"],
-      ["Замена аккумулятора / задней крышки", "от 1 800 ₽", "45 мин"],
-      ["Прошивка, разблокировка, пайка контроллера", "от 2 000 ₽", "1–2 часа"]
-    ]],
-    "laptop": ["Ноутбук / ПК", [
-      ["Чистка системы охлаждения + замена термоинтерфейсов", "2 500 ₽", "1–2 часа"],
-      ["Установка SSD / Windows / ОЗУ", "от 1 800 ₽", "1 час"],
-      ["Ремонт петель корпуса / замена матрицы", "от 2 800 ₽", "1–3 часа"],
-      ["Ремонт цепей питания материнской платы / видеокарты", "от 4 500 ₽", "после диагностики"]
-    ]],
-    "other": ["Приставки / 3D", [
-      ["Чистка PS4 / PS5 с заменой жидкого металла", "от 2 900 ₽", "1,5 часа"],
-      ["Ремонт геймпадов DualSense / Xbox (замена 3D-аналогов)", "от 1 500 ₽", "45 мин"],
-      ["3D-печать детали, крепежа или шестерни", "3–4 ₽ / грамм", "от 1 часа"],
-      ["Ремонт портативной акустики и электроники", "от 1 800 ₽", "от 1 часа"]
-    ]]
+<script id="seed" type="application/json">
+{
+  "CFG": {
+    "badge": "Сервисный центр, магазин и копицентр в ЖК «Самолёт» (Люберцы)",
+    "phone_raw": "+79155505514",
+    "tg_user": "mysestore",
+    "tg_url": "https://t.me/mysestore",
+    "address": "Московская область, г. Люберцы, ЖК «Самолёт»",
+    "schedule": "Понедельник — Суббота с 10:00 до 21:00 (Воскресенье — выходной)",
+    "map_title": "📍 Мы находимся в Люберцах (ЖК «Самолёт»)",
+    "map_sub": "Сервисный центр, магазин и копицентр se:стор",
+    "map_link": "https://yandex.ru/maps",
+    "map_iframe": "",
+    "footer_text": "© 2026 SE STORE (се-стор.рф), г. Люберцы, ЖК «Самолёт». Ремонт электроники, 3D-печать, копицентр и магазин аксессуаров.",
+    "phone_view": "+7 (915) 550-55-14"
   },
-  "G": [
-    ["Смартфоны", "iPhone 15 Pro (Б/У, грейд А+)", "128 ГБ · АКБ 94% · идеал, без ремонтов", 74900, 1, ""],
-    ["Смартфоны", "iPhone 13 Pro 256 ГБ Graphite", "Родной OLED · FaceID работает идеально", 52900, 0, ""],
-    ["Кабели и зарядки", "Кабель USB-C Apple Original", "Плетёный · 1 м · быстрая зарядка PD", 1990, 0, ""],
-    ["Кабели и зарядки", "Адаптер питания 20W / 35W USB-C", "Оригинальный контроллер · без перегрева", 1690, 0, ""],
-    ["Стёкла и защита", "Бронестекло с поклейкой (iPhone X–18)", "Олеофобное покрытие · антишпион / глянец", 990, 0, ""],
-    ["Стёкла и защита", "Чехол MagSafe Clear / Silicone", "Усиленные бортики защиты камеры", 1290, 0, ""],
-    ["3D-печать и авто", "Адаптер Eikosha в дефлектор обдува", "Для Geely Coolray и др. · прочный PETG", 450, 0, ""],
-    ["3D-печать и авто", "Изготовление детали / шестерни по образцу", "Моделирование и 3D-печать · 3–4 ₽/г", 350, 1, ""]
+  "HERO": {
+    "title_top": "Ремонт",
+    "title_bottom": "телефонов и ПК",
+    "lead": "Профессиональный компонентный ремонт техники, проверенные аксессуары, 3D-печать и услуги копицентра в ЖК «Самолёт».",
+    "btn1_text": "Выбрать модель ремонта →",
+    "btn2_text": "Витрина магазина",
+    "feats": [
+      [
+        "Ремонт Apple и Android",
+        "Замена дисплеев, аккумуляторов, крышек, шлейфов и сложная BGA-пайка плат под микроскопом"
+      ],
+      [
+        "Компьютеры и игровые приставки",
+        "Сборка ПК, чистка от пыли, замена термопасты, установка ПО и ремонт геймпадов"
+      ],
+      [
+        "Копицентр и 3D-печать",
+        "Копирование и печать документов А4, печать фото 10×15 и А4, 3D-печать деталей от 4 ₽/грамм"
+      ]
+    ],
+    "tiles": [
+      [
+        "01 • СЕРВИС",
+        "Ремонт техники",
+        "Apple, Android, ПК и приставки",
+        "#service"
+      ],
+      [
+        "02 • ВИТРИНА",
+        "Магазин",
+        "Аксессуары, кабели, стёкла, гаджеты",
+        "#shop"
+      ],
+      [
+        "03 • ПЕЧАТЬ И 3D",
+        "Копицентр",
+        "Документы А4, фотопечать, 3D-печать",
+        "#copystore"
+      ],
+      [
+        "04 • ЛЮБЕРЦЫ",
+        "Контакты",
+        "ЖК «Самолёт», с 10:00 до 21:00",
+        "#contacts"
+      ]
+    ]
+  },
+  "MODULES": [
+    {
+      "title": "Спецпредложение для жителей ЖК «Самолёт»",
+      "html": "<div class=\"card\" style=\"border-color:#008cff;background:linear-gradient(135deg,rgba(0,140,255,.16),rgba(14,26,58,.9))\"><span class=\"tag\">ЛОКАЛЬНЫЙ БОНУС</span><h3 style=\"margin:6px 0\">Бесплатная диагностика и скидка на защитное стекло при ремонте экрана</h3><p class=\"note\">При замене дисплея или аккумулятора — поклейка защитного бронестекла со скидкой 50%.</p></div>",
+      "enabled": 1
+    }
   ],
-  "M": [
-    {"id":"iphone-18-pro-max","s":"iPhone 18","n":"iPhone 18 Pro Max","sp":"6.9\" Super Retina XDR · USB-C · Titanium","p":[14900,26900,6900,8900,4500,5900,6900]},
-    {"id":"iphone-18-pro","s":"iPhone 18","n":"iPhone 18 Pro","sp":"6.3\" Super Retina XDR · USB-C · Titanium","p":[13900,24900,6500,8500,4500,5500,6500]},
-    {"id":"iphone-18-air","s":"iPhone 18","n":"iPhone 18 Air / Plus","sp":"6.6\" OLED · Ультратонкий корпус · USB-C","p":[11900,20900,5900,7500,4200,4900,5900]},
-    {"id":"iphone-18","s":"iPhone 18","n":"iPhone 18","sp":"6.1\" Super Retina XDR · USB-C","p":[10900,18900,5500,6900,3900,4500,5500]},
-
-    {"id":"iphone-17-pro-max","s":"iPhone 17","n":"iPhone 17 Pro Max","sp":"6.9\" ProMotion OLED · USB-C","p":[12900,23900,5900,7900,3900,4900,5900]},
-    {"id":"iphone-17-pro","s":"iPhone 17","n":"iPhone 17 Pro","sp":"6.3\" ProMotion OLED · USB-C","p":[11900,21900,5500,7500,3900,4900,5500]},
-    {"id":"iphone-17-air","s":"iPhone 17","n":"iPhone 17 Air / Plus","sp":"6.6\" OLED · USB-C","p":[9900,17900,4900,6500,3500,4200,5200]},
-    {"id":"iphone-17","s":"iPhone 17","n":"iPhone 17","sp":"6.1\" OLED · USB-C","p":[8900,15900,4500,5900,3500,3900,4900]},
-
-    {"id":"iphone-16-pro-max","s":"iPhone 16","n":"iPhone 16 Pro Max","sp":"6.9\" LTPO OLED · USB-C · Titanium","p":[10900,19900,5200,6900,3500,4500,5500]},
-    {"id":"iphone-16-pro","s":"iPhone 16","n":"iPhone 16 Pro","sp":"6.3\" LTPO OLED · USB-C · Titanium","p":[9900,17900,4900,6500,3500,4200,5200]},
-    {"id":"iphone-16-plus","s":"iPhone 16","n":"iPhone 16 Plus","sp":"6.7\" Super Retina XDR · USB-C","p":[8500,14900,4500,5900,3200,3900,4900]},
-    {"id":"iphone-16","s":"iPhone 16","n":"iPhone 16","sp":"6.1\" Super Retina XDR · USB-C","p":[7900,13900,4200,5500,3200,3500,4500]},
-    {"id":"iphone-16e","s":"iPhone 16","n":"iPhone 16e","sp":"6.1\" OLED · Face ID · USB-C","p":[6900,11900,3900,4900,2900,3200,4200]},
-
-    {"id":"iphone-15-pro-max","s":"iPhone 15","n":"iPhone 15 Pro Max","sp":"6.7\" ProMotion OLED · USB-C · Titanium","p":[8900,16900,4500,5900,2900,3900,4900]},
-    {"id":"iphone-15-pro","s":"iPhone 15","n":"iPhone 15 Pro","sp":"6.1\" ProMotion OLED · USB-C · Titanium","p":[7900,14900,4200,5500,2900,3900,4900]},
-    {"id":"iphone-15-plus","s":"iPhone 15","n":"iPhone 15 Plus","sp":"6.7\" OLED · Dynamic Island · USB-C","p":[6900,12900,3900,4900,2700,3500,4500]},
-    {"id":"iphone-15","s":"iPhone 15","n":"iPhone 15","sp":"6.1\" OLED · Dynamic Island · USB-C","p":[6500,11900,3700,4500,2700,3200,4200]},
-
-    {"id":"iphone-14-pro-max","s":"iPhone 14","n":"iPhone 14 Pro Max","sp":"6.7\" ProMotion OLED · Lightning","p":[6900,13900,3900,4900,2500,3500,4500]},
-    {"id":"iphone-14-pro","s":"iPhone 14","n":"iPhone 14 Pro","sp":"6.1\" ProMotion OLED · Lightning","p":[6500,12500,3700,4500,2500,3500,4500]},
-    {"id":"iphone-14-plus","s":"iPhone 14","n":"iPhone 14 Plus","sp":"6.7\" Super Retina XDR · Lightning","p":[5500,9900,3500,4200,2300,3200,3900]},
-    {"id":"iphone-14","s":"iPhone 14","n":"iPhone 14","sp":"6.1\" Super Retina XDR · Lightning","p":[4900,8900,3300,3900,2300,2900,3900]},
-
-    {"id":"iphone-13-pro-max","s":"iPhone 13","n":"iPhone 13 Pro Max","sp":"6.7\" 120Hz ProMotion OLED · Lightning","p":[5900,11500,3500,4500,2200,3200,3900]},
-    {"id":"iphone-13-pro","s":"iPhone 13","n":"iPhone 13 Pro","sp":"6.1\" 120Hz ProMotion OLED · Lightning","p":[5500,9900,3300,4200,2200,2900,3900]},
-    {"id":"iphone-13","s":"iPhone 13","n":"iPhone 13","sp":"6.1\" Super Retina XDR · Lightning","p":[4500,7900,2900,3500,2000,2700,3500]},
-    {"id":"iphone-13-mini","s":"iPhone 13","n":"iPhone 13 mini","sp":"5.4\" Super Retina XDR · Lightning","p":[4500,7500,2900,3500,2000,2700,3500]},
-
-    {"id":"iphone-12-pro-max","s":"iPhone 12","n":"iPhone 12 Pro Max","sp":"6.7\" Super Retina XDR · Lightning","p":[4900,8900,3200,3900,1900,2700,3500]},
-    {"id":"iphone-12-pro","s":"iPhone 12","n":"iPhone 12 Pro","sp":"6.1\" Super Retina XDR · Lightning","p":[4500,7900,2900,3500,1900,2500,3500]},
-    {"id":"iphone-12","s":"iPhone 12","n":"iPhone 12","sp":"6.1\" Super Retina XDR · Lightning","p":[4200,7500,2900,3500,1900,2500,3500]},
-    {"id":"iphone-12-mini","s":"iPhone 12","n":"iPhone 12 mini","sp":"5.4\" Super Retina XDR · Lightning","p":[3900,6900,2700,3200,1900,2500,3200]},
-
-    {"id":"iphone-11-pro-max","s":"iPhone 11","n":"iPhone 11 Pro Max","sp":"6.5\" Super Retina XDR OLED · Lightning","p":[3900,6900,2700,3200,1700,2400,3200]},
-    {"id":"iphone-11-pro","s":"iPhone 11","n":"iPhone 11 Pro","sp":"5.8\" Super Retina XDR OLED · Lightning","p":[3700,6500,2500,2900,1700,2400,3200]},
-    {"id":"iphone-11","s":"iPhone 11","n":"iPhone 11","sp":"6.1\" Liquid Retina IPS · Lightning","p":[2900,4900,2400,2700,1600,2200,2900]},
-
-    {"id":"iphone-xs-max","s":"iPhone X / XS / XR","n":"iPhone XS Max","sp":"6.5\" Super Retina OLED · Lightning","p":[3500,5900,2500,2900,1500,2200,2900]},
-    {"id":"iphone-xs","s":"iPhone X / XS / XR","n":"iPhone XS","sp":"5.8\" Super Retina OLED · Lightning","p":[3200,5500,2300,2700,1500,2200,2900]},
-    {"id":"iphone-xr","s":"iPhone X / XS / XR","n":"iPhone XR","sp":"6.1\" Liquid Retina IPS · Lightning","p":[2700,4500,2200,2500,1500,1900,2700]},
-    {"id":"iphone-x","s":"iPhone X / XS / XR","n":"iPhone X","sp":"5.8\" Super Retina OLED · Lightning","p":[2900,4900,2200,2500,1500,1900,2900]}
+  "NEWS": [
+    {
+      "date": "Актуально",
+      "title": "Оригинальные комплектующие для iPhone и Samsung в наличии",
+      "text": "В мастерской SE STORE доступны дисплеи, аккумуляторы и шлейфы для iPhone X – 18 Pro Max, а также смартфонов Samsung, Xiaomi, Realme и Tecno."
+    },
+    {
+      "date": "Акция сезона",
+      "title": "Комплексная чистка ноутбуков и PS5 с заменой термоинтерфейсов",
+      "text": "Устраняем перегрев и шум турбины за 1–2 часа. Качественные термопасты и жидкий металл с гарантией."
+    }
+  ],
+  "REVIEWS": [
+    {
+      "author": "Алексей М.",
+      "stars": 5,
+      "date": "Яндекс Карты",
+      "text": "Отличный сервис в ЖК Самолёт! Быстро поменяли экран на iPhone, качество супер, цены адекватные. Рекомендую!"
+    },
+    {
+      "author": "Елена С.",
+      "stars": 5,
+      "date": "Яндекс Карты",
+      "text": "Срочно нужно было распечатать документы А4 и сделать фотографии 10х15 — выручили за пару минут. Очень вежливый мастер."
+    },
+    {
+      "author": "Дмитрий К.",
+      "stars": 5,
+      "date": "Яндекс Карты",
+      "text": "Чистили игровую приставку PS5 и меняли стики на геймпаде DualSense. Приставка работает бесшумно, дрифт стиков пропал!"
+    }
+  ],
+  "APPLE_MODELS": [
+    {
+      "id": "iphone-18-pro-max",
+      "s": "iPhone 18 Pro",
+      "name": "iPhone 18 Pro Max",
+      "specs": "6.9\" Super Retina XDR · USB-C · Titanium",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 26 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 18 Pro Max, появились полосы, пятна на матрице или не работает сенсор."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 6 900 ₽",
+          "45 мин",
+          "iPhone 18 Pro Max быстро разряжается, греется или потерял ёмкость."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 8 900 ₽",
+          "2 часа",
+          "Разбито заднее стекло или погнута титановая рамка после падения."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Смартфон не включается, не заряжается, попал в воду или требуется сложная пайка платы под микроскопом."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-18-pro",
+      "s": "iPhone 18 Pro",
+      "name": "iPhone 18 Pro",
+      "specs": "6.3\" Super Retina XDR · USB-C · Titanium",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 24 900 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 18 Pro, нет изображения или не реагирует тачскрин."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 6 500 ₽",
+          "45 мин",
+          "Снизилась автономность, телефон выключается на холоде."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 8 500 ₽",
+          "2 часа",
+          "Трещины и сколы на задней крышке или повреждение геометрии корпуса."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Восстановление цепей питания, разъёма USB-C, аудиокодека, Face ID и пайка BGA."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-17-pro-max",
+      "s": "iPhone 17",
+      "name": "iPhone 17 Pro Max",
+      "specs": "6.9\" ProMotion OLED · USB-C",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 21 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 17 Pro Max, повреждена матрица или стекло."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 5 900 ₽",
+          "45 мин",
+          "Износ батареи ниже 80%, быстрая разрядка."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 7 900 ₽",
+          "2 часа",
+          "Замена разбитого заднего стекла или корпуса целиком."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт шлейфов кнопок, разъёма зарядки и материнской платы."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-17-pro",
+      "s": "iPhone 17",
+      "name": "iPhone 17 Pro",
+      "specs": "6.3\" ProMotion OLED · USB-C",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 19 900 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 17 Pro, полосы на экране или чёрный экран."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 5 500 ₽",
+          "45 мин",
+          "Установка нового аккумулятора со 100% ёмкостью."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 7 500 ₽",
+          "2 часа",
+          "Устранение трещин задней панели."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Компонентный ремонт платы после воды или падения."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-17-plus",
+      "s": "iPhone 17",
+      "name": "iPhone 17 Air / Plus",
+      "specs": "6.6\" OLED · USB-C",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 16 900 ₽",
+          "60 мин",
+          "Разбили дисплей, не работает сенсор или появились пятна."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 4 900 ₽",
+          "45 мин",
+          "Замена изношенной батареи."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 6 500 ₽",
+          "2 часа",
+          "Замена заднего стекла без разбора платы."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Замена нижнего шлейфа зарядки и BGA-пайка."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-17",
+      "s": "iPhone 17",
+      "name": "iPhone 17",
+      "specs": "6.1\" OLED · USB-C",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 14 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 17, требуется установка нового модуля."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 4 500 ₽",
+          "45 мин",
+          "Восстановление времени автономной работы."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 5 900 ₽",
+          "2 часа",
+          "Замена разбитой задней панели."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт платы, шлейфов и разъёмов после диагностики."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-16-pro-max",
+      "s": "iPhone 16",
+      "name": "iPhone 16 Pro Max",
+      "specs": "6.9\" LTPO OLED · USB-C · Titanium",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 17 900 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 16 Pro Max, нет картинки или треснуло стекло."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 5 200 ₽",
+          "45 мин",
+          "Быстро садится батарея, перезагружается под нагрузкой."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 6 900 ₽",
+          "2 часа",
+          "Разбита задняя стеклянная крышка."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт после залития, замена шлейфов и BGA-микросхем."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-16-pro",
+      "s": "iPhone 16",
+      "name": "iPhone 16 Pro",
+      "specs": "6.3\" LTPO OLED · USB-C · Titanium",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 15 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 16 Pro, замена с сохранением TrueTone."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 4 900 ₽",
+          "45 мин",
+          "Установка новой батареи без ошибки в настройках."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 6 500 ₽",
+          "2 часа",
+          "Замена заднего стекла или корпуса."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Пайка контроллеров питания, замена шлейфа USB-C."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-16-plus",
+      "s": "iPhone 16",
+      "name": "iPhone 16 Plus",
+      "specs": "6.7\" Super Retina XDR · USB-C",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 12 900 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 16 Plus, не работает тач."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 4 500 ₽",
+          "45 мин",
+          "Замена изношенного аккумулятора."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 5 900 ₽",
+          "2 часа",
+          "Замена треснувшей задней крышки."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт шлейфов и материнской платы."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-16",
+      "s": "iPhone 16",
+      "name": "iPhone 16",
+      "specs": "6.1\" Super Retina XDR · USB-C",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 11 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 16, полосы или пятна на матрице."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 4 200 ₽",
+          "45 мин",
+          "Замена аккумулятора на новый."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 5 500 ₽",
+          "2 часа",
+          "Замена задней стеклянной панели."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Диагностика и компонентный ремонт платы."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-15-pro-max",
+      "s": "iPhone 15",
+      "name": "iPhone 15 Pro Max",
+      "specs": "6.7\" ProMotion OLED · USB-C · Titanium",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 14 900 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 15 Pro Max, зелёный экран или нет отклика."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 4 500 ₽",
+          "45 мин",
+          "Замена вздувшейся или изношенной АКБ."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 5 900 ₽",
+          "2 часа",
+          "Замена съёмного заднего стекла или титанового корпуса."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Устранение перезагрузок (panic full), замена шлейфов, BGA пайка."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-15-pro",
+      "s": "iPhone 15",
+      "name": "iPhone 15 Pro",
+      "specs": "6.1\" ProMotion OLED · USB-C · Titanium",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 12 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 15 Pro, переклейка или замена модуля."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 4 200 ₽",
+          "45 мин",
+          "Установка нового аккумулятора."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 5 500 ₽",
+          "2 часа",
+          "Замена разбитой задней крышки."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт платы под микроскопом и замена шлейфов."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-15-plus",
+      "s": "iPhone 15",
+      "name": "iPhone 15 Plus",
+      "specs": "6.7\" OLED · Dynamic Island · USB-C",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 10 900 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 15 Plus."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 900 ₽",
+          "45 мин",
+          "Замена батареи при быстром разряде."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 4 900 ₽",
+          "2 часа",
+          "Замена заднего стекла."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Замена шлейфа зарядки USB-C и пайка платы."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-15",
+      "s": "iPhone 15",
+      "name": "iPhone 15",
+      "specs": "6.1\" OLED · Dynamic Island · USB-C",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 9 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 15, замена с гарантией."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 700 ₽",
+          "45 мин",
+          "Новая батарея со 100% ёмкостью."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 4 500 ₽",
+          "2 часа",
+          "Замена разбитой задней панели."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт шлейфов и BGA пайка после диагностики."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-14-pro-max",
+      "s": "iPhone 14",
+      "name": "iPhone 14 Pro Max",
+      "specs": "6.7\" ProMotion OLED · Lightning",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 11 900 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 14 Pro Max, нет изображения."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 900 ₽",
+          "45 мин",
+          "Замена изношенной АКБ."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 4 900 ₽",
+          "2 часа",
+          "Лазерная замена заднего стекла или корпуса."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Замена шлейфов и сложная пайка платы."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-14-pro",
+      "s": "iPhone 14",
+      "name": "iPhone 14 Pro",
+      "specs": "6.1\" ProMotion OLED · Lightning",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 10 500 ₽",
+          "60 мин",
+          "Разбили экран iPhone 14 Pro, полосы или пятна."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 700 ₽",
+          "45 мин",
+          "Замена аккумулятора на новый."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 4 500 ₽",
+          "2 часа",
+          "Восстановление задней крышки."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт цепей питания и замена шлейфов."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-14-plus",
+      "s": "iPhone 14",
+      "name": "iPhone 14 Plus",
+      "specs": "6.7\" Super Retina XDR · Lightning",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 7 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 14 Plus."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 500 ₽",
+          "45 мин",
+          "Замена аккумулятора."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 4 200 ₽",
+          "2 часа",
+          "Замена заднего стекла."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Замена шлейфов и пайка BGA."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-14",
+      "s": "iPhone 14",
+      "name": "iPhone 14",
+      "specs": "6.1\" Super Retina XDR · Lightning",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 6 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 14, замена модуля."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 300 ₽",
+          "45 мин",
+          "Установка нового аккумулятора."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 3 900 ₽",
+          "2 часа",
+          "Замена разбитой крышки."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт шлейфов и платы после диагностики."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-13-pro-max",
+      "s": "iPhone 13",
+      "name": "iPhone 13 Pro Max",
+      "specs": "6.7\" 120Hz ProMotion OLED",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 9 500 ₽",
+          "60 мин",
+          "Разбили экран iPhone 13 Pro Max или белый/зелёный экран."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 500 ₽",
+          "45 мин",
+          "Замена батареи с переносом контроллера."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 4 500 ₽",
+          "2 часа",
+          "Замена заднего стекла."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Восстановление дорожек экрана, шлейфов и BGA пайка."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-13-pro",
+      "s": "iPhone 13",
+      "name": "iPhone 13 Pro",
+      "specs": "6.1\" 120Hz ProMotion OLED",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 8 500 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 13 Pro."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 300 ₽",
+          "45 мин",
+          "Замена аккумулятора."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 4 200 ₽",
+          "2 часа",
+          "Замена задней крышки."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт платы и шлейфов."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-13",
+      "s": "iPhone 13",
+      "name": "iPhone 13 / 13 mini",
+      "specs": "6.1\" / 5.4\" Super Retina XDR",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 5 900 ₽",
+          "60 мин",
+          "Разбили экран iPhone 13 / 13 mini."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 2 900 ₽",
+          "45 мин",
+          "Новая батарея за 45 минут."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 3 500 ₽",
+          "2 часа",
+          "Замена разбитого заднего стекла."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Замена разъёма Lightning и BGA пайка."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-12-pro-max",
+      "s": "iPhone 12",
+      "name": "iPhone 12 Pro Max",
+      "specs": "6.7\" Super Retina XDR",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 6 900 ₽",
+          "60 мин",
+          "Разбили дисплей iPhone 12 Pro Max."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 3 200 ₽",
+          "45 мин",
+          "Замена изношенной батареи."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 3 900 ₽",
+          "2 часа",
+          "Замена заднего стекла."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт слухового динамика, шлейфов и платы."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-12",
+      "s": "iPhone 12",
+      "name": "iPhone 12 / 12 Pro / 12 mini",
+      "specs": "6.1\" / 5.4\" Super Retina XDR",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 5 200 ₽",
+          "60 мин",
+          "Разбили экран iPhone 12 / 12 Pro."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 2 900 ₽",
+          "45 мин",
+          "Замена аккумулятора."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 3 500 ₽",
+          "2 часа",
+          "Замена треснувшей задней крышки."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт модема, аудиокодека и шлейфов."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-11-pro",
+      "s": "iPhone 11 / X",
+      "name": "iPhone 11 Pro / 11 Pro Max",
+      "specs": "5.8\" / 6.5\" Super Retina XDR OLED",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 4 500 ₽",
+          "45 мин",
+          "Разбили экран iPhone 11 Pro / Pro Max."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 2 500 ₽",
+          "40 мин",
+          "Установка новой батареи."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 2 900 ₽",
+          "2 часа",
+          "Замена заднего стекла."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт Face ID, шлейфов и пайка BGA."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-11",
+      "s": "iPhone 11 / X",
+      "name": "iPhone 11",
+      "specs": "6.1\" Liquid Retina IPS",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 3 200 ₽",
+          "45 мин",
+          "Разбили экран iPhone 11, полосы на экране."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 2 200 ₽",
+          "40 мин",
+          "Быстрая замена батареи при вас."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 2 700 ₽",
+          "2 часа",
+          "Замена разбитой задней крышки."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Замена шлейфа зарядки и ремонт платы."
+        ]
+      ]
+    },
+    {
+      "id": "iphone-x-xs-xr",
+      "s": "iPhone 11 / X",
+      "name": "iPhone X / XS / XS Max / XR",
+      "specs": "5.8\" – 6.5\" OLED / IPS",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 2 900 ₽",
+          "45 мин",
+          "Разбили дисплей iPhone X / XS / XR."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 2 000 ₽",
+          "40 мин",
+          "Замена старого аккумулятора на новый."
+        ],
+        [
+          "Замена задней крышки / корпуса",
+          "от 2 500 ₽",
+          "2 часа",
+          "Замена заднего стекла."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Ремонт платы и шлейфов после диагностики."
+        ]
+      ]
+    }
+  ],
+  "ANDROID_BRANDS": [
+    {
+      "brand": "Samsung",
+      "sub": "Samsung Galaxy S (S20 – S25 Ultra)",
+      "desc": "Флагманская линейка Samsung с изогнутыми и плоскими Dynamic AMOLED 2X экранами.",
+      "prices": [
+        [
+          "Замена дисплея (AMOLED)",
+          "от 5 000 ₽",
+          "60–90 мин",
+          "Разбили экран Galaxy S, выгорела матрица, появились полосы или чёрное пятно."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 2 500 ₽",
+          "45 мин",
+          "Быстро садится заряд или вздулась задняя крышка."
+        ],
+        [
+          "Замена задней крышки",
+          "от 1 900 ₽",
+          "45 мин",
+          "Трещины на задней стеклянной панели."
+        ],
+        [
+          "Замена шлейфов / разъёма Type-C / BGA пайка",
+          "Цена после диагностики",
+          "от 1 часа",
+          "Не работает быстрая зарядка, микрофон или требуется пайка платы."
+        ]
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "sub": "Samsung Galaxy A (A10 – A55 / A73)",
+      "desc": "Самая популярная серия Samsung. Запчасти в наличии для быстрого ремонта.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 3 500 ₽",
+          "45–60 мин",
+          "Разбили экран Samsung Galaxy A, не работает сенсор или нет изображения."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 2 000 ₽",
+          "40 мин",
+          "Смартфон не держит заряд в течение дня."
+        ],
+        [
+          "Замена задней крышки / рамки",
+          "от 1 500 ₽",
+          "40 мин",
+          "Повреждён корпус или крышка после падения."
+        ],
+        [
+          "Замена нижней платы зарядки / BGA пайка",
+          "Цена после диагностики",
+          "от 45 мин",
+          "Проблемы с зарядкой, влагой или межплатным шлейфом (A50/A51/A52 и др.)."
+        ]
+      ]
+    },
+    {
+      "brand": "Xiaomi",
+      "sub": "Xiaomi (Mi / 11 / 12 / 13 / 14 / 15)",
+      "desc": "Флагманская серия Xiaomi и T-серия с AMOLED-матрицами и турбо-зарядкой.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 4 500 ₽",
+          "60 мин",
+          "Разбили дисплей флагмана Xiaomi, требуется замена модуля."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 2 200 ₽",
+          "45 мин",
+          "Потеря ёмкости аккумулятора."
+        ],
+        [
+          "Замена задней крышки",
+          "от 1 800 ₽",
+          "45 мин",
+          "Трещины на заднем стекле."
+        ],
+        [
+          "Замена шлейфов и BGA пайка (реболл CPU)",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Смартфон не включается, отвал процессора/памяти, ремонт цепей питания."
+        ]
+      ]
+    },
+    {
+      "brand": "Xiaomi",
+      "sub": "Redmi и Redmi Note (Note 8 – Note 14 Pro+)",
+      "desc": "Народная линейка Redmi и Redmi Note. Быстрый модульный и компонентный ремонт.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 2 800 ₽",
+          "45–60 мин",
+          "Разбили экран Redmi / Redmi Note, полосы или разбитое стекло."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 1 800 ₽",
+          "40 мин",
+          "Установка новой батареи."
+        ],
+        [
+          "Замена кнопки включения / разъёма Type-C",
+          "от 1 400 ₽",
+          "35 мин",
+          "Телефон циклически перезагружается или не заряжается."
+        ],
+        [
+          "Замена шлейфов и BGA пайка платы",
+          "Цена после диагностики",
+          "от 1,5 часов",
+          "Реболл процессора (например Redmi Note 10 Pro), ремонт модема и звука."
+        ]
+      ]
+    },
+    {
+      "brand": "Xiaomi",
+      "sub": "POCO (X3 Pro / X5 / X6 / F3 / F5 / F6 / M-серия)",
+      "desc": "Мощные смартфоны POCO — от замены экрана до профессионального реболла процессора.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 3 000 ₽",
+          "45–60 мин",
+          "Разбили экран POCO, не реагирует сенсор."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 1 900 ₽",
+          "40 мин",
+          "Быстрый разряд или вздутие АКБ."
+        ],
+        [
+          "Замена разъёма зарядки / шлейфа",
+          "от 1 500 ₽",
+          "40 мин",
+          "Не работает быстрая зарядка Mi Turbo Charge."
+        ],
+        [
+          "Реболл процессора / памяти (BGA пайка)",
+          "Цена после диагностики",
+          "от 2 часов",
+          "Смартфон POCO X3 Pro / F3 завис с серым экраном или перестал включаться."
+        ]
+      ]
+    },
+    {
+      "brand": "Tecno",
+      "sub": "Tecno Pova (Pova 2 / 4 / 5 / 6 Pro / Neo)",
+      "desc": "Игровая линейка Tecno Pova с большими экранами и аккумуляторами 6000–7000 мАч.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 2 800 ₽",
+          "45–60 мин",
+          "Разбили большой экран Tecno Pova, трещины или пятна."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 1 900 ₽",
+          "40 мин",
+          "Замена ёмкого аккумулятора."
+        ],
+        [
+          "Замена разъёма зарядки Type-C",
+          "от 1 400 ₽",
+          "35 мин",
+          "Расшатан порт зарядки, телефон не заряжается."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 1 часа",
+          "Ремонт платы после воды или удара."
+        ]
+      ]
+    },
+    {
+      "brand": "Tecno",
+      "sub": "Tecno Camon и Spark",
+      "desc": "Камерофоны Tecno Camon и доступная линейка Tecno Spark всех поколений.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 2 600 ₽",
+          "45–60 мин",
+          "Разбили экран Tecno Camon / Spark."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 1 700 ₽",
+          "40 мин",
+          "Замена изношенной батареи."
+        ],
+        [
+          "Замена разъёма зарядки",
+          "от 1 400 ₽",
+          "35 мин",
+          "Восстановление зарядки и микрофона."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 1 часа",
+          "Компонентный ремонт материнской платы."
+        ]
+      ]
+    },
+    {
+      "brand": "Realme",
+      "sub": "Realme (GT / 10 / 11 / 12 Pro+ / C-серия)",
+      "desc": "Ремонт смартфонов Realme любой серии — от доступных C-моделей до флагманов GT.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 2 900 ₽",
+          "45–60 мин",
+          "Разбили дисплей Realme, нет изображения."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 1 800 ₽",
+          "40 мин",
+          "Замена батареи на новую."
+        ],
+        [
+          "Замена разъёма SuperVOOC / Type-C",
+          "от 1 500 ₽",
+          "40 мин",
+          "Ремонт быстрой зарядки."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 1 часа",
+          "Ремонт после попадания жидкости или КЗ."
+        ]
+      ]
+    },
+    {
+      "brand": "Oppo",
+      "sub": "Oppo (Reno / Find / A-серия)",
+      "desc": "Качественный ремонт смартфонов Oppo серий Reno, Find X и A.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 3 200 ₽",
+          "60 мин",
+          "Разбили экран Oppo, замена экранного модуля."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 1 900 ₽",
+          "40 мин",
+          "Установка нового аккумулятора."
+        ],
+        [
+          "Замена крышки / шлейфов / BGA пайка",
+          "Цена после диагностики",
+          "от 1 часа",
+          "Ремонт разъёмов, кнопок и материнской платы."
+        ]
+      ]
+    },
+    {
+      "brand": "Vivo",
+      "sub": "Vivo (V-серия / X-серия / Y-серия)",
+      "desc": "Обслуживание и ремонт смартфонов Vivo всех актуальных серий.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 3 000 ₽",
+          "60 мин",
+          "Разбили экран Vivo, появились полосы."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 1 900 ₽",
+          "40 мин",
+          "Замена батареи с гарантией."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 1 часа",
+          "Восстановление разъёма зарядки и пайка платы."
+        ]
+      ]
+    },
+    {
+      "brand": "Huawei",
+      "sub": "Huawei (Pura / P-серия / Mate / Nova) и Honor",
+      "desc": "Ремонт смартфонов Huawei и Honor любой сложности.",
+      "prices": [
+        [
+          "Замена дисплея",
+          "от 3 000 ₽",
+          "60 мин",
+          "Разбили экран Huawei / Honor, замена матрицы."
+        ],
+        [
+          "Замена аккумулятора (АКБ)",
+          "от 1 800 ₽",
+          "45 мин",
+          "Быстрая разрядка или вздутие батареи."
+        ],
+        [
+          "Замена задней крышки",
+          "от 1 600 ₽",
+          "45 мин",
+          "Замена разбитой крышки корпуса."
+        ],
+        [
+          "Замена шлейфов и BGA пайка",
+          "Цена после диагностики",
+          "от 1,5 часов",
+          "Ремонт платы, разъёма зарядки и цепей питания."
+        ]
+      ]
+    }
+  ],
+  "PC": [
+    [
+      "Сборка компьютера на заказ",
+      "от 2 500 ₽",
+      "1 день",
+      "Подбор совместимых комплектующих под бюджет (для игр, учёбы или работы), аккуратная сборка, кабель-менеджмент, настройка BIOS и стресс-тест."
+    ],
+    [
+      "Чистка от пыли + замена термопасты",
+      "2 500 ₽",
+      "1–2 часа",
+      "Если ноутбук или ПК сильно шумит, греется выше 85 °C, сбрасывает частоты (троттлит) или выключается в играх."
+    ],
+    [
+      "Установка Windows, драйверов и ПО",
+      "от 1 800 ₽",
+      "1 час",
+      "Когда купили новый ноутбук без системы, заменили накопитель или старая ОС тормозит и выдаёт синие экраны."
+    ],
+    [
+      "Замена комплектующих и апгрейд",
+      "от 1 000 ₽",
+      "от 30 мин",
+      "Ускорение медленного ПК: установка скоростного SSD вместо HDD, добавление оперативной памяти, замена видеокарты, блока питания, матрицы или петель ноутбука."
+    ],
+    [
+      "Сложный ремонт материнских плат ноутбуков",
+      "Цена после диагностики",
+      "от 2 часов",
+      "Ноутбук не включается, не заряжает батарею, залит жидкостью — поиск КЗ тепловизором и пайка цепей питания."
+    ]
+  ],
+  "CONSOLE": [
+    [
+      "Чистка приставки + замена термопасты / жидкого металла",
+      "от 2 900 ₽",
+      "1,5 часа",
+      "Приставка PS4, PS5 или Xbox Series X/S гудит как самолёт на взлёте, греется или пишет уведомление о перегреве."
+    ],
+    [
+      "Ремонт геймпадов DualSense / DualShock / Xbox",
+      "от 1 500 ₽",
+      "45 мин",
+      "Если персонаж или камера двигаются сами (дрифт стиков) — меняем 3D-механизмы на новые (включая датчики Холла), чиним курки и кнопки."
+    ],
+    [
+      "Компонентный ремонт платы приставки",
+      "Цена после диагностики",
+      "от 2 часов",
+      "Приставка включается и сразу гаснет (синий огонь), нет изображения на телевизоре (замена порта или контроллера HDMI), ремонт блока питания."
+    ]
+  ],
+  "COPYSTORE": [
+    [
+      "Чёрно-белая печать и ксерокопия А4",
+      "20 ₽ / стр.",
+      "При вас",
+      "Быстрая распечатка документов, договоров, заявлений, рефератов и ксерокопия паспортов или справок."
+    ],
+    [
+      "Цветная печать документов А4",
+      "60 ₽ / стр.",
+      "При вас",
+      "Чёткая цветная распечатка презентаций, титульных листов, графиков, дипломов и сертификатов."
+    ],
+    [
+      "Печать фотографий (10×15 и А4)",
+      "от 40 ₽",
+      "5–10 мин",
+      "Насыщенная фотопечать на плотной глянцевой или матовой фотобумаге прямо с вашего телефона или из Telegram."
+    ],
+    [
+      "3D-печать деталей и аксессуаров на заказ",
+      "4 ₽ / грамм",
+      "от 1 часа",
+      "Изготовление шестерёнок, автокреплений (адаптеры в дефлектор Eikosha / Leraton, вставки в подстаканник), корпусов и бытовых деталей из прочных пластиков PLA, PETG, ABS, TPU."
+    ]
+  ],
+  "SHOP_CATS": [
+    "Смартфоны",
+    "Кабели и зарядки",
+    "Стёкла и защита",
+    "3D-печать и авто"
+  ],
+  "G": [
+    [
+      "Смартфоны",
+      "iPhone 15 Pro (Б/У, грейд А+)",
+      "128 ГБ · АКБ 94% · идеал, без ремонтов",
+      74900,
+      1,
+      ""
+    ],
+    [
+      "Смартфоны",
+      "iPhone 13 Pro 256 ГБ Graphite",
+      "Родной OLED · FaceID работает идеально",
+      52900,
+      0,
+      ""
+    ],
+    [
+      "Кабели и зарядки",
+      "Кабель USB-C Apple Original",
+      "Плетёный · 1 м · быстрая зарядка PD",
+      1990,
+      0,
+      ""
+    ],
+    [
+      "Кабели и зарядки",
+      "Адаптер питания 20W / 35W USB-C",
+      "Оригинальный контроллер · без перегрева",
+      1690,
+      0,
+      ""
+    ],
+    [
+      "Стёкла и защита",
+      "Бронестекло с поклейкой (iPhone / Android)",
+      "Олеофобное покрытие · антишпион или глянец",
+      990,
+      0,
+      ""
+    ],
+    [
+      "Стёкла и защита",
+      "Чехол MagSafe Clear / Silicone",
+      "Усиленные бортики защиты камеры",
+      1290,
+      0,
+      ""
+    ],
+    [
+      "3D-печать и авто",
+      "Адаптер Eikosha / Leraton в дефлектор",
+      "Для Geely Coolray и др. · прочный термостойкий PETG",
+      450,
+      0,
+      ""
+    ],
+    [
+      "3D-печать и авто",
+      "Изготовление 3D-детали или шестерни по образцу",
+      "Моделирование и FDM 3D-печать · 4 ₽/г",
+      350,
+      1,
+      ""
+    ]
   ]
-}</script>
+}
+</script>
+<script id="app-js">
+(function(){var t=document.getElementById('shell');document.body.insertBefore(t.content.cloneNode(true),t)})();
 
-<script id="app-js">(function(){var t=document.getElementById('shell');document.body.insertBefore(t.content.cloneNode(true),t)})();
-
-var S=JSON.parse(document.getElementById('seed').textContent),R=S.R,G=S.G,M=S.M||[];
+var S=JSON.parse(document.getElementById('seed').textContent);
 var $=function(i){return document.getElementById(i)};
 function fm(n){return Number(n||0).toLocaleString('ru-RU')+' ₽'}
 
-var M_SRV=[
-  ["Переклейка стекла (с сохранением родной матрицы)","При целом изображении и тачскрине · сепаратор 80–85 °C","90–120 мин"],
-  ["Замена дисплейного модуля целиком","Оригинал / проверенный OLED с переносом TrueTone","45–60 мин"],
-  ["Замена аккумулятора","Новая ёмкость 100% · переварка контроллера BMS при необходимости","40–60 мин"],
-  ["Замена заднего стекла / корпуса","Лазерная срезка или сборка в оригинальном корпусе","2–3 часа"],
-  ["Замена разъёма зарядки (нижнего шлейфа)","Решение проблем с зарядкой, микрофоном и циклической перезагрузкой","40–60 мин"],
-  ["Ремонт основной камеры / замена стекла камеры","Устранение пятен, тряски автофокуса или трещин сапфирового стекла","45–60 мин"],
-  ["Сложный ремонт платы / Face ID / после воды","Пайка BGA под микроскопом, поиск КЗ тепловизором","от 2 часов"]
-];
-
-function chips(b,a,cur,fn){
-  b.innerHTML='';
-  a.forEach(function(x){
-    var c=document.createElement('button');
-    c.type='button';c.className='chip';c.textContent=x[1];
-    c.setAttribute('aria-pressed',String(cur===x[0]));
-    c.onclick=function(){fn(x[0])};
-    b.appendChild(c);
-  });
+// Базовые DOM-хелперы (нужны и для сайта, и для админки)
+function mk(t,p,k){
+  var e=document.createElement(t);
+  if(p){for(var x in p){if(x==='style'&&typeof p[x]==='string')e.style.cssText=p[x];else e[x]=p[x]}}
+  (k||[]).forEach(function(c){if(c)e.appendChild(typeof c==='string'?document.createTextNode(c):c)});
+  return e;
+}
+function fi(v,ph,cb,ty){
+  var i=mk('input',{type:ty||'text',value:v===undefined||v===null?'':v,placeholder:ph||'',oninput:function(){cb(i.value)}});
+  if(ph)i.setAttribute('aria-label',ph);
+  return i;
+}
+function fta(v,ph,cb,rows){
+  var t=mk('textarea',{rows:rows||2,placeholder:ph||'',oninput:function(){cb(t.value)}});
+  t.value=v===undefined||v===null?'':v;
+  if(ph)t.setAttribute('aria-label',ph);
+  return t;
+}
+function xb(fn,l){
+  var b=mk('button',{type:'button',className:'x',textContent:l||'✕ Удалить',onclick:fn});
+  return b;
+}
+function ab(t,fn){
+  return mk('div',{style:'margin-top:6px'},[mk('button',{type:'button',className:'btn o sm',textContent:t,onclick:fn})]);
 }
 
-// Главная: чипы быстрого перехода к сериям iPhone X-18
-var SERIES_LIST=['Все серии','iPhone 18','iPhone 17','iPhone 16','iPhone 15','iPhone 14','iPhone 13','iPhone 12','iPhone 11','iPhone X / XS / XR'];
-var curSer='Все серии',curQ='';
-
-function initHomeSeries(){
-  var hs=$('home-series');
-  if(!hs)return;
-  hs.innerHTML='';
-  SERIES_LIST.slice(1).forEach(function(s){
-    var a=document.createElement('a');
-    a.className='chip';
-    a.href='#iphone';
-    a.textContent=s;
-    a.onclick=function(){curSer=s;renderCatalog()};
-    hs.appendChild(a);
-  });
-}
-
-function renderCatalog(){
-  chips($('ser-filter'),SERIES_LIST.map(function(s){return [s,s]}),curSer,function(s){curSer=s;renderCatalog()});
-  var box=$('mcatalog');
-  box.innerHTML='';
-  var q=curQ.trim().toLowerCase();
-  var groups={};
-  M.forEach(function(m){
-    if(curSer!=='Все серии'&&m.s!==curSer)return;
-    if(q&&m.n.toLowerCase().indexOf(q)<0&&m.s.toLowerCase().indexOf(q)<0)return;
-    if(!groups[m.s])groups[m.s]=[];
-    groups[m.s].push(m);
-  });
-  var keys=Object.keys(groups);
-  if(!keys.length){
-    box.innerHTML='<div class="card"><p class="note">По вашему запросу модель не найдена. Попробуйте очистить фильтр.</p></div>';
-    return;
-  }
-  keys.forEach(function(sName){
-    var sb=document.createElement('div');
-    sb.className='ser-block';
-    sb.innerHTML='<div class="ser-title"><h3>Линейка '+sName+'</h3><span class="tag">'+groups[sName].length+' мод.</span></div>';
-    var gr=document.createElement('div');
-    gr.className='mgrid';
-    groups[sName].forEach(function(m){
-      var a=document.createElement('a');
-      a.className='mcard';
-      a.href='#model/'+m.id;
-      a.innerHTML='<span class="tag">'+m.s.toUpperCase()+'</span><b>'+m.n+'</b><span>'+m.sp+'</span><div class="mpr">Ремонт от '+fm(Math.min.apply(null,m.p))+' →</div>';
-      gr.appendChild(a);
-    });
-    sb.appendChild(gr);
-    box.appendChild(sb);
-  });
-}
-
-if($('msearch')){
-  $('msearch').oninput=function(e){curQ=e.target.value;renderCatalog()};
-}
-
-function renderModelPage(id){
-  var m=M.find(function(x){return x.id===id})||M[0];
-  if(!m)return;
-  $('m-crumb').textContent=m.n;
-  $('m-ser-tag').textContent='СЕРИЯ '+m.s.toUpperCase()+' • СЕРВИС SE STORE ЛЮБЕРЦЫ';
-  $('m-title').textContent='Ремонт '+m.n;
-  $('m-subname').textContent=m.n;
-  $('m-desc').textContent='Профессиональный ремонт '+m.n+' в ЖК «Самолёт» (Люберцы). Бесплатная диагностика, сохранение оригинальной матрицы при переклейке стекла и гарантия на все работы.';
-  var sp=$('m-specs');
-  sp.innerHTML='';
-  m.sp.split('·').forEach(function(item){
-    var d=document.createElement('span');
-    d.className='spec';
-    d.innerHTML='<b>•</b> '+item.trim();
-    sp.appendChild(d);
-  });
-
-  // Соседние модели этой же серии
-  var sib=$('m-siblings');
-  sib.innerHTML='';
-  M.filter(function(x){return x.s===m.s}).forEach(function(x){
-    var a=document.createElement('a');
-    a.href='#model/'+x.id;
-    a.className='chip'+(x.id===m.id?' act':'');
-    a.textContent=x.n;
-    sib.appendChild(a);
-  });
-
-  var pt=$('m-prices');
-  pt.innerHTML='';
-  M_SRV.forEach(function(srv,idx){
-    var price=m.p[idx]||2500;
-    var r=document.createElement('div');
-    r.className='prow';
-    r.innerHTML='<div><b>'+srv[0]+'</b><small>'+srv[1]+'</small></div><span class="ptm">⏱ '+srv[2]+'</span><span class="pval">от '+fm(price)+'</span>';
-    var b=document.createElement('button');
-    b.type='button';
-    b.className='btn sm';
-    b.textContent='Записаться';
-    b.onclick=function(){
-      $('rs').value=m.n+' — '+srv[0]+' (от '+fm(price)+')';
-      location.hash='#contacts';
-    };
-    r.appendChild(b);
-    pt.appendChild(r);
-  });
-}
-
-// Универсальный калькулятор
-var dev='iphone',iss=0;
-function calc(){
-  chips($('dv'),Object.keys(R).map(function(k){return[k,R[k][0]]}),dev,function(k){dev=k;iss=0;calc()});
-  var s=$('is');s.innerHTML='';
-  R[dev][1].forEach(function(x,i){
-    var c=document.createElement('button');c.type='button';c.className='chip';
-    c.setAttribute('aria-pressed',String(i===iss));
-    var a=document.createElement('span');a.textContent=x[0];
-    var p=document.createElement('i');p.textContent=x[1];
-    c.appendChild(a);c.appendChild(p);
-    c.onclick=function(){iss=i;calc()};
-    s.appendChild(c);
-  });
-  var v=R[dev][1][iss];$('rp').textContent=v[1];$('rt').textContent='⏱ '+v[2];
-}
-$('book').onclick=function(){var v=R[dev][1][iss];$('rs').value=R[dev][0]+': '+v[0]+' ('+v[1]+')';location.hash='#contacts'};
-document.querySelectorAll('[data-subj]').forEach(function(a){a.onclick=function(){$('rs').value=a.dataset.subj+': '}});
-
-// Витрина магазина
-var cat='Все',cart=[];
-function shop(){
-  var cs=['Все','Смартфоны','Кабели и зарядки','Стёкла и защита','3D-печать и авто'];
-  chips($('ct'),cs.map(function(c){return[c,c]}),cat,function(c){cat=c;shop()});
-  var b=$('pd');b.innerHTML='';
-  G.forEach(function(g,i){
-    if(cat!=='Все'&&g[0]!==cat)return;
-    var e=document.createElement('div');e.className='card prod';
-    e.innerHTML='<div class="ph"></div><h3></h3><p></p><div class="pr"></div>';
-    e.querySelector('.ph').textContent=g[0].slice(0,3).toUpperCase();
-    if(g[5]){
-      var ph=e.querySelector('.ph');ph.textContent='';ph.className='ph pic';
-      var im=document.createElement('img');im.src=g[5];im.alt=g[1];im.loading='lazy';ph.appendChild(im);
-    }
-    e.querySelector('h3').textContent=g[1];
-    e.querySelector('p').textContent=g[2];
-    e.querySelector('.pr').textContent=(g[4]?'от ':'')+fm(g[3]);
-    var t=document.createElement('button');t.type='button';t.className='btn';t.textContent='Забронировать';
-    t.onclick=function(){cart.push(i);bk()};
-    e.appendChild(t);b.appendChild(e);
-  });
-}
-function bk(){
-  $('cc').textContent='Бронь: '+cart.length;
-  var l=$('cl');l.innerHTML='';var sum=0;
-  if(!cart.length){l.innerHTML='<li><span class="note">Пока пусто. Выберите товар на витрине.</span></li>'}
-  cart.forEach(function(i,k){
-    sum+=G[i][3];
-    var li=document.createElement('li');
-    var s=document.createElement('span');s.textContent=G[i][1]+' — '+fm(G[i][3]);
-    var x=document.createElement('button');x.type='button';x.className='x';x.setAttribute('aria-label','Убрать');x.textContent='✕';
-    x.onclick=function(){cart.splice(k,1);bk()};
-    li.appendChild(s);li.appendChild(x);l.appendChild(li);
-  });
-  $('tt').textContent=fm(sum);$('bf').hidden=!cart.length;
-}
-
-$('bf').onsubmit=function(e){
-  e.preventDefault();
-  var items=cart.map(function(i){return '• '+G[i][1]+' ('+fm(G[i][3])+')'}).join('\n');
-  var contact=$('bt').value;
-  var msg='Здравствуйте! Хочу забронировать в SE STORE:\n'+items+'\nКонтакт: '+contact;
-  $('bd').innerHTML='Бронь сформирована! <a href="https://t.me/mysestore?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Нажмите здесь, чтобы отправить список мастеру в Telegram →</a>';
-  cart=[];bk();
-};
-
-$('rf').onsubmit=function(e){
-  e.preventDefault();
-  var text=$('rs').value,contact=$('rt2').value;
-  var msg='Заявка на ремонт в SE STORE:\nУстройство/вопрос: '+text+'\nКонтакт: '+contact;
-  $('rd').innerHTML='Заявка готова! <a href="https://t.me/mysestore?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Отправить напрямую в Telegram (@mysestore) →</a>';
-  e.target.reset();
-};
-
-// Админ-панель с редактированием товаров, услуг и цен моделей iPhone + скачиванием готового HTML
-var ADM=false,WG,WR,WM,CATS=['Смартфоны','Кабели и зарядки','Стёкла и защита','3D-печать и авто'];
-var HEAD="<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<title>SE STORE — ремонт техники, 3D-печать и витрина в Люберцах (ЖК «Самолёт»)</title>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap\" rel=\"stylesheet\">\n";
-
-function mk(t,p,k){var e=document.createElement(t);for(var x in p)e[x]=p[x];(k||[]).forEach(function(c){e.appendChild(c)});return e}
-function fi(v,ph,cb,ty){var i=mk('input',{type:ty||'text',value:v,placeholder:ph,oninput:function(){cb(i.value)}});i.setAttribute('aria-label',ph);return i}
-function xb(fn,l){var b=mk('button',{type:'button',className:'x',textContent:'✕',onclick:fn});b.setAttribute('aria-label',l);return b}
-function ab(t,fn){return mk('p',{},[mk('button',{type:'button',className:'btn o',textContent:t,onclick:fn})])}
-
+// Сжатие загружаемых фото товаров в WebP DataURL (вшиваются прямо в HTML)
 function shrinkDataUrl(file){
   return new Promise(function(res,rej){
     var im=new Image(),u=URL.createObjectURL(file);
     im.onload=function(){
-      var k=Math.min(1,700/Math.max(im.width,im.height)),c=document.createElement('canvas');
+      var k=Math.min(1,680/Math.max(im.width,im.height)),c=document.createElement('canvas');
       c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);
       c.getContext('2d').drawImage(im,0,0,c.width,c.height);
       URL.revokeObjectURL(u);
@@ -694,11 +1827,11 @@ function shrinkDataUrl(file){
 
 function photoCell(g){
   var w=mk('div',{className:'pcell'}),th;
-  if(g[5]){th=mk('img',{src:g[5],alt:g[1]||'Фото товара',className:'pth'})}
+  if(g[5]){th=mk('img',{src:g[5],alt:g[1]||'Фото',className:'pth'})}
   else{th=mk('span',{textContent:'Нет фото',className:'pth'})}
   w.appendChild(th);
   var fl=mk('input',{type:'file',accept:'image/*'});fl.hidden=true;
-  var bt=mk('button',{type:'button',className:'x',textContent:g[5]?'Заменить':'+ Фото'});
+  var bt=mk('button',{type:'button',className:'btn o sm',style:'padding:4px 8px;font-size:11px',textContent:g[5]?'Заменить':'+ Фото'});
   bt.onclick=function(){fl.click()};
   fl.onchange=async function(){
     var f=fl.files[0];if(!f)return;
@@ -706,131 +1839,781 @@ function photoCell(g){
     try{g[5]=await shrinkDataUrl(f);admRender()}catch(e){bt.textContent='Ошибка'}
   };
   w.appendChild(fl);w.appendChild(bt);
-  if(g[5])w.appendChild(xb(function(){g[5]='';admRender()},'Убрать фото'));
+  if(g[5])w.appendChild(mk('button',{type:'button',className:'x',style:'padding:3px 6px;font-size:11px',textContent:'Убрать фото',onclick:function(){g[5]='';admRender()}}));
   return w;
 }
 
-function admRender(){
-  var box=$('admbox');box.innerHTML='';$('admsave').hidden=!ADM;
-  if(!ADM){admLogin(box);return}
-  $('admhint').textContent='Редактируйте товары, цены на ремонт моделей iPhone X–18 и скачивайте готовый обновлённый файл index.html для хостинга.';
-  if(!WG){
-    WG=JSON.parse(JSON.stringify(G));
-    WR=JSON.parse(JSON.stringify(R));
-    WM=JSON.parse(JSON.stringify(M));
+// Рендер общих контактов и главной страницы
+function renderHome(){
+  var C=S.CFG||{},H=S.HERO||{};
+  if($('h-badge'))$('h-badge').textContent=C.badge||'';
+  if($('h-top'))$('h-top').textContent=H.title_top||'Ремонт';
+  if($('h-bot'))$('h-bot').textContent=H.title_bottom||'телефонов и ПК';
+  if($('h-desc'))$('h-desc').textContent=H.lead||'';
+  if($('h-btn1'))$('h-btn1').textContent=H.btn1_text||'Выбрать модель ремонта →';
+  if($('h-btn2'))$('h-btn2').textContent=H.btn2_text||'Витрина магазина';
+
+  var tgUrl=C.tg_url||('https://t.me/'+(C.tg_user||'mysestore'));
+  var telRaw=C.phone_raw||'+79155505514';
+  var telView=C.phone_view||'+7 (915) 550-55-14';
+  if($('h-tg')){$('h-tg').href=tgUrl;$('h-tg').textContent='Telegram @'+(C.tg_user||'mysestore')}
+  if($('h-tel')){$('h-tel').href='tel:'+telRaw;$('h-tel').textContent=telView}
+  if($('c-addr'))$('c-addr').textContent=C.address||'';
+  if($('c-sched'))$('c-sched').textContent=C.schedule||'';
+  if($('c-tel')){$('c-tel').href='tel:'+telRaw;$('c-tel').textContent=telView}
+  if($('c-tg')){$('c-tg').href=tgUrl;$('c-tg').textContent='Telegram: @'+(C.tg_user||'mysestore')}
+  if($('copy-tg-btn'))$('copy-tg-btn').href=tgUrl;
+  if($('f-txt'))$('f-txt').textContent=C.footer_text||'';
+
+  // Преимущества с галочками
+  var ul=$('h-feats');
+  if(ul){
+    ul.innerHTML='';
+    (H.feats||[]).forEach(function(f){
+      var li=mk('li',{},[mk('b',{textContent:f[0]}),mk('span',{textContent:f[1]})]);
+      ul.appendChild(li);
+    });
   }
-  var topBtns=mk('div',{style:'display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px'},[
-    mk('button',{type:'button',className:'btn o sm',textContent:'Выйти из админки',onclick:function(){ADM=false;try{sessionStorage.removeItem('se_adm');location.hash='#home'}catch(x){}admRender()}}),
-    mk('button',{type:'button',className:'btn o sm',textContent:'Сменить логин / пароль',onclick:function(){$('pwd-box').hidden=!$('pwd-box').hidden}})
-  ]);
-  box.appendChild(topBtns);
-  var nlg=fi('','Новый логин',function(){}),npw=fi('','Новый пароль',function(){},'password'),pmsg=mk('span',{className:'ok',style:'margin-left:10px'});
-  var pbox=mk('div',{id:'pwd-box',className:'card',hidden:true,style:'margin-bottom:18px;max-width:440px'},[
-    mk('div',{className:'tag',textContent:'БЕЗОПАСНОСТЬ'}),
-    mk('h3',{textContent:'Смена пароля администратора',style:'margin:6px 0 10px'}),
-    nlg,
-    mk('div',{style:'height:8px'}),
-    npw,
-    mk('div',{style:'margin-top:10px;display:flex;align-items:center;flex-wrap:wrap;gap:8px'},[
-      mk('button',{type:'button',className:'btn sm',textContent:'Применить новый пароль',onclick:async function(){
-        if(!nlg.value.trim()||!npw.value){pmsg.textContent='Заполните оба поля';return}
-        var ns=AS;
-        var nh=await sha(ns+':'+nlg.value.trim()+':'+npw.value);
-        S.AUTH={s:ns,h:nh};
-        pmsg.textContent='Пароль обновлён! Не забудьте нажать «Скачать обновлённый index.html» внизу.';
-      }}),
-      pmsg
-    ])
-  ]);
-  box.appendChild(pbox);
 
-  box.appendChild(mk('h3',{textContent:'1. Товары на витрине'}));
-  WG.forEach(function(g,i){
-    var sel=mk('select',{onchange:function(){g[0]=sel.value}});
-    CATS.forEach(function(c){sel.appendChild(mk('option',{textContent:c,selected:c===g[0]}))});
-    var ot=mk('input',{type:'checkbox',checked:!!g[4],onchange:function(){g[4]=ot.checked?1:0}});
-    box.appendChild(mk('div',{className:'arow'},[
-      photoCell(g),sel,
-      fi(g[1],'Название',function(v){g[1]=v}),
-      fi(g[2],'Описание',function(v){g[2]=v}),
-      fi(g[3],'Цена, ₽',function(v){g[3]=+v},'number'),
-      mk('label',{className:'ck'},[ot,document.createTextNode('от')]),
-      xb(function(){WG.splice(i,1);admRender()},'Удалить товар')
-    ]));
+  // Плитки быстрого перехода
+  var tl=$('home-tiles');
+  if(tl){
+    tl.innerHTML='';
+    (H.tiles||[]).forEach(function(t){
+      var a=mk('a',{className:'card tile',href:t[3]||'#service'},[
+        mk('span',{className:'tag',textContent:t[0]}),
+        mk('h3',{textContent:t[1]}),
+        mk('p',{textContent:t[2]})
+      ]);
+      tl.appendChild(a);
+    });
+  }
+
+  // Кастомные HTML-модули
+  var cm=$('custom-modules');
+  if(cm){
+    cm.innerHTML='';
+    (S.MODULES||[]).forEach(function(m){
+      if(!m.enabled)return;
+      var d=mk('div',{});
+      d.innerHTML=m.html||'';
+      cm.appendChild(d);
+    });
+  }
+
+  // Акции и новости
+  var hb=$('home-news');
+  if(hb){
+    hb.innerHTML='';
+    if(!S.NEWS||!S.NEWS.length){
+      hb.innerHTML='<div class="card"><p class="note">Пока нет активных акций.</p></div>';
+    }else{
+      S.NEWS.forEach(function(n){
+        var d=mk('div',{className:'news-card'},[
+          mk('span',{className:'date',textContent:n.date}),
+          mk('h3',{textContent:n.title}),
+          mk('p',{textContent:n.text})
+        ]);
+        hb.appendChild(d);
+      });
+    }
+  }
+
+  // Отзывы с Яндекс Карт
+  var rv=$('home-reviews');
+  if($('rev-map-link'))$('rev-map-link').href=C.map_link||'https://yandex.ru/maps';
+  if(rv){
+    rv.innerHTML='';
+    (S.REVIEWS||[]).forEach(function(r){
+      var st='★★★★★'.slice(0,Math.max(1,Math.min(5,Number(r.stars)||5)));
+      rv.appendChild(mk('div',{className:'review-card'},[
+        mk('div',{className:'review-stars',textContent:st}),
+        mk('p',{className:'review-author',textContent:r.author+' • '+(r.date||'Яндекс Карты')}),
+        mk('p',{className:'review-text',textContent:r.text})
+      ]));
+    });
+  }
+
+  // Блок Мы находимся
+  if($('m-box-title'))$('m-box-title').textContent=C.map_title||'📍 Мы находимся в Люберцах (ЖК «Самолёт»)';
+  if($('m-box-sched'))$('m-box-sched').textContent='График работы: '+(C.schedule||'Пн – Сб с 10:00 до 21:00');
+  var mf=$('m-box-frame');
+  if(mf){
+    if(C.map_iframe&&C.map_iframe.trim()){
+      mf.innerHTML=C.map_iframe;
+    }else{
+      mf.innerHTML='<div style="text-align:center;padding:24px"><p style="font-weight:800;font-size:18px;margin:0 0 6px">'+(C.address||'г. Люберцы, ЖК «Самолёт»')+'</p><p class="note" style="margin:0 0 14px">'+(C.map_sub||'Сервисный центр se:стор')+' · Тел.: '+telView+'</p><a class="btn sm" href="'+(C.map_link||'https://yandex.ru/maps')+'" target="_blank" rel="noopener">Построить маршрут на Яндекс Картах →</a></div>';
+    }
+  }
+}
+
+// Рендер раздела Сервис (4 вкладки: Apple, Android, ПК, Приставки)
+var curSub='apple',curAppleSer='Все серии',curAndroidBrand='Все бренды';
+function renderService(sub){
+  curSub=sub||'apple';
+  document.querySelectorAll('#srv-tabs a').forEach(function(a){
+    var st=a.getAttribute('data-st');
+    a.className=st===curSub?'act':'';
   });
-  box.appendChild(ab('+ Добавить товар',function(){WG.push([CATS[0],'','',0,0,'']);admRender()}));
+  var box=$('srv-content');
+  if(!box)return;
+  box.innerHTML='';
 
-  box.appendChild(mk('h3',{textContent:'2. Цены по моделям iPhone (переклейка / дисплей / АКБ)'}));
-  WM.forEach(function(m){
-    box.appendChild(mk('div',{className:'arow srow'},[
-      mk('b',{textContent:m.n}),
-      fi(m.p[0],'Переклейка, ₽',function(v){m.p[0]=+v},'number'),
-      fi(m.p[1],'Дисплей, ₽',function(v){m.p[1]=+v},'number'),
-      fi(m.p[2],'АКБ, ₽',function(v){m.p[2]=+v},'number')
-    ]));
+  if(curSub==='apple'){
+    box.appendChild(mk('h3',{textContent:'Ремонт Apple iPhone (от iPhone X до iPhone 18 Pro Max)',style:'margin:0 0 8px;font-size:22px'}));
+    box.appendChild(mk('p',{className:'lead',textContent:'Выберите свою модель iPhone. На странице каждой модели указаны цены на замену дисплея, аккумулятора, задней крышки, а также замену шлейфов и BGA-пайку с описанием поломок.'}));
+
+    // Фильтр по сериям iPhone
+    var sers=['Все серии'];
+    (S.APPLE_MODELS||[]).forEach(function(m){if(m.s&&sers.indexOf(m.s)<0)sers.push(m.s)});
+    var chWrap=mk('div',{className:'chips'});
+    sers.forEach(function(sName){
+      var b=mk('button',{type:'button',className:'chip'+(curAppleSer===sName?' act':''),textContent:sName,onclick:function(){curAppleSer=sName;renderService('apple')}});
+      chWrap.appendChild(b);
+    });
+    box.appendChild(chWrap);
+
+    var grid=mk('div',{className:'g3'});
+    (S.APPLE_MODELS||[]).forEach(function(m){
+      if(curAppleSer!=='Все серии'&&m.s!==curAppleSer)return;
+      var card=mk('a',{className:'card tile',href:'#model/apple/'+m.id},[
+        mk('span',{className:'tag',textContent:(m.s||'APPLE IPHONE').toUpperCase()}),
+        mk('h3',{textContent:m.name,style:'margin:6px 0'}),
+        mk('p',{className:'note',textContent:m.specs}),
+        mk('p',{textContent:'Открыть прайс модели →',style:'margin-top:10px;font-weight:700;color:var(--cyan)'})
+      ]);
+      grid.appendChild(card);
+    });
+    box.appendChild(grid);
+  }
+  else if(curSub==='android'){
+    box.appendChild(mk('h3',{textContent:'Ремонт смартфонов Android по брендам и сериям',style:'margin:0 0 8px;font-size:22px'}));
+    box.appendChild(mk('p',{className:'lead',textContent:'Отдельные страницы для серий Samsung Galaxy S и Galaxy A, Xiaomi, Redmi и POCO, Tecno Pova и Camon, Realme, Oppo, Vivo и Huawei.'}));
+
+    var brs=['Все бренды'];
+    (S.ANDROID_BRANDS||[]).forEach(function(b){if(b.brand&&brs.indexOf(b.brand)<0)brs.push(b.brand)});
+    var chWrap=mk('div',{className:'chips'});
+    brs.forEach(function(bName){
+      var btn=mk('button',{type:'button',className:'chip'+(curAndroidBrand===bName?' act':''),textContent:bName,onclick:function(){curAndroidBrand=bName;renderService('android')}});
+      chWrap.appendChild(btn);
+    });
+    box.appendChild(chWrap);
+
+    var grid=mk('div',{className:'g3'});
+    (S.ANDROID_BRANDS||[]).forEach(function(b,idx){
+      if(curAndroidBrand!=='Все бренды'&&b.brand!==curAndroidBrand)return;
+      var firstPrice=(b.prices&&b.prices[0])?b.prices[0][1]:'по запросу';
+      var card=mk('a',{className:'card tile',href:'#model/android/'+idx},[
+        mk('span',{className:'tag',textContent:'БРЕНД: '+b.brand.toUpperCase()}),
+        mk('h3',{textContent:b.sub,style:'margin:6px 0'}),
+        mk('p',{className:'note',textContent:b.desc}),
+        mk('p',{textContent:'Дисплей '+firstPrice+' • Подробнее →',style:'margin-top:10px;font-weight:700;color:var(--cyan)'})
+      ]);
+      grid.appendChild(card);
+    });
+    box.appendChild(grid);
+  }
+  else if(curSub==='pc'){
+    var card=mk('div',{className:'card'},[
+      mk('span',{className:'tag',textContent:'КОМПЬЮТЕРЫ И НОУТБУКИ'}),
+      mk('h3',{textContent:'Ремонт, сборка и обслуживание ПК и ноутбуков',style:'margin:6px 0 8px;font-size:22px'}),
+      mk('p',{className:'note',textContent:'Сборка кастомных ПК, чистка систем охлаждения с заменой термоинтерфейсов, установка ОС и компонентный ремонт материнских плат.'})
+    ]);
+    var pt=mk('div',{className:'ptable'});
+    (S.PC||[]).forEach(function(pr){
+      var row=mk('div',{className:'prow'},[
+        mk('div',{},[mk('b',{textContent:pr[0]}),mk('small',{textContent:pr[3]})]),
+        mk('span',{className:'ptm',textContent:'⏱ '+pr[2]}),
+        mk('span',{className:'pval',textContent:pr[1]}),
+        mk('button',{type:'button',className:'btn sm',textContent:'Записаться',onclick:function(){
+          $('rs').value='ПК / Ноутбук — '+pr[0]+' ('+pr[1]+')';
+          location.hash='#contacts';
+        }})
+      ]);
+      pt.appendChild(row);
+    });
+    card.appendChild(pt);
+    box.appendChild(card);
+  }
+  else if(curSub==='console'){
+    var card=mk('div',{className:'card'},[
+      mk('span',{className:'tag',textContent:'SONY PLAYSTATION • XBOX • NINTENDO'}),
+      mk('h3',{textContent:'Ремонт и обслуживание игровых приставок',style:'margin:6px 0 8px;font-size:22px'}),
+      mk('p',{className:'note',textContent:'Чистка от пыли, замена термопасты и жидкого металла, устранение дрифта стиков геймпадов и компонентный ремонт плат.'})
+    ]);
+    var pt=mk('div',{className:'ptable'});
+    (S.CONSOLE||[]).forEach(function(pr){
+      var row=mk('div',{className:'prow'},[
+        mk('div',{},[mk('b',{textContent:pr[0]}),mk('small',{textContent:pr[3]})]),
+        mk('span',{className:'ptm',textContent:'⏱ '+pr[2]}),
+        mk('span',{className:'pval',textContent:pr[1]}),
+        mk('button',{type:'button',className:'btn sm',textContent:'Записаться',onclick:function(){
+          $('rs').value='Игровая приставка — '+pr[0]+' ('+pr[1]+')';
+          location.hash='#contacts';
+        }})
+      ]);
+      pt.appendChild(row);
+    });
+    card.appendChild(pt);
+    box.appendChild(card);
+  }
+}
+
+// Детальная страница конкретной модели iPhone или суббренда Android
+function renderModelDetail(type,key){
+  var title='',desc='',prices=[],sib=$('md-siblings');
+  if(sib)sib.innerHTML='';
+  if(type==='apple'){
+    var m=(S.APPLE_MODELS||[]).find(function(x){return x.id===key})||(S.APPLE_MODELS||[])[0];
+    if(!m)return;
+    title='Ремонт '+m.name;
+    desc=m.specs+' · Диагностика при ремонте бесплатно.';
+    prices=m.prices||[];
+    $('md-crumb-title').textContent=m.name;
+    $('md-back').href='#service/apple';
+    (S.APPLE_MODELS||[]).filter(function(x){return x.s===m.s}).forEach(function(x){
+      sib.appendChild(mk('a',{href:'#model/apple/'+x.id,className:'chip'+(x.id===m.id?' act':''),textContent:x.name}));
+    });
+  }else if(type==='android'){
+    var b=(S.ANDROID_BRANDS||[])[Number(key)]||(S.ANDROID_BRANDS||[])[0];
+    if(!b)return;
+    title='Ремонт '+b.sub;
+    desc=b.desc;
+    prices=b.prices||[];
+    $('md-crumb-title').textContent=b.sub;
+    $('md-back').href='#service/android';
+    (S.ANDROID_BRANDS||[]).forEach(function(x,i){
+      if(x.brand===b.brand){
+        sib.appendChild(mk('a',{href:'#model/android/'+i,className:'chip'+(i===Number(key)?' act':''),textContent:x.sub}));
+      }
+    });
+  }
+  $('md-title').textContent=title;
+  $('md-desc').textContent=desc;
+  var pt=$('md-prices');
+  pt.innerHTML='';
+  prices.forEach(function(pr){
+    var row=mk('div',{className:'prow'},[
+      mk('div',{},[mk('b',{textContent:pr[0]}),mk('small',{textContent:pr[3]||''})]),
+      mk('span',{className:'ptm',textContent:'⏱ '+(pr[2]||'60 мин')}),
+      mk('span',{className:'pval',textContent:pr[1]||'По запросу'}),
+      mk('button',{type:'button',className:'btn sm',textContent:'Записаться',onclick:function(){
+        $('rs').value=title+' — '+pr[0]+' ('+pr[1]+')';
+        location.hash='#contacts';
+      }})
+    ]);
+    pt.appendChild(row);
   });
 }
 
-function build(){
-  var seed=JSON.stringify(S).replace(/</g,'\\u003c');
+// Рендер Копицентра (без плакатов)
+function renderCopystore(){
+  var cs=$('copy-services');
+  if(!cs)return;
+  cs.innerHTML='';
+  (S.COPYSTORE||[]).forEach(function(item){
+    var card=mk('div',{className:'card'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center;gap:8px'},[
+        mk('span',{className:'tag',textContent:item[1]}),
+        mk('span',{className:'time',textContent:'⏱ '+item[2]})
+      ]),
+      mk('h3',{textContent:item[0],style:'margin:8px 0 6px'}),
+      mk('p',{className:'note',textContent:item[3]}),
+      mk('p',{style:'margin-top:14px'},[
+        mk('button',{type:'button',className:'btn sm o',textContent:'Заказать услугу',onclick:function(){
+          $('rs').value='Копицентр / 3D: '+item[0]+' ('+item[1]+')';
+          location.hash='#contacts';
+        }})
+      ])
+    ]);
+    cs.appendChild(card);
+  });
+}
+
+// Рендер Магазина
+var cat='Все',cart=[];
+function shop(){
+  var cats=['Все'].concat(S.SHOP_CATS||['Смартфоны','Кабели и зарядки','Стёкла и защита','3D-печать и авто']);
+  var cbs=$('ct');
+  if(!cbs)return;
+  cbs.innerHTML='';
+  cats.forEach(function(c){
+    var btn=mk('button',{type:'button',className:'chip',textContent:c,onclick:function(){cat=c;shop()}});
+    btn.setAttribute('aria-pressed',String(cat===c));
+    cbs.appendChild(btn);
+  });
+  var b=$('pd');b.innerHTML='';
+  (S.G||[]).forEach(function(g,i){
+    if(cat!=='Все'&&g[0]!==cat)return;
+    var e=mk('div',{className:'card prod'});
+    var ph=mk('div',{className:'ph',textContent:(g[0]||'ТОВ').slice(0,3).toUpperCase()});
+    if(g[5]){
+      ph.textContent='';ph.className='ph pic';
+      ph.appendChild(mk('img',{src:g[5],alt:g[1],loading:'lazy'}));
+    }
+    e.appendChild(ph);
+    e.appendChild(mk('h3',{textContent:g[1]}));
+    e.appendChild(mk('p',{textContent:g[2]}));
+    e.appendChild(mk('div',{className:'pr',textContent:(g[4]?'от ':'')+fm(g[3])}));
+    e.appendChild(mk('button',{type:'button',className:'btn',textContent:'Забронировать',onclick:function(){cart.push(i);bk()}}));
+    b.appendChild(e);
+  });
+}
+
+function bk(){
+  var cc=$('cc');if(cc)cc.textContent='Бронь: '+cart.length;
+  var l=$('cl');if(!l)return;
+  l.innerHTML='';var sum=0;
+  if(!cart.length){l.innerHTML='<li><span class="note">Пока пусто. Выберите товар на витрине.</span></li>'}
+  cart.forEach(function(i,k){
+    if(!S.G[i])return;
+    sum+=Number(S.G[i][3])||0;
+    var li=mk('li',{},[
+      mk('span',{textContent:S.G[i][1]+' — '+fm(S.G[i][3])}),
+      mk('button',{type:'button',className:'x',textContent:'✕',onclick:function(){cart.splice(k,1);bk()}})
+    ]);
+    l.appendChild(li);
+  });
+  $('tt').textContent=fm(sum);$('bf').hidden=!cart.length;
+}
+
+if($('bf')){
+  $('bf').onsubmit=function(e){
+    e.preventDefault();
+    var items=cart.map(function(i){return '• '+S.G[i][1]+' ('+fm(S.G[i][3])+')'}).join('\n');
+    var contact=$('bt').value;
+    var msg='Здравствуйте! Хочу забронировать в SE STORE:\n'+items+'\nКонтакт: '+contact;
+    var tgUser=(S.CFG&&S.CFG.tg_user)||'mysestore';
+    $('bd').innerHTML='Бронь сформирована! <a href="https://t.me/'+tgUser+'?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Нажмите здесь, чтобы отправить список мастеру в Telegram →</a>';
+    cart=[];bk();
+  };
+}
+
+if($('rf')){
+  $('rf').onsubmit=function(e){
+    e.preventDefault();
+    var text=$('rs').value,contact=$('rt2').value;
+    var msg='Заявка в SE STORE:\nУстройство/услуга: '+text+'\nКонтакт: '+contact;
+    var tgUser=(S.CFG&&S.CFG.tg_user)||'mysestore';
+    $('rd').innerHTML='Заявка готова! <a href="https://t.me/'+tgUser+'?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Отправить напрямую в Telegram (@'+tgUser+') →</a>';
+    e.target.reset();
+  };
+}
+
+// =========================================================================
+// ПОЛНАЯ АДМИН-ПАНЕЛЬ ПО КАТЕГОРИЯМ НА ОДНОЙ СТРАНИЦЕ
+// =========================================================================
+var WS=null,admFilter='all';
+var HEAD="<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<title>SE STORE — ремонт техники, 3D-печать и копицентр в Люберцах (ЖК «Самолёт»)</title>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap\" rel=\"stylesheet\">\n";
+
+function makeCatSection(id, title, isOpen, children){
+  if(admFilter!=='all'&&admFilter!==id)return null;
+  var det=mk('details',{className:'adm-cat',open:admFilter===id||isOpen});
+  var sum=mk('summary',{textContent:title});
+  var body=mk('div',{className:'adm-cat-body'},children);
+  det.appendChild(sum);
+  det.appendChild(body);
+  return det;
+}
+
+function admRender(){
+  var box=$('admbox');if(!box)return;
+  box.innerHTML='';
+  if(!WS)WS=JSON.parse(JSON.stringify(S));
+
+  // Верхняя закрепленная панель быстрого выбора категории + кнопка сохранения
+  var cats=[
+    ['all','Все разделы сразу'],
+    ['cfg','1. Контакты и График'],
+    ['hero','2. Первый экран и Плитки'],
+    ['mods','3. Акции, Новости и Модули'],
+    ['revs','4. Отзывы и Карта'],
+    ['apple','5. Ремонт Apple (X–18 Pro Max)'],
+    ['android','6. Ремонт Android (Бренды)'],
+    ['pccon','7. Ремонт ПК и Приставок'],
+    ['shop','8. Магазин и Категории'],
+    ['copy','9. Копицентр и 3D-печать']
+  ];
+  var filterBar=mk('div',{className:'chips',style:'margin:0'});
+  cats.forEach(function(c){
+    filterBar.appendChild(mk('button',{
+      type:'button',
+      className:'chip'+(admFilter===c[0]?' act':''),
+      textContent:c[1],
+      onclick:function(){admFilter=c[0];admRender()}
+    }));
+  });
+
+  var topBar=mk('div',{className:'adm-bar'},[
+    filterBar,
+    mk('div',{style:'display:flex;gap:8px'},[
+      mk('button',{type:'button',className:'btn sm',textContent:'💾 Сохранить и скачать index.html',onclick:function(){$('admsave').click()}})
+    ])
+  ]);
+  box.appendChild(topBar);
+
+  // КАТЕГОРИЯ 1: ОСНОВНЫЕ НАСТРОЙКИ, ТЕЛЕФОН, ГРАФИК, КОНТАКТЫ
+  var c1=makeCatSection('cfg','⚙️ 1. Основные настройки сайта, Телефон, График и Адрес',true,[
+    mk('div',{className:'adm-grid2'},[
+      mk('div',{},[mk('label',{className:'f',textContent:'Текст верхнего бейджа на главной'}),fi(WS.CFG.badge,'Бейдж',function(v){WS.CFG.badge=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Адрес мастерской'}),fi(WS.CFG.address,'Адрес',function(v){WS.CFG.address=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Телефон (как отображается на сайте)'}),fi(WS.CFG.phone_view,'+7 (915) 550-55-14',function(v){WS.CFG.phone_view=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Телефон для звонка (без пробелов)'}),fi(WS.CFG.phone_raw,'+79155505514',function(v){WS.CFG.phone_raw=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Логин Telegram (без @)'}),fi(WS.CFG.tg_user,'mysestore',function(v){WS.CFG.tg_user=v;WS.CFG.tg_url='https://t.me/'+v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'График работы'}),fi(WS.CFG.schedule,'График',function(v){WS.CFG.schedule=v})])
+    ]),
+    mk('label',{className:'f',textContent:'Текст в подвале сайта (футер)'}),
+    fi(WS.CFG.footer_text,'Текст футера',function(v){WS.CFG.footer_text=v})
+  ]);
+  if(c1)box.appendChild(c1);
+
+  // КАТЕГОРИЯ 2: ПЕРВЫЙ ЭКРАН ГЛАВНОЙ СТРАНИЦЫ, БУЛЛИТЫ И 4 ПЛИТКИ
+  var featsWrap=mk('div',{style:'display:grid;gap:8px'});
+  (WS.HERO.feats||[]).forEach(function(f,idx){
+    featsWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center'},[
+        mk('b',{textContent:'Преимущество #'+(idx+1)}),
+        xb(function(){WS.HERO.feats.splice(idx,1);admRender()},'Удалить')
+      ]),
+      fi(f[0],'Жирный заголовок преимущества',function(v){f[0]=v}),
+      fi(f[1],'Описание преимущества',function(v){f[1]=v})
+    ]));
+  });
+  featsWrap.appendChild(ab('+ Добавить пункт преимущества',function(){WS.HERO.feats.push(['Новый пункт','Описание']);admRender()}));
+
+  var tilesWrap=mk('div',{className:'adm-grid2'});
+  (WS.HERO.tiles||[]).forEach(function(t,idx){
+    tilesWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('b',{textContent:'Карточка раздела #'+(idx+1)}),
+      fi(t[0],'Тег (например 01 • СЕРВИС)',function(v){t[0]=v}),
+      fi(t[1],'Заголовок карточки',function(v){t[1]=v}),
+      fi(t[2],'Описание карточки',function(v){t[2]=v}),
+      fi(t[3],'Ссылка (#service, #shop, #copystore, #contacts)',function(v){t[3]=v})
+    ]));
+  });
+
+  var c2=makeCatSection('hero','🏠 2. Главная страница: Заголовок, Преимущества и Карточки разделов',false,[
+    mk('div',{className:'adm-grid2'},[
+      mk('div',{},[mk('label',{className:'f',textContent:'Верхнее слово заголовка (в рамке)'}),fi(WS.HERO.title_top,'Ремонт',function(v){WS.HERO.title_top=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Нижняя строка заголовка (голубым)'}),fi(WS.HERO.title_bottom,'телефонов и ПК',function(v){WS.HERO.title_bottom=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Текст главной кнопки'}),fi(WS.HERO.btn1_text,'Кнопка 1',function(v){WS.HERO.btn1_text=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Текст второй кнопки'}),fi(WS.HERO.btn2_text,'Кнопка 2',function(v){WS.HERO.btn2_text=v})])
+    ]),
+    mk('label',{className:'f',textContent:'Подзаголовок под главным заголовком'}),
+    fta(WS.HERO.lead,'Описание',function(v){WS.HERO.lead=v},2),
+    mk('h4',{textContent:'Пункты с галочками (возле анимированного телефона)',style:'margin:8px 0 0'}),
+    featsWrap,
+    mk('h4',{textContent:'4 карточки быстрого перехода на главной',style:'margin:8px 0 0'}),
+    tilesWrap
+  ]);
+  if(c2)box.appendChild(c2);
+
+  // КАТЕГОРИЯ 3: АКЦИИ, НОВОСТИ И СВОИ HTML-МОДУЛИ
+  var newsWrap=mk('div',{style:'display:grid;gap:10px'});
+  (WS.NEWS||[]).forEach(function(n,idx){
+    newsWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center'},[
+        mk('b',{textContent:'Акция / Новость #'+(idx+1)}),
+        xb(function(){WS.NEWS.splice(idx,1);admRender()},'Удалить акцию')
+      ]),
+      mk('div',{className:'adm-grid2'},[
+        fi(n.date,'Метка / Дата (например: Акция)',function(v){n.date=v}),
+        fi(n.title,'Заголовок акции или новости',function(v){n.title=v})
+      ]),
+      fta(n.text,'Подробный текст акции или новости',function(v){n.text=v},2)
+    ]));
+  });
+  newsWrap.appendChild(ab('+ Добавить акцию или новость',function(){WS.NEWS.push({date:'Акция',title:'Новая акция',text:'Описание условий'});admRender()}));
+
+  var modsWrap=mk('div',{style:'display:grid;gap:10px'});
+  (WS.MODULES||[]).forEach(function(m,idx){
+    var chk=mk('input',{type:'checkbox',checked:!!m.enabled,onchange:function(){m.enabled=chk.checked?1:0}});
+    modsWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px'},[
+        mk('b',{textContent:'HTML-модуль #'+(idx+1)+': '+(m.title||'')}),
+        mk('div',{style:'display:flex;gap:12px;align-items:center'},[
+          mk('label',{className:'ck',style:'margin:0'},[chk,' Показывать на сайте']),
+          xb(function(){WS.MODULES.splice(idx,1);admRender()},'Удалить модуль')
+        ])
+      ]),
+      fi(m.title,'Название модуля (для себя)',function(v){m.title=v}),
+      fta(m.html,'HTML-код блока или баннера',function(v){m.html=v},3)
+    ]));
+  });
+  modsWrap.appendChild(ab('+ Добавить свой HTML-модуль / баннер',function(){WS.MODULES.push({title:'Новый блок',html:'<div class="card"><h3>Заголовок блока</h3><p class="note">Текст блока</p></div>',enabled:1});admRender()}));
+
+  var c3=makeCatSection('mods','🔥 3. Акции, Новости и Свои HTML-модули',false,[
+    mk('h4',{textContent:'Акции и новости на главной',style:'margin:0'}),
+    newsWrap,
+    mk('h4',{textContent:'Свои дополнительные модули / баннеры (HTML)',style:'margin:10px 0 0'}),
+    modsWrap
+  ]);
+  if(c3)box.appendChild(c3);
+
+  // КАТЕГОРИЯ 4: ОТЗЫВЫ С ЯНДЕКС КАРТ И БЛОК КАРТЫ
+  var revWrap=mk('div',{style:'display:grid;gap:10px'});
+  (WS.REVIEWS||[]).forEach(function(r,idx){
+    revWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center'},[
+        mk('b',{textContent:'Отзыв #'+(idx+1)+' ('+r.author+')'}),
+        xb(function(){WS.REVIEWS.splice(idx,1);admRender()},'Удалить отзыв')
+      ]),
+      mk('div',{className:'adm-grid3'},[
+        fi(r.author,'Имя клиента',function(v){r.author=v}),
+        fi(r.date,'Подпись (Яндекс Карты)',function(v){r.date=v}),
+        fi(r.stars,'Звёзд (1-5)',function(v){r.stars=+v},'number')
+      ]),
+      fta(r.text,'Текст отзыва',function(v){r.text=v},2)
+    ]));
+  });
+  revWrap.appendChild(ab('+ Добавить отзыв клиента',function(){WS.REVIEWS.push({author:'Новый клиент',stars:5,date:'Яндекс Карты',text:'Текст отзыва'});admRender()}));
+
+  var c4=makeCatSection('revs','⭐ 4. Отзывы с Яндекс Карт и Блок «Мы находимся»',false,[
+    revWrap,
+    mk('h4',{textContent:'Настройки блока «Мы находимся» и Яндекс Карты',style:'margin:10px 0 0'}),
+    mk('div',{className:'adm-grid2'},[
+      mk('div',{},[mk('label',{className:'f',textContent:'Заголовок блока карты'}),fi(WS.CFG.map_title,'Заголовок',function(v){WS.CFG.map_title=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Ссылка на вашу точку в Яндекс Картах'}),fi(WS.CFG.map_link,'https://yandex.ru/maps/...',function(v){WS.CFG.map_link=v})])
+    ]),
+    mk('label',{className:'f',textContent:'Код интерактивной карты iframe (необязательно — если пусто, выводится карточка с кнопкой маршрута)'}),
+    fta(WS.CFG.map_iframe,'<iframe src="https://yandex.ru/map-widget/v1/..." width="100%" height="320" frameborder="0"></iframe>',function(v){WS.CFG.map_iframe=v},2)
+  ]);
+  if(c4)box.appendChild(c4);
+
+  // КАТЕГОРИЯ 5: СЕРВИС — МОДЕЛИ APPLE IPHONE (X – 18 PRO MAX)
+  var appleWrap=mk('div',{style:'display:grid;gap:12px'});
+  (WS.APPLE_MODELS||[]).forEach(function(m,i){
+    var pList=mk('div',{style:'display:grid;gap:6px'});
+    (m.prices||[]).forEach(function(pr,pidx){
+      pList.appendChild(mk('div',{className:'adm-srv-row'},[
+        fi(pr[0],'Услуга (напр. Замена дисплея)',function(v){pr[0]=v}),
+        fi(pr[1],'Цена (от ... ₽)',function(v){pr[1]=v}),
+        fi(pr[2],'Срок (60 мин)',function(v){pr[2]=v}),
+        fi(pr[3],'Описание (в каком случае нужен ремонт)',function(v){pr[3]=v}),
+        xb(function(){m.prices.splice(pidx,1);admRender()},'✕')
+      ]));
+    });
+    pList.appendChild(ab('+ Добавить услугу для '+m.name,function(){
+      m.prices.push(['Новая услуга','Цена после диагностики','от 1 часа','Описание поломки']);
+      admRender();
+    }));
+
+    appleWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px'},[
+        mk('b',{style:'font-size:16px;color:var(--cyan)',textContent:m.name+' ('+(m.s||'iPhone')+')'}),
+        xb(function(){WS.APPLE_MODELS.splice(i,1);admRender()},'Удалить модель')
+      ]),
+      mk('div',{className:'adm-grid3'},[
+        fi(m.name,'Название модели (напр. iPhone 18 Pro)',function(v){m.name=v}),
+        fi(m.s,'Серия для фильтра (напр. iPhone 18 Pro)',function(v){m.s=v}),
+        fi(m.specs,'Характеристики экрана/корпуса',function(v){m.specs=v})
+      ]),
+      pList
+    ]));
+  });
+  appleWrap.appendChild(ab('+ Добавить новую модель Apple iPhone / iPad',function(){
+    WS.APPLE_MODELS.unshift({
+      id:'iphone-'+Date.now(),
+      s:'iPhone 18 Pro',
+      name:'Новая модель iPhone',
+      specs:'Super Retina XDR · USB-C',
+      prices:[
+        ['Замена дисплея','от 9 900 ₽','60 мин','Разбили дисплей, нет изображения или полосы.'],
+        ['Замена аккумулятора (АКБ)','от 3 900 ₽','45 мин','Быстро разряжается или выключается.'],
+        ['Замена задней крышки','от 4 900 ₽','2 часа','Трещины на заднем стекле.'],
+        ['Замена шлейфов и BGA пайка','Цена после диагностики','от 2 часов','Сложный ремонт платы и шлейфов.']
+      ]
+    });
+    admRender();
+  }));
+
+  var c5=makeCatSection('apple','🍏 5. Управление Сервисом: Модели Apple iPhone (X – 18 Pro Max)',false,[appleWrap]);
+  if(c5)box.appendChild(c5);
+
+  // КАТЕГОРИЯ 6: СЕРВИС — ANDROID ПО БРЕНДАМ И СУББРЕНДАМ
+  var andWrap=mk('div',{style:'display:grid;gap:12px'});
+  (WS.ANDROID_BRANDS||[]).forEach(function(b,i){
+    var pList=mk('div',{style:'display:grid;gap:6px'});
+    (b.prices||[]).forEach(function(pr,pidx){
+      pList.appendChild(mk('div',{className:'adm-srv-row'},[
+        fi(pr[0],'Услуга',function(v){pr[0]=v}),
+        fi(pr[1],'Цена (от ... ₽)',function(v){pr[1]=v}),
+        fi(pr[2],'Срок',function(v){pr[2]=v}),
+        fi(pr[3],'Описание поломки',function(v){pr[3]=v}),
+        xb(function(){b.prices.splice(pidx,1);admRender()},'✕')
+      ]));
+    });
+    pList.appendChild(ab('+ Добавить услугу для '+b.sub,function(){
+      b.prices.push(['Замена шлейфов и BGA пайка','Цена после диагностики','от 1 часа','Описание']);
+      admRender();
+    }));
+
+    andWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px'},[
+        mk('b',{style:'font-size:16px;color:var(--cyan)',textContent:b.brand+' — '+b.sub}),
+        xb(function(){WS.ANDROID_BRANDS.splice(i,1);admRender()},'Удалить серию')
+      ]),
+      mk('div',{className:'adm-grid3'},[
+        fi(b.brand,'Бренд (Samsung, Xiaomi, Tecno...)',function(v){b.brand=v}),
+        fi(b.sub,'Название серии / суббренда',function(v){b.sub=v}),
+        fi(b.desc,'Краткое описание серии',function(v){b.desc=v})
+      ]),
+      pList
+    ]));
+  });
+  andWrap.appendChild(ab('+ Добавить новый бренд или серию Android',function(){
+    WS.ANDROID_BRANDS.push({
+      brand:'Samsung',
+      sub:'Новая серия Android',
+      desc:'Описание линейки смартфонов',
+      prices:[
+        ['Замена дисплея','от 3 500 ₽','60 мин','Разбили экран или не работает сенсор.'],
+        ['Замена аккумулятора (АКБ)','от 2 000 ₽','40 мин','Быстрая разрядка батареи.'],
+        ['Замена шлейфов и BGA пайка','Цена после диагностики','от 1 часа','Ремонт платы и разъёмов.']
+      ]
+    });
+    admRender();
+  }));
+
+  var c6=makeCatSection('android','🤖 6. Управление Сервисом: Смартфоны Android (Бренды и Суббренды)',false,[andWrap]);
+  if(c6)box.appendChild(c6);
+
+  // КАТЕГОРИЯ 7: СЕРВИС — РЕМОНТ ПК И ИГРОВЫХ ПРИСТАВОК
+  var pcWrap=mk('div',{style:'display:grid;gap:8px'});
+  (WS.PC||[]).forEach(function(pr,idx){
+    pcWrap.appendChild(mk('div',{className:'adm-srv-row'},[
+      fi(pr[0],'Услуга по ПК/ноутбукам',function(v){pr[0]=v}),
+      fi(pr[1],'Цена',function(v){pr[1]=v}),
+      fi(pr[2],'Срок',function(v){pr[2]=v}),
+      fi(pr[3],'В каких случаях требуется',function(v){pr[3]=v}),
+      xb(function(){WS.PC.splice(idx,1);admRender()},'✕')
+    ]));
+  });
+  pcWrap.appendChild(ab('+ Добавить услугу по ремонту ПК',function(){WS.PC.push(['Новая услуга ПК','от 1 500 ₽','1 час','Описание']);admRender()}));
+
+  var conWrap=mk('div',{style:'display:grid;gap:8px'});
+  (WS.CONSOLE||[]).forEach(function(pr,idx){
+    conWrap.appendChild(mk('div',{className:'adm-srv-row'},[
+      fi(pr[0],'Услуга по приставкам',function(v){pr[0]=v}),
+      fi(pr[1],'Цена',function(v){pr[1]=v}),
+      fi(pr[2],'Срок',function(v){pr[2]=v}),
+      fi(pr[3],'В каких случаях требуется',function(v){pr[3]=v}),
+      xb(function(){WS.CONSOLE.splice(idx,1);admRender()},'✕')
+    ]));
+  });
+  conWrap.appendChild(ab('+ Добавить услугу по приставкам',function(){WS.CONSOLE.push(['Новая услуга по консолям','от 1 500 ₽','1 час','Описание']);admRender()}));
+
+  var c7=makeCatSection('pccon','💻🎮 7. Управление Сервисом: Ремонт ПК и Игровых Приставок',false,[
+    mk('h4',{textContent:'Услуги по компьютерам и ноутбукам',style:'margin:0'}),
+    pcWrap,
+    mk('h4',{textContent:'Услуги по игровым приставкам (PS4, PS5, Xbox)',style:'margin:10px 0 0'}),
+    conWrap
+  ]);
+  if(c7)box.appendChild(c7);
+
+  // КАТЕГОРИЯ 8: МАГАЗИН — КАТЕГОРИИ И ТОВАРЫ ВИТРИНЫ
+  var shopCatsWrap=mk('div',{style:'display:flex;flex-wrap:wrap;gap:8px;align-items:center'});
+  (WS.SHOP_CATS||[]).forEach(function(cName,cidx){
+    shopCatsWrap.appendChild(mk('div',{style:'display:inline-flex;gap:6px;align-items:center;background:var(--bg);padding:6px 10px;border-radius:10px;border:1px solid var(--line)'},[
+      fi(cName,'Категория',function(v){WS.SHOP_CATS[cidx]=v}),
+      xb(function(){WS.SHOP_CATS.splice(cidx,1);admRender()},'✕')
+    ]));
+  });
+  shopCatsWrap.appendChild(ab('+ Добавить категорию магазина',function(){WS.SHOP_CATS.push('Новая категория');admRender()}));
+
+  var goodsWrap=mk('div',{style:'display:grid;gap:10px'});
+  (WS.G||[]).forEach(function(g,i){
+    var sel=mk('select',{onchange:function(){g[0]=sel.value}});
+    (WS.SHOP_CATS||[]).forEach(function(catName){sel.appendChild(mk('option',{textContent:catName,selected:catName===g[0]}))});
+    var ot=mk('input',{type:'checkbox',checked:!!g[4],onchange:function(){g[4]=ot.checked?1:0}});
+    goodsWrap.appendChild(mk('div',{className:'arow'},[
+      photoCell(g),
+      sel,
+      fi(g[1],'Название товара',function(v){g[1]=v}),
+      fi(g[2],'Краткое описание',function(v){g[2]=v}),
+      fi(g[3],'Цена, ₽',function(v){g[3]=+v},'number'),
+      mk('label',{className:'ck',style:'margin:0'},[ot,' от']),
+      xb(function(){WS.G.splice(i,1);admRender()},'✕')
+    ]));
+  });
+  goodsWrap.appendChild(ab('+ Добавить товар на витрину',function(){WS.G.push([(WS.SHOP_CATS&&WS.SHOP_CATS[0])||'Смартфоны','Новый товар','В наличии в Люберцах',1000,0,'']);admRender()}));
+
+  var c8=makeCatSection('shop','🛍️ 8. Управление Магазином: Категории и Товары на витрине',false,[
+    mk('h4',{textContent:'Категории витрины магазина',style:'margin:0'}),
+    shopCatsWrap,
+    mk('h4',{textContent:'Товары (с загрузкой фото, ценами и описанием)',style:'margin:10px 0 0'}),
+    goodsWrap
+  ]);
+  if(c8)box.appendChild(c8);
+
+  // КАТЕГОРИЯ 9: КОПИЦЕНТР И 3D-ПЕЧАТЬ (БЕЗ ПЛАКАТОВ)
+  var copyWrap=mk('div',{style:'display:grid;gap:10px'});
+  (WS.COPYSTORE||[]).forEach(function(csItem,i){
+    copyWrap.appendChild(mk('div',{className:'adm-srv-row'},[
+      fi(csItem[0],'Название услуги копицентра / 3D',function(v){csItem[0]=v}),
+      fi(csItem[1],'Цена (напр. 20 ₽ / стр.)',function(v){csItem[1]=v}),
+      fi(csItem[2],'Срок (напр. При вас)',function(v){csItem[2]=v}),
+      fi(csItem[3],'Подробное описание услуги',function(v){csItem[3]=v}),
+      xb(function(){WS.COPYSTORE.splice(i,1);admRender()},'✕')
+    ]));
+  });
+  copyWrap.appendChild(ab('+ Добавить услугу копицентра или 3D-печати',function(){
+    WS.COPYSTORE.push(['Новая услуга печати','от 40 ₽','При вас','Описание услуги']);
+    admRender();
+  }));
+
+  var c9=makeCatSection('copy','🖨️ 9. Управление Копицентром и 3D-печатью',false,[copyWrap]);
+  if(c9)box.appendChild(c9);
+}
+
+function buildHtml(){
+  var seed=JSON.stringify(WS,null,2).replace(/</g,'\\u003c');
   return '<!DOCTYPE html>\n<html lang="ru">\n<head>\n'+HEAD+'<style id="app-css">'+$('app-css').textContent+'</style>\n</head>\n<body>\n<template id="shell">'+$('shell').innerHTML+'</template>\n<script id="seed" type="application/json">'+seed+'<\/script>\n<script id="app-js">'+$('app-js').textContent+'<\/script>\n</body>\n</html>';
 }
 
-function save(){
-  S.G=WG.filter(function(g){return String(g[1]).trim()}).map(function(g){return [g[0],g[1],g[2],+g[3]||0,g[4]?1:0,g[5]||'']});
-  S.M=WM;
-  G=S.G;M=S.M;
-  shop();renderCatalog();
-  var blob=new Blob([build()],{type:'text/html;charset=utf-8'});
-  var a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);
-  a.download='index.html';
-  a.click();
-  URL.revokeObjectURL(a.href);
-  $('admst').textContent='Изменения применены! Готовый файл index.html скачан.';
-}
-$('admsave').onclick=save;
-
-var AS='443f26a955275bae',AH='fc983c0f61e6849f3997c053b19b625411a5256f7f300f1de9832c5ece1b086a',FAIL=0,LOCK=0;
-try{ADM=sessionStorage.getItem('se_adm')==='1'}catch(e){}
-async function sha(s){var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('')}
-
-function admLogin(box){
-  $('admhint').textContent='Раздел закрыт. Доступ только для владельца SE STORE.';
-  var lg=fi('','Логин',function(){}),pw=fi('','Пароль',function(){},'password');
-  lg.autocomplete='username';pw.autocomplete='current-password';
-  var msg=mk('p',{className:'ok'}),bt=mk('button',{type:'submit',className:'btn',textContent:'Войти в панель'});
-  var f=mk('form',{},[lg,pw,bt]);
-  f.style.cssText='display:grid;gap:10px;max-width:360px';
-  f.onsubmit=async function(e){
-    e.preventDefault();
-    if(Date.now()<LOCK){msg.textContent='Слишком много попыток. Подождите минуту.';return}
-    if(!(window.crypto&&crypto.subtle)){msg.textContent='Нужен защищённый режим браузера (HTTPS или localhost).';return}
-    var curH=(S.AUTH&&S.AUTH.h)||AH,curS=(S.AUTH&&S.AUTH.s)||AS;
-    var h=await sha(curS+':'+lg.value.trim()+':'+pw.value);
-    if(h===curH){ADM=true;try{sessionStorage.setItem('se_adm','1')}catch(x){}admRender()}
-    else{FAIL++;if(FAIL>=5){LOCK=Date.now()+60000;FAIL=0}msg.textContent='Неверный логин или пароль.'}
+if($('admsave')){
+  $('admsave').onclick=function(){
+    if(!WS)WS=JSON.parse(JSON.stringify(S));
+    S=JSON.parse(JSON.stringify(WS));
+    renderHome();renderCopystore();shop();renderService(curSub);
+    var blob=new Blob([buildHtml()],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='index.html';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    $('admst').textContent='✅ Все изменения сохранены! Готовый файл index.html скачан.';
   };
-  box.appendChild(f);box.appendChild(msg);
 }
 
-var P=['home','iphone','model','repair','shop','lab','contacts','admin'];
+// Роутинг
+var P=['home','service','model-detail','shop','copystore','contacts','admin'];
 function route(){
   var raw=(location.hash||'#home').slice(1);
   var parts=raw.split('/');
   var h=parts[0];
+  if(h==='model')h='model-detail';
   if(P.indexOf(h)<0)h='home';
   P.forEach(function(p){if($('pg-'+p))$('pg-'+p).hidden=p!==h});
-  var navHash=h==='model'?'#iphone':'#'+h;
+
+  var navHash='#'+parts[0];
   document.querySelectorAll('#nav a').forEach(function(a){
-    if(a.getAttribute('href')===navHash)a.setAttribute('aria-current','page');
+    var href=a.getAttribute('href');
+    if(href===navHash||(parts[0]==='service'&&href==='#service')||(parts[0]==='model'&&href==='#service'))a.setAttribute('aria-current','page');
     else a.removeAttribute('aria-current');
   });
-  if(h==='model')renderModelPage(parts[1]);
+
+  if(h==='home')renderHome();
+  if(h==='service')renderService(parts[1]);
+  if(h==='model-detail')renderModelDetail(parts[1],parts[2]);
+  if(h==='shop')shop();
+  if(h==='copystore')renderCopystore();
   if(h==='admin')admRender();
   window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',route);
+
+// Секретный вход в админку: 5 кликов по © 2026 SE STORE в подвале
 (function(){
   var sc=$('secret-adm'),cnt=0,tm;
   if(sc)sc.onclick=function(){
@@ -839,12 +2622,8 @@ window.addEventListener('hashchange',route);
     if(cnt>=5){cnt=0;location.hash='#admin'}
   };
 })();
-initHomeSeries();
-renderCatalog();
-calc();
-shop();
-bk();
-route();
+
+renderHome();renderCopystore();shop();bk();route();
 </script>
 </body>
 </html>
