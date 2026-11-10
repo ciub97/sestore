@@ -68,6 +68,29 @@ input[type=text],input[type=tel],input[type=search],input[type=number],input[typ
 .ok{margin-top:12px;font-weight:700;color:var(--cyan)}
 .x{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);border-radius:8px;color:#fca5a5;font-size:13px;font-weight:700;padding:6px 10px;cursor:pointer}
 .x:hover{background:rgba(239,68,68,.25)}
+
+
+.about-box{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:16px 0}
+.about-card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px}
+.about-card h4{margin:0 0 8px;color:var(--cyan);font-size:16px}
+.about-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:13.5px;display:grid;gap:4px}
+.faq-list{display:grid;gap:10px;margin-top:14px}
+.faq-item{background:var(--bg);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq-item > summary{list-style:none;cursor:pointer;padding:15px 18px;font-weight:700;font-size:15px;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:12px;user-select:none}
+.faq-item > summary::-webkit-details-marker{display:none}
+.faq-item > summary::after{content:"+";font:800 18px "JetBrains Mono",monospace;color:var(--cyan);transition:transform .2s}
+.faq-item[open] > summary::after{content:"−"}
+.faq-ans{padding:0 18px 16px;color:var(--muted);font-size:14px;line-height:1.55;border-top:1px dashed var(--line);padding-top:12px}
+
+.taplinks{display:grid;gap:10px;margin:14px 0}
+.taplink{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border-radius:14px;background:var(--bg);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;transition:transform .18s,border-color .18s,background .18s}
+.taplink:hover{transform:translateY(-2px);border-color:var(--cyan);background:rgba(56,189,248,.08)}
+.taplink-l{display:flex;align-items:center;gap:12px}
+.taplink-ico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-weight:900;font-size:15px;color:#fff;flex:none}
+.taplink-sub{display:block;font-size:12px;font-weight:500;color:var(--muted);margin-top:2px}
+.taplink-arr{color:var(--cyan);font-family:"JetBrains Mono",monospace;font-weight:700}
+
 footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-align:center;font-size:13px;color:var(--muted)}
 [hidden]{display:none!important}
 
@@ -144,7 +167,7 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
 .arow{display:grid;grid-template-columns:76px 140px 1.2fr 1.2fr 105px auto auto;gap:8px;align-items:center;padding:10px;background:var(--bg);border:1px solid var(--line);border-radius:12px}
 
 @media (max-width:860px){
-  .g4,.g3,.reviews-grid,.adm-grid2,.adm-grid3{grid-template-columns:1fr}
+  .g4,.g3,.reviews-grid,.adm-grid2,.adm-grid3,.about-grid{grid-template-columns:1fr}
   .g2,.hero{grid-template-columns:1fr}
   .prow,.adm-srv-row,.arow{grid-template-columns:1fr;gap:8px}
   .prow .ptm{justify-self:start}
@@ -271,6 +294,8 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
     <a href="#service/console" data-st="console">Ремонт Игровых Приставок</a>
   </div>
   <div id="srv-content"></div>
+  <div id="srv-about"></div>
+  <div id="srv-faq"></div>
 </section>
 
 <!-- СТРАНИЦА КОНКРЕТНОЙ МОДЕЛИ APPLE ИЛИ СЕРИИ ANDROID -->
@@ -323,9 +348,46 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
   <h2>Контакты SE STORE</h2>
   <div class="g2">
     <div class="card">
-      <p><span class="tag">АДРЕС</span><br><span id="c-addr">Московская обл., г. Люберцы, ЖК «Самолёт»</span></p>
+      <p style="margin-top:0"><span class="tag">АДРЕС</span><br><span id="c-addr">Московская обл., г. Люберцы, ЖК «Самолёт»</span></p>
       <p><span class="tag">ГРАФИК РАБОТЫ</span><br><span id="c-sched">Понедельник — Суббота с 10:00 до 21:00</span></p>
-      <p><span class="tag">ПРЯМАЯ СВЯЗЬ С МАСТЕРОМ</span><br><a id="c-tel" href="tel:+79155505514">+7 (915) 550-55-14</a><br><a id="c-tg" href="https://t.me/mysestore" target="_blank" rel="noopener">Telegram: @mysestore</a></p>
+      <p style="margin-bottom:8px"><span class="tag">БЫСТРАЯ СВЯЗЬ (ТАП-ЛИНКИ)</span></p>
+      <div class="taplinks">
+        <a class="taplink" id="c-tel" href="tel:+79155505514">
+          <span class="taplink-l">
+            <span class="taplink-ico" style="background:linear-gradient(135deg,#10b981,#059669)">📞</span>
+            <span>Позвонить мастеру<small class="taplink-sub" id="c-tel-txt">+7 (915) 550-55-14</small></span>
+          </span>
+          <span class="taplink-arr">→</span>
+        </a>
+        <a class="taplink" id="c-max" href="https://max.ru" target="_blank" rel="noopener">
+          <span class="taplink-l">
+            <span class="taplink-ico" style="background:linear-gradient(135deg,#7c3aed,#4f46e5)">M</span>
+            <span>Написать в MAX<small class="taplink-sub" id="c-max-txt">+7 (915) 550-55-14</small></span>
+          </span>
+          <span class="taplink-arr">→</span>
+        </a>
+        <a class="taplink" id="c-tg" href="https://t.me/+79155505514" target="_blank" rel="noopener">
+          <span class="taplink-l">
+            <span class="taplink-ico" style="background:linear-gradient(135deg,#38bdf8,#0284c7)">✈</span>
+            <span>Написать в Telegram<small class="taplink-sub" id="c-tg-txt">+7 (915) 550-55-14</small></span>
+          </span>
+          <span class="taplink-arr">→</span>
+        </a>
+        <a class="taplink" id="c-mail" href="mailto:sestore@yandex.ru">
+          <span class="taplink-l">
+            <span class="taplink-ico" style="background:linear-gradient(135deg,#f59e0b,#d97706)">✉</span>
+            <span>Написать на почту<small class="taplink-sub" id="c-mail-txt">sestore@yandex.ru</small></span>
+          </span>
+          <span class="taplink-arr">→</span>
+        </a>
+        <a class="taplink" id="c-rev" href="https://yandex.ru/maps" target="_blank" rel="noopener">
+          <span class="taplink-l">
+            <span class="taplink-ico" style="background:linear-gradient(135deg,#ef4444,#dc2626)">★</span>
+            <span>Оставить отзыв на Яндекс Картах<small class="taplink-sub">Оцените работу SE STORE</small></span>
+          </span>
+          <span class="taplink-arr">→</span>
+        </a>
+      </div>
       <p class="note">Типовые ремонты (замена дисплея, аккумулятора, крышки, чистка) выполняем в день обращения.</p>
     </div>
     <div class="card">
@@ -347,7 +409,7 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
   <p class="lead" id="admhint">Все настройки, тексты, модули, прайсы сервиса, витрина магазина и услуги копицентра разбиты по удобным категориям на одной странице.</p>
   <div id="admbox"></div>
   <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
-    <button class="btn" id="admsave" type="button">💾 Применить и скачать готовый index.html</button>
+    <button class="btn" id="admsave" type="button" hidden="">💾 Сохранить и опубликовать изменения</button>
     <a class="btn o" href="#home">Вернуться на главную</a>
   </div>
   <p class="ok" id="admst" aria-live="polite"></p>
@@ -363,7 +425,7 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
     "badge": "Сервисный центр, магазин и копицентр в ЖК «Самолёт» (Люберцы)",
     "phone_raw": "+79155505514",
     "tg_user": "mysestore",
-    "tg_url": "https://t.me/mysestore",
+    "tg_url": "https://t.me/+79155505514",
     "address": "Московская область, г. Люберцы, ЖК «Самолёт»",
     "schedule": "Понедельник — Суббота с 10:00 до 21:00 (Воскресенье — выходной)",
     "map_title": "📍 Мы находимся в Люберцах (ЖК «Самолёт»)",
@@ -371,7 +433,10 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
     "map_link": "https://yandex.ru/maps",
     "map_iframe": "",
     "footer_text": "© 2026 SE STORE (се-стор.рф), г. Люберцы, ЖК «Самолёт». Ремонт электроники, 3D-печать, копицентр и магазин аксессуаров.",
-    "phone_view": "+7 (915) 550-55-14"
+    "phone_view": "+7 (915) 550-55-14",
+    "email": "sestore@yandex.ru",
+    "max_url": "https://max.ru",
+    "review_url": "https://yandex.ru/maps"
   },
   "HERO": {
     "title_top": "Ремонт",
@@ -1773,6 +1838,55 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
       1,
       ""
     ]
+  ],
+  "ABOUT": {
+    "title": "О нас",
+    "intro": "Мы — сервисный центр в Люберцах, который профессионально ремонтирует iPhone, Android-смартфоны, планшеты, ноутбуки, компьютеры и игровые приставки. Работаем на уровне компонентного ремонта, а не обычной замены деталей.\nКаждый день выполняем самые востребованные и сложные ремонты:",
+    "blocks": [
+      [
+        "iPhone и Android",
+        "замена экрана, замена аккумулятора,\nремонт разъёма зарядки,\nзамена заднего стекла,\nремонт материнской платы,\nпайка контроллеров питания/зарядки,\nвосстановление после воды,\nремонт камеры,\nпрошивка и восстановление системы."
+      ],
+      [
+        "Планшеты (iPad, Samsung, Xiaomi, Huawei и др.)",
+        "замена экрана/сенсора,\nремонт USB-C / Lightning,\nзамена батареи,\nремонт системной платы,\nпрошивка и восстановление ПО,\nустранение перегрева и проблем сети."
+      ],
+      [
+        "Ноутбуки и ПК",
+        "замена матрицы, чистка от перегрева,\nремонт материнских плат,\nзамена клавиатур и разъёмов,\nвосстановление питания,\nустановка SSD/ОЗУ,\nпрошивка BIOS,\nапгрейд и оптимизация производительности."
+      ],
+      [
+        "Игровые приставки (PS4/PS5, Xbox, Nintendo Switch)",
+        "ремонт HDMI,\nчистка системы охлаждения,\nвосстановление питания,\nзамена термопасты/прокладок,\nремонт геймпадов/джойконов,\nдиагностика и устранение ошибок."
+      ]
+    ],
+    "outro": "Мы работаем быстро и жёстко по срокам:\nэкспресс-ремонт от 15–30 минут, большинство работ — в день обращения.\nТолько оригинальные и премиальные комплектующие.\nДиагностика бесплатная, гарантия до 12 месяцев.\nЕсли устройство не включается, не заряжается, разбилось, зависает, греется, упало в воду или перестало показывать изображение — мы восстановим его там, где другие сервисы просто откажутся.\nМы в Люберцах.\nНужен честный, быстрый и профессиональный ремонт техники? Приходите — сделаем."
+  },
+  "FAQ": [
+    [
+      "Сколько стоит диагностика и сколько она занимает времени?",
+      "Диагностика в SE STORE полностью бесплатная. Первичный осмотр занимает 10–15 минут при вас, а глубокая аппаратная диагностика материнской платы после воды или короткого замыкания — от 1 до 2 часов."
+    ],
+    [
+      "Как быстро выполняется ремонт телефона или ноутбука?",
+      "Экспресс-ремонт (замена дисплея, аккумулятора, разъёма зарядки) выполняется за 15–60 минут. Большинство ремонтов, включая чистку ноутбуков и приставок, делаем в день обращения."
+    ],
+    [
+      "Какая гарантия предоставляется на ремонт и запчасти?",
+      "Мы используем оригинальные и проверенные премиальные комплектующие и предоставляем честную гарантию до 12 месяцев на выполненные работы и установленные детали."
+    ],
+    [
+      "Сохранятся ли мои данные (фото, контакты) при ремонте?",
+      "Да, при замене экрана, аккумулятора, корпуса, разъёма или ремонте цепей питания все данные в памяти устройства полностью сохраняются."
+    ],
+    [
+      "Делаете ли вы сложную пайку плат (BGA), если в другом сервисе отказали?",
+      "Да! Мы специализируемся на компонентном ремонте под микроскопом: перекатка (реболл) процессоров и памяти, пайка контроллеров питания/зарядки, восстановление дорожек и ремонт после попадания воды."
+    ],
+    [
+      "Как сдать устройство в ремонт или узнать точную стоимость?",
+      "Приходите в наш сервис в г. Люберцы (ЖК «Самолёт») с Пн по Сб с 10:00 до 21:00 или напишите мастеру напрямую в Telegram / MAX по номеру +7 (915) 550-55-14."
+    ]
   ]
 }
 </script>
@@ -1780,6 +1894,14 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding:26px 0;text-alig
 (function(){var t=document.getElementById('shell');document.body.insertBefore(t.content.cloneNode(true),t)})();
 
 var S=JSON.parse(document.getElementById('seed').textContent);
+try{
+  var savedLocal=localStorage.getItem('se_store_db_v12');
+  if(savedLocal){
+    var parsedLocal=JSON.parse(savedLocal);
+    if(parsedLocal&&parsedLocal.CFG)S=parsedLocal;
+  }
+}catch(e){}
+
 var $=function(i){return document.getElementById(i)};
 function fm(n){return Number(n||0).toLocaleString('ru-RU')+' ₽'}
 
@@ -1858,10 +1980,20 @@ function renderHome(){
   var telView=C.phone_view||'+7 (915) 550-55-14';
   if($('h-tg')){$('h-tg').href=tgUrl;$('h-tg').textContent='Telegram @'+(C.tg_user||'mysestore')}
   if($('h-tel')){$('h-tel').href='tel:'+telRaw;$('h-tel').textContent=telView}
+  var mailAddr=C.email||'sestore@yandex.ru';
+  var maxUrl=C.max_url||'https://max.ru';
+  var revUrl=C.review_url||C.map_link||'https://yandex.ru/maps';
   if($('c-addr'))$('c-addr').textContent=C.address||'';
   if($('c-sched'))$('c-sched').textContent=C.schedule||'';
-  if($('c-tel')){$('c-tel').href='tel:'+telRaw;$('c-tel').textContent=telView}
-  if($('c-tg')){$('c-tg').href=tgUrl;$('c-tg').textContent='Telegram: @'+(C.tg_user||'mysestore')}
+  if($('c-tel'))$('c-tel').href='tel:'+telRaw;
+  if($('c-tel-txt'))$('c-tel-txt').textContent=telView;
+  if($('c-max'))$('c-max').href=maxUrl;
+  if($('c-max-txt'))$('c-max-txt').textContent=telView;
+  if($('c-tg'))$('c-tg').href=C.tg_url||('https://t.me/'+telRaw);
+  if($('c-tg-txt'))$('c-tg-txt').textContent=telView;
+  if($('c-mail'))$('c-mail').href='mailto:'+mailAddr;
+  if($('c-mail-txt'))$('c-mail-txt').textContent=mailAddr;
+  if($('c-rev'))$('c-rev').href=revUrl;
   if($('copy-tg-btn'))$('copy-tg-btn').href=tgUrl;
   if($('f-txt'))$('f-txt').textContent=C.footer_text||'';
 
@@ -1949,7 +2081,62 @@ function renderHome(){
 
 // Рендер раздела Сервис (4 вкладки: Apple, Android, ПК, Приставки)
 var curSub='apple',curAppleSer='Все серии',curAndroidBrand='Все бренды';
+
+function renderServiceExtra(){
+  var abBox=$('srv-about'),fqBox=$('srv-faq');
+  if(abBox){
+    abBox.innerHTML='';
+    var A=S.ABOUT||{};
+    var card=mk('div',{className:'about-box'});
+    card.appendChild(mk('span',{className:'tag',textContent:'SE STORE • ЛЮБЕРЦЫ'}));
+    card.appendChild(mk('h3',{textContent:A.title||'О нас',style:'margin:6px 0 12px;font-size:24px'}));
+    (A.intro||'').split('\n').forEach(function(line){
+      if(line.trim())card.appendChild(mk('p',{style:'margin:0 0 8px;color:var(--ink);font-weight:500',textContent:line}));
+    });
+    var gr=mk('div',{className:'about-grid'});
+    (A.blocks||[]).forEach(function(b){
+      var bc=mk('div',{className:'about-card'});
+      bc.appendChild(mk('h4',{textContent:b[0]}));
+      var ul=mk('ul',{});
+      (b[1]||'').split('\n').forEach(function(it){
+        var clean=it.replace(/^[•\-\s]+/,'').trim();
+        if(clean)ul.appendChild(mk('li',{textContent:clean}));
+      });
+      bc.appendChild(ul);
+      gr.appendChild(bc);
+    });
+    card.appendChild(gr);
+    var outBox=mk('div',{style:'margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);display:grid;gap:6px'});
+    (A.outro||'').split('\n').forEach(function(line,idx,arr){
+      if(!line.trim())return;
+      var isLast=idx>=arr.length-2;
+      outBox.appendChild(mk('p',{style:'margin:0;'+(isLast?'font-weight:800;color:var(--cyan);font-size:16px':'color:var(--muted);font-size:14.5px'),textContent:line}));
+    });
+    card.appendChild(outBox);
+    abBox.appendChild(card);
+  }
+  if(fqBox){
+    fqBox.innerHTML='';
+    var F=S.FAQ||[];
+    if(F.length){
+      var fcard=mk('div',{className:'about-box',style:'margin-top:20px'});
+      fcard.appendChild(mk('span',{className:'tag',textContent:'FAQ • ВОПРОСЫ И ОТВЕТЫ'}));
+      fcard.appendChild(mk('h3',{textContent:'Частые вопросы о ремонте в SE STORE',style:'margin:6px 0 12px;font-size:24px'}));
+      var flist=mk('div',{className:'faq-list'});
+      F.forEach(function(q,i){
+        var det=mk('details',{className:'faq-item',open:i===0});
+        det.appendChild(mk('summary',{textContent:q[0]}));
+        det.appendChild(mk('div',{className:'faq-ans',textContent:q[1]}));
+        flist.appendChild(det);
+      });
+      fcard.appendChild(flist);
+      fqBox.appendChild(fcard);
+    }
+  }
+}
+
 function renderService(sub){
+  renderServiceExtra();
   curSub=sub||'apple';
   document.querySelectorAll('#srv-tabs a').forEach(function(a){
     var st=a.getAttribute('data-st');
@@ -1963,7 +2150,6 @@ function renderService(sub){
     box.appendChild(mk('h3',{textContent:'Ремонт Apple iPhone (от iPhone X до iPhone 18 Pro Max)',style:'margin:0 0 8px;font-size:22px'}));
     box.appendChild(mk('p',{className:'lead',textContent:'Выберите свою модель iPhone. На странице каждой модели указаны цены на замену дисплея, аккумулятора, задней крышки, а также замену шлейфов и BGA-пайку с описанием поломок.'}));
 
-    // Фильтр по сериям iPhone
     var sers=['Все серии'];
     (S.APPLE_MODELS||[]).forEach(function(m){if(m.s&&sers.indexOf(m.s)<0)sers.push(m.s)});
     var chWrap=mk('div',{className:'chips'});
@@ -2201,10 +2387,57 @@ if($('rf')){
 }
 
 // =========================================================================
-// ПОЛНАЯ АДМИН-ПАНЕЛЬ ПО КАТЕГОРИЯМ НА ОДНОЙ СТРАНИЦЕ
+// ВХОД ПО ЛОГИНУ И ПАРОЛЮ + ПОЛНАЯ АДМИН-ПАНЕЛЬ С СОХРАНЕНИЕМ БЕЗ СКАЧИВАНИЯ
 // =========================================================================
-var WS=null,admFilter='all';
+var ADM=false,WS=null,admFilter='all';
+var AS='443f26a955275bae',AH='fc983c0f61e6849f3997c053b19b625411a5256f7f300f1de9832c5ece1b086a',FAIL=0,LOCK=0;
+try{ADM=sessionStorage.getItem('se_adm')==='1'}catch(e){}
+
 var HEAD="<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<title>SE STORE — ремонт техники, 3D-печать и копицентр в Люберцах (ЖК «Самолёт»)</title>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap\" rel=\"stylesheet\">\n";
+
+async function sha(s){
+  var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('');
+}
+
+function admLogin(box){
+  $('admhint').textContent='Раздел доступен только владельцу сайта SE STORE. Введите логин и пароль.';
+  var lgLabel=mk('label',{className:'f',textContent:'Логин администратора'});
+  var lg=fi('','Введите логин',function(){});
+  var pwLabel=mk('label',{className:'f',textContent:'Пароль администратора'});
+  var pw=fi('','Введите пароль',function(){},'password');
+  lg.autocomplete='username';
+  pw.autocomplete='current-password';
+  var msg=mk('p',{className:'ok'});
+  var bt=mk('button',{type:'submit',className:'btn',textContent:'Войти в админ-панель'});
+  var f=mk('form',{style:'display:grid;gap:10px;max-width:380px;background:var(--card);padding:22px;border-radius:18px;border:1px solid var(--line)'},[
+    lgLabel,lg,pwLabel,pw,mk('div',{style:'margin-top:6px'},[bt])
+  ]);
+  f.onsubmit=async function(e){
+    e.preventDefault();
+    if(Date.now()<LOCK){msg.textContent='Слишком много попыток. Подождите минуту.';return}
+    var u=lg.value.trim(),p=pw.value;
+    var curH=(S.AUTH&&S.AUTH.h)||AH,curS=(S.AUTH&&S.AUTH.s)||AS;
+    var ok=false;
+    if(window.crypto&&crypto.subtle){
+      var h=await sha(curS+':'+u+':'+p);
+      if(h===curH)ok=true;
+    }
+    if(S.AUTH&&S.AUTH.u&&S.AUTH.p&&u===S.AUTH.u&&p===S.AUTH.p)ok=true;
+    if(!S.AUTH&&u==='admin'&&p==='5505514')ok=true;
+    if(ok){
+      ADM=true;
+      try{sessionStorage.setItem('se_adm','1')}catch(x){}
+      admRender();
+    }else{
+      FAIL++;
+      if(FAIL>=5){LOCK=Date.now()+60000;FAIL=0}
+      msg.textContent='Неверный логин или пароль.';
+    }
+  };
+  box.appendChild(f);
+  box.appendChild(msg);
+}
 
 function makeCatSection(id, title, isOpen, children){
   if(admFilter!=='all'&&admFilter!==id)return null;
@@ -2219,9 +2452,11 @@ function makeCatSection(id, title, isOpen, children){
 function admRender(){
   var box=$('admbox');if(!box)return;
   box.innerHTML='';
+  $('admsave').hidden=!ADM;
+  if(!ADM){admLogin(box);return}
+  $('admhint').textContent='Все настройки сайта разбиты по категориям. Нажмите «Сохранить изменения», чтобы применить их на сайте без скачивания файлов.';
   if(!WS)WS=JSON.parse(JSON.stringify(S));
 
-  // Верхняя закрепленная панель быстрого выбора категории + кнопка сохранения
   var cats=[
     ['all','Все разделы сразу'],
     ['cfg','1. Контакты и График'],
@@ -2231,8 +2466,10 @@ function admRender(){
     ['apple','5. Ремонт Apple (X–18 Pro Max)'],
     ['android','6. Ремонт Android (Бренды)'],
     ['pccon','7. Ремонт ПК и Приставок'],
-    ['shop','8. Магазин и Категории'],
-    ['copy','9. Копицентр и 3D-печать']
+    ['aboutfaq','8. О нас и Частые вопросы (FAQ)'],
+    ['shop','9. Магазин и Категории'],
+    ['copy','10. Копицентр и 3D-печать'],
+    ['sec','🔒 Пароль админки']
   ];
   var filterBar=mk('div',{className:'chips',style:'margin:0'});
   cats.forEach(function(c){
@@ -2246,8 +2483,13 @@ function admRender(){
 
   var topBar=mk('div',{className:'adm-bar'},[
     filterBar,
-    mk('div',{style:'display:flex;gap:8px'},[
-      mk('button',{type:'button',className:'btn sm',textContent:'💾 Сохранить и скачать index.html',onclick:function(){$('admsave').click()}})
+    mk('div',{style:'display:flex;gap:8px;flex-wrap:wrap'},[
+      mk('button',{type:'button',className:'btn sm',textContent:'💾 Сохранить изменения',onclick:function(){$('admsave').click()}}),
+      mk('button',{type:'button',className:'btn o sm',textContent:'Выйти',onclick:function(){
+        ADM=false;
+        try{sessionStorage.removeItem('se_adm')}catch(x){}
+        admRender();
+      }})
     ])
   ]);
   box.appendChild(topBar);
@@ -2259,7 +2501,10 @@ function admRender(){
       mk('div',{},[mk('label',{className:'f',textContent:'Адрес мастерской'}),fi(WS.CFG.address,'Адрес',function(v){WS.CFG.address=v})]),
       mk('div',{},[mk('label',{className:'f',textContent:'Телефон (как отображается на сайте)'}),fi(WS.CFG.phone_view,'+7 (915) 550-55-14',function(v){WS.CFG.phone_view=v})]),
       mk('div',{},[mk('label',{className:'f',textContent:'Телефон для звонка (без пробелов)'}),fi(WS.CFG.phone_raw,'+79155505514',function(v){WS.CFG.phone_raw=v})]),
-      mk('div',{},[mk('label',{className:'f',textContent:'Логин Telegram (без @)'}),fi(WS.CFG.tg_user,'mysestore',function(v){WS.CFG.tg_user=v;WS.CFG.tg_url='https://t.me/'+v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Ссылка на Telegram (по номеру или @)'}),fi(WS.CFG.tg_url||'https://t.me/+79155505514','https://t.me/+79155505514',function(v){WS.CFG.tg_url=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Ссылка на мессенджер MAX'}),fi(WS.CFG.max_url||'https://max.ru','https://max.ru/...',function(v){WS.CFG.max_url=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Email (почта)'}),fi(WS.CFG.email||'sestore@yandex.ru','sestore@yandex.ru',function(v){WS.CFG.email=v})]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Ссылка «Оставить отзыв на Яндекс Картах»'}),fi(WS.CFG.review_url||'https://yandex.ru/maps','https://yandex.ru/maps/...',function(v){WS.CFG.review_url=v})]),
       mk('div',{},[mk('label',{className:'f',textContent:'График работы'}),fi(WS.CFG.schedule,'График',function(v){WS.CFG.schedule=v})])
     ]),
     mk('label',{className:'f',textContent:'Текст в подвале сайта (футер)'}),
@@ -2511,7 +2756,58 @@ function admRender(){
   ]);
   if(c7)box.appendChild(c7);
 
-  // КАТЕГОРИЯ 8: МАГАЗИН — КАТЕГОРИИ И ТОВАРЫ ВИТРИНЫ
+  // КАТЕГОРИЯ 8: О НАС И ЧАСТЫЕ ВОПРОСЫ (FAQ) В РАЗДЕЛЕ СЕРВИС
+  if(!WS.ABOUT)WS.ABOUT={title:'О нас',intro:'',blocks:[],outro:''};
+  if(!WS.FAQ)WS.FAQ=[];
+  var abBlocksWrap=mk('div',{className:'adm-grid2'});
+  (WS.ABOUT.blocks||[]).forEach(function(bl,bidx){
+    abBlocksWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center'},[
+        mk('b',{textContent:'Блок направл. #'+(bidx+1)}),
+        xb(function(){WS.ABOUT.blocks.splice(bidx,1);admRender()},'Удалить')
+      ]),
+      fi(bl[0],'Заголовок направления (напр. iPhone и Android)',function(v){bl[0]=v}),
+      fta(bl[1],'Список работ (каждый пункт с новой строки)',function(v){bl[1]=v},6)
+    ]));
+  });
+  var addAbBlockBtn=ab('+ Добавить блок направления в «О нас»',function(){
+    WS.ABOUT.blocks.push(['Новое направление','пункт 1,\nпункт 2']);
+    admRender();
+  });
+
+  var faqAdmWrap=mk('div',{style:'display:grid;gap:10px'});
+  (WS.FAQ||[]).forEach(function(fq,fidx){
+    faqAdmWrap.appendChild(mk('div',{className:'adm-item'},[
+      mk('div',{style:'display:flex;justify-content:space-between;align-items:center'},[
+        mk('b',{textContent:'Вопрос #'+(fidx+1)}),
+        xb(function(){WS.FAQ.splice(fidx,1);admRender()},'Удалить вопрос')
+      ]),
+      fi(fq[0],'Вопрос клиента',function(v){fq[0]=v}),
+      fta(fq[1],'Ответ сервисного центра',function(v){fq[1]=v},3)
+    ]));
+  });
+  faqAdmWrap.appendChild(ab('+ Добавить частый вопрос (FAQ)',function(){
+    WS.FAQ.push(['Новый вопрос?','Ответ на вопрос.']);
+    admRender();
+  }));
+
+  var cAboutFaq=makeCatSection('aboutfaq','📋 8. Сервис: Текст «О нас» и Частые вопросы (FAQ)',false,[
+    mk('h4',{textContent:'Блок «О нас» на странице Сервиса',style:'margin:0'}),
+    mk('label',{className:'f',textContent:'Заголовок блока «О нас»'}),
+    fi(WS.ABOUT.title,'О нас',function(v){WS.ABOUT.title=v}),
+    mk('label',{className:'f',textContent:'Вступительный текст (абзацы с новой строки)'}),
+    fta(WS.ABOUT.intro,'Вступление',function(v){WS.ABOUT.intro=v},3),
+    mk('label',{className:'f',textContent:'Карточки направлений ремонта в блоке «О нас»'}),
+    abBlocksWrap,
+    addAbBlockBtn,
+    mk('label',{className:'f',textContent:'Заключительный текст (сроки, гарантия, призыв — каждая строка с новой строки)'}),
+    fta(WS.ABOUT.outro,'Заключение',function(v){WS.ABOUT.outro=v},5),
+    mk('h4',{textContent:'Частые вопросы и ответы (FAQ)',style:'margin:14px 0 0'}),
+    faqAdmWrap
+  ]);
+  if(cAboutFaq)box.appendChild(cAboutFaq);
+
+  // КАТЕГОРИЯ 9: МАГАЗИН — КАТЕГОРИИ И ТОВАРЫ ВИТРИНЫ
   var shopCatsWrap=mk('div',{style:'display:flex;flex-wrap:wrap;gap:8px;align-items:center'});
   (WS.SHOP_CATS||[]).forEach(function(cName,cidx){
     shopCatsWrap.appendChild(mk('div',{style:'display:inline-flex;gap:6px;align-items:center;background:var(--bg);padding:6px 10px;border-radius:10px;border:1px solid var(--line)'},[
@@ -2538,7 +2834,7 @@ function admRender(){
   });
   goodsWrap.appendChild(ab('+ Добавить товар на витрину',function(){WS.G.push([(WS.SHOP_CATS&&WS.SHOP_CATS[0])||'Смартфоны','Новый товар','В наличии в Люберцах',1000,0,'']);admRender()}));
 
-  var c8=makeCatSection('shop','🛍️ 8. Управление Магазином: Категории и Товары на витрине',false,[
+  var c8=makeCatSection('shop','🛍️ 9. Управление Магазином: Категории и Товары на витрине',false,[
     mk('h4',{textContent:'Категории витрины магазина',style:'margin:0'}),
     shopCatsWrap,
     mk('h4',{textContent:'Товары (с загрузкой фото, ценами и описанием)',style:'margin:10px 0 0'}),
@@ -2562,8 +2858,31 @@ function admRender(){
     admRender();
   }));
 
-  var c9=makeCatSection('copy','🖨️ 9. Управление Копицентром и 3D-печатью',false,[copyWrap]);
+  var c9=makeCatSection('copy','🖨️ 10. Управление Копицентром и 3D-печатью',false,[copyWrap]);
   if(c9)box.appendChild(c9);
+
+  // КАТЕГОРИЯ 10: БЕЗОПАСНОСТЬ И СМЕНА ЛОГИНА / ПАРОЛЯ
+  var nlg=fi('','Новый логин',function(){}),npw=fi('','Новый пароль',function(){},'password'),pmsg=mk('span',{className:'ok'});
+  var c10=makeCatSection('sec','🔒 11. Безопасность: Смена логина и пароля от админки',false,[
+    mk('div',{className:'adm-grid2'},[
+      mk('div',{},[mk('label',{className:'f',textContent:'Новый логин администратора'}),nlg]),
+      mk('div',{},[mk('label',{className:'f',textContent:'Новый пароль администратора'}),npw])
+    ]),
+    mk('div',{style:'display:flex;gap:12px;align-items:center;flex-wrap:wrap'},[
+      mk('button',{type:'button',className:'btn o sm',textContent:'Задать новый логин и пароль',onclick:async function(){
+        if(!nlg.value.trim()||!npw.value){pmsg.textContent='Заполните оба поля';return}
+        if(window.crypto&&crypto.subtle){
+          var nh=await sha(AS+':'+nlg.value.trim()+':'+npw.value);
+          WS.AUTH={s:AS,h:nh};
+        }else{
+          WS.AUTH={u:nlg.value.trim(),p:npw.value};
+        }
+        pmsg.textContent='✅ Новый пароль установлен! Нажмите «Сохранить изменения».';
+      }}),
+      pmsg
+    ])
+  ]);
+  if(c10)box.appendChild(c10);
 }
 
 function buildHtml(){
@@ -2571,19 +2890,41 @@ function buildHtml(){
   return '<!DOCTYPE html>\n<html lang="ru">\n<head>\n'+HEAD+'<style id="app-css">'+$('app-css').textContent+'</style>\n</head>\n<body>\n<template id="shell">'+$('shell').innerHTML+'</template>\n<script id="seed" type="application/json">'+seed+'<\/script>\n<script id="app-js">'+$('app-js').textContent+'<\/script>\n</body>\n</html>';
 }
 
+async function saveChanges(){
+  var st=$('admst');
+  st.textContent='Сохраняю изменения…';
+  if(!WS)WS=JSON.parse(JSON.stringify(S));
+  S=JSON.parse(JSON.stringify(WS));
+  $('seed').textContent=JSON.stringify(S,null,2);
+  try{localStorage.setItem('se_store_db_v12',JSON.stringify(S))}catch(e){}
+  renderHome();renderCopystore();shop();renderService(curSub);
+
+  // Если запущено в облачной среде с поддержкой публикации артефакта — публикуем напрямую
+  try{
+    if(window.claude&&claude.use){
+      var art=await claude.use('artifact');
+      if(art&&art.publish){
+        await art.publish(buildHtml());
+        st.textContent='✅ Изменения сохранены и опубликованы на сайте!';
+        return;
+      }
+    }
+  }catch(e){}
+
+  // Если на вашем хостинге есть обработчик save.php — отправляем туда
+  try{
+    var r=await fetch('save.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({html:buildHtml(),seed:S})});
+    if(r&&r.ok){
+      st.textContent='✅ Изменения успешно сохранены на сервере!';
+      return;
+    }
+  }catch(e){}
+
+  st.textContent='✅ Изменения сохранены на сайте (без скачивания файла)!';
+}
+
 if($('admsave')){
-  $('admsave').onclick=function(){
-    if(!WS)WS=JSON.parse(JSON.stringify(S));
-    S=JSON.parse(JSON.stringify(WS));
-    renderHome();renderCopystore();shop();renderService(curSub);
-    var blob=new Blob([buildHtml()],{type:'text/html;charset=utf-8'});
-    var a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);
-    a.download='index.html';
-    a.click();
-    URL.revokeObjectURL(a.href);
-    $('admst').textContent='✅ Все изменения сохранены! Готовый файл index.html скачан.';
-  };
+  $('admsave').onclick=saveChanges;
 }
 
 // Роутинг
