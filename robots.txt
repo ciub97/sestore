@@ -1,0 +1,15 @@
+User-agent: Yandex
+Allow: /
+Disallow: /#admin
+Clean-param: text
+
+User-agent: Googlebot
+Allow: /
+Disallow: /#admin
+
+User-agent: *
+Allow: /
+Disallow: /#admin
+
+Host: https://се-стор.рф
+Sitemap: https://се-стор.рф/sitemap.xml
