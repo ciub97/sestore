@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SE STORE — ремонт техники, 3D-печать и копицентр в Люберцах (ЖК «Самолёт»)</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2714%27%20fill=%27%23060a17%27/%3E%3Crect%20x=%273%27%20y=%273%27%20width=%2758%27%20height=%2758%27%20rx=%2711%27%20fill=%27none%27%20stroke=%27%2338bdf8%27%20stroke-width=%273%27/%3E%3Ctext%20x=%2732%27%20y=%2743%27%20font-family=%27Arial,Helvetica,sans-serif%27%20font-size=%2729%27%20font-weight=%27900%27%20text-anchor=%27middle%27%20fill=%27%2338bdf8%27%3ESE%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#060a17">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -55,8 +57,32 @@ h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin:0 0 12px;letter-spacing
 .chip[aria-pressed="true"],.chip.act{background:var(--blue);border-color:var(--cyan);color:#fff}
 .prod{display:flex;flex-direction:column;gap:8px;padding:16px}
 .ph{height:90px;border-radius:12px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,var(--glow) 0 8px,transparent 8px 16px);display:grid;place-items:center;font:700 12px "JetBrains Mono",monospace;color:var(--cyan)}
-.ph.pic{height:140px;padding:0;overflow:hidden;background:none}
-.ph.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.pic{height:auto;aspect-ratio:1/1;padding:0;overflow:hidden;background:rgba(127,127,127,.07);display:flex;align-items:center;justify-content:center;position:relative}
+.ph.pic img{width:100%;height:100%;object-fit:contain;object-position:center center;display:block;transition:transform .25s}
+.prod[data-zoom]{cursor:pointer;transition:transform .2s,border-color .2s}
+.prod[data-zoom]:hover{border-color:var(--cyan)}
+.prod[data-zoom]:hover .ph.pic img{transform:scale(1.05)}
+.prod[data-zoom]:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.zbadge{position:absolute;right:8px;bottom:8px;width:30px;height:30px;border-radius:50%;background:rgba(6,10,23,.72);color:#fff;display:grid;place-items:center;font-size:14px;pointer-events:none}
+.pm{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));background:rgba(3,6,16,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pm.open{display:flex;animation:pmin .18s ease-out}
+@keyframes pmin{from{opacity:0}to{opacity:1}}
+.pm-box{position:relative;width:100%;max-width:560px;max-height:100%;overflow-y:auto;overscroll-behavior:contain;background:var(--card);border:1px solid var(--line);border-radius:20px;display:flex;flex-direction:column}
+.pm-img{flex:none;display:flex;align-items:center;justify-content:center;width:100%;height:min(56vh,520px);height:min(56dvh,520px);background:rgba(127,127,127,.08);border-radius:20px 20px 0 0;overflow:hidden}
+.pm-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;object-position:center;display:block}
+.pm-img .pm-ph{font:700 28px "JetBrains Mono",monospace;color:var(--cyan)}
+.pm-info{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px}
+.pm-info .tag{margin:0}
+.pm-info h3{margin:0;font-size:20px;line-height:1.3}
+.pm-info p{margin:0;color:var(--muted);font-size:15px}
+.pm-info .pr{font-size:28px;font-weight:900;color:var(--cyan);margin-top:4px}
+.pm-info .btn{margin-top:6px;width:100%;justify-content:center;text-align:center}
+.pm-x{position:absolute;top:10px;right:10px;z-index:2;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:rgba(6,10,23,.75);color:#fff;font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.pm-x:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+body.pm-lock{overflow:hidden}
+@media (min-width:861px){.pm-box{max-width:620px}}
+@media (max-width:640px){.pm{padding:12px 12px calc(12px + env(safe-area-inset-bottom,0px));align-items:center}.pm-img{height:min(48vh,420px);height:min(48dvh,420px)}.pm-info{padding:16px}.pm-info h3{font-size:18px}.pm-info .pr{font-size:24px}}
+@media (max-height:520px) and (orientation:landscape){.pm-img{height:min(70vh,300px);height:min(70dvh,300px)}}
 .pcell{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .pth{width:56px;height:56px;border-radius:10px;object-fit:cover;border:1px solid var(--line);display:grid;place-items:center;font-size:10px;color:var(--muted);text-align:center}
 .prod h3{margin:0;font-size:15px;line-height:1.3}.prod p{margin:0;font-size:13px;color:var(--muted);flex:1}
@@ -2376,18 +2402,66 @@ function shop(){
   (S.G||[]).forEach(function(g,i){
     if(cat!=='Все'&&g[0]!==cat)return;
     var e=mk('div',{className:'card prod'});
+    e.setAttribute('data-zoom','1');e.setAttribute('tabindex','0');e.setAttribute('role','button');
+    e.setAttribute('aria-label','Открыть товар: '+g[1]);
     var ph=mk('div',{className:'ph',textContent:(g[0]||'ТОВ').slice(0,3).toUpperCase()});
     if(g[5]){
       ph.textContent='';ph.className='ph pic';
       ph.appendChild(mk('img',{src:g[5],alt:g[1],loading:'lazy'}));
+      ph.appendChild(mk('span',{className:'zbadge',textContent:'🔍'}));
     }
     e.appendChild(ph);
     e.appendChild(mk('h3',{textContent:g[1]}));
     e.appendChild(mk('p',{textContent:g[2]}));
     e.appendChild(mk('div',{className:'pr',textContent:(g[4]?'от ':'')+fm(g[3])}));
-    e.appendChild(mk('button',{type:'button',className:'btn',textContent:'Забронировать',onclick:function(){cart.push(i);bk()}}));
+    e.appendChild(mk('button',{type:'button',className:'btn',textContent:'Забронировать',onclick:function(ev){ev.stopPropagation();cart.push(i);bk()}}));
+    e.addEventListener('click',function(){openProd(i)});
+    e.addEventListener('keydown',function(ev){if((ev.key==='Enter'||ev.key===' ')&&ev.target===e){ev.preventDefault();openProd(i)}});
     b.appendChild(e);
   });
+}
+
+// Окно товара: увеличенное фото сверху, описание и цена снизу
+var pmEl=null,pmLast=null;
+function closeProd(){
+  if(!pmEl)return;
+  pmEl.classList.remove('open');
+  document.body.classList.remove('pm-lock');
+  if(pmLast&&pmLast.focus){try{pmLast.focus()}catch(e){}}
+}
+function openProd(i){
+  var g=(S.G||[])[i];if(!g)return;
+  if(!pmEl){
+    pmEl=mk('div',{className:'pm',role:'dialog'});
+    pmEl.setAttribute('aria-modal','true');
+    pmEl.addEventListener('click',function(ev){if(ev.target===pmEl)closeProd()});
+    document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&pmEl.classList.contains('open'))closeProd()});
+    document.body.appendChild(pmEl);
+  }
+  pmLast=document.activeElement;
+  pmEl.innerHTML='';
+  pmEl.setAttribute('aria-label',g[1]||'Товар');
+  var box=mk('div',{className:'pm-box'});
+  var x=mk('button',{type:'button',className:'pm-x',textContent:'✕',onclick:closeProd});
+  x.setAttribute('aria-label','Закрыть');
+  box.appendChild(x);
+  var im=mk('div',{className:'pm-img'});
+  if(g[5])im.appendChild(mk('img',{src:g[5],alt:g[1]||''}));
+  else im.appendChild(mk('span',{className:'pm-ph',textContent:(g[0]||'ТОВ').slice(0,3).toUpperCase()}));
+  box.appendChild(im);
+  var info=mk('div',{className:'pm-info'});
+  if(g[0])info.appendChild(mk('span',{className:'tag',textContent:g[0]}));
+  info.appendChild(mk('h3',{textContent:g[1]||''}));
+  if(g[2])info.appendChild(mk('p',{textContent:g[2]}));
+  info.appendChild(mk('div',{className:'pr',textContent:(g[4]?'от ':'')+fm(g[3])}));
+  var bb=mk('button',{type:'button',className:'btn',textContent:'Забронировать',onclick:function(){cart.push(i);bk();bb.textContent='Добавлено в бронь ✓';setTimeout(closeProd,600)}});
+  info.appendChild(bb);
+  box.appendChild(info);
+  pmEl.appendChild(box);
+  pmEl.classList.add('open');
+  document.body.classList.add('pm-lock');
+  box.scrollTop=0;
+  x.focus();
 }
 
 function bk(){
@@ -2477,7 +2551,7 @@ var ADM=false,WS=null,admFilter='all';
 var AS='443f26a955275bae',AH='fc983c0f61e6849f3997c053b19b625411a5256f7f300f1de9832c5ece1b086a',FAIL=0,LOCK=0;
 try{ADM=sessionStorage.getItem('se_adm')==='1'}catch(e){}
 
-var HEAD="<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<title>SE STORE — ремонт техники, 3D-печать и копицентр в Люберцах (ЖК «Самолёт»)</title>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap\" rel=\"stylesheet\">\n";
+var HEAD="<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<title>SE STORE — ремонт техники, 3D-печать и копицентр в Люберцах (ЖК «Самолёт»)</title>\n<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2714%27%20fill=%27%23060a17%27/%3E%3Crect%20x=%273%27%20y=%273%27%20width=%2758%27%20height=%2758%27%20rx=%2711%27%20fill=%27none%27%20stroke=%27%2338bdf8%27%20stroke-width=%273%27/%3E%3Ctext%20x=%2732%27%20y=%2743%27%20font-family=%27Arial,Helvetica,sans-serif%27%20font-size=%2729%27%20font-weight=%27900%27%20text-anchor=%27middle%27%20fill=%27%2338bdf8%27%3ESE%3C/text%3E%3C/svg%3E\">\n<meta name=\"theme-color\" content=\"#060a17\">\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap\" rel=\"stylesheet\">\n";
 
 async function sha(s){
   var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
@@ -2505,7 +2579,7 @@ function admLogin(box){
     var ok=false;
     if(window.crypto&&crypto.subtle){
       var h=await sha(curS+':'+u+':'+p);
-      if(h===curH)ok=true;
+      if(h===curH){ok=true;try{sessionStorage.setItem('se_adm_h',h)}catch(x){}}
     }
     if(S.AUTH&&S.AUTH.u&&S.AUTH.p&&u===S.AUTH.u&&p===S.AUTH.p)ok=true;
     if(!S.AUTH&&u==='admin'&&p==='5505514')ok=true;
@@ -2573,7 +2647,7 @@ function admRender(){
       mk('button',{type:'button',className:'btn o sm',textContent:'⚙️ Скачать настройки (.json)',onclick:function(){$('admdlj').click()}}),
       mk('button',{type:'button',className:'btn o sm',textContent:'Выйти',onclick:function(){
         ADM=false;
-        try{sessionStorage.removeItem('se_adm')}catch(x){}
+        try{sessionStorage.removeItem('se_adm');sessionStorage.removeItem('se_adm_h')}catch(x){}
         admRender();
       }})
     ])
@@ -3022,15 +3096,34 @@ async function saveChanges(){
     }
   }catch(e){}
 
-  // Если на вашем хостинге есть обработчик save.php — отправляем туда
+  // Отправляем готовый сайт на сервер: save.php перезапишет index.html
+  var hh='';
+  try{hh=sessionStorage.getItem('se_adm_h')||''}catch(e){}
+  if(!hh){
+    st.textContent='⚠️ Сохранено только в этом браузере. Чтобы записать на сервер, выйдите из админки и войдите снова, затем нажмите «Сохранить».';
+    return;
+  }
   try{
-    var r=await fetch('save.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({html:buildHtml(),seed:S})});
-    if(r&&r.ok){
-      st.textContent='✅ Изменения успешно сохранены на сервере!';
+    var r=await fetch('save.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({html:buildHtml(),h:hh})});
+    var j=null;
+    try{j=await r.json()}catch(e){}
+    if(r.ok&&j&&j.ok){
+      // если пароль меняли — дальше сервер ждёт уже новый
+      if(WS&&WS.AUTH&&WS.AUTH.h){try{sessionStorage.setItem('se_adm_h',WS.AUTH.h)}catch(e){}}
+      st.textContent='✅ Изменения сохранены на сервере: index.html обновлён ('+new Date().toLocaleTimeString('ru-RU')+').';
       return;
     }
-  }catch(e){}
-
+    if(j&&j.error){st.textContent='❌ Сервер не сохранил: '+j.error;return}
+    if(r.status===404||r.status===405||r.status===501){
+      st.textContent='❌ На сервере не найден save.php (код '+r.status+'). Загрузите save.php в ту же папку, что и index.html. Пока изменения сохранены только в этом браузере.';
+      return;
+    }
+    st.textContent='❌ Сервер ответил ошибкой '+r.status+'. Изменения сохранены только в этом браузере.';
+    return;
+  }catch(e){
+    st.textContent='❌ Нет связи с сервером. Изменения сохранены только в этом браузере.';
+    return;
+  }
   st.textContent='✅ Изменения сохранены на сайте (без скачивания файла)!';
 }
 
